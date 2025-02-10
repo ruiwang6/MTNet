@@ -228,14 +228,10 @@ class MTLSTformer(nn.Module):
         self.input_fc1 = nn.Linear(input_dim, input_emb_dim)
         self.input_fc2 = nn.Linear(input_dim, input_emb_dim)
 
-        if tod_emb_dim > 0:
-            self.tod_embedding = nn.Embedding(steps_per_day, tod_emb_dim)
-        if dow_emb_dim > 0:
-            self.dow_embedding = nn.Embedding(7, dow_emb_dim)
-        if adaptive_emb_dim > 0:
-            self.adaptive_embedding = nn.init.xavier_uniform_(
-                nn.Parameter(torch.empty(in_steps, num_nodes, adaptive_emb_dim))
-            )
+        self.tod_embedding = nn.Embedding(steps_per_day, tod_emb_dim)
+        self.dow_embedding = nn.Embedding(7, dow_emb_dim)
+        self.adaptive_embedding = nn.init.xavier_uniform_(
+                nn.Parameter(torch.empty(in_steps, num_nodes, adaptive_emb_dim)))
 
         self.attn_layers_t1 = nn.ModuleList(
             [
@@ -268,13 +264,9 @@ class MTLSTformer(nn.Module):
         self.cross_task_inter1 = CrossTaskAttentionLayer(self.hidden_dim, cross_feed_forward_dim, self.cross_heads, dropout)
         self.cross_task_inter2 = CrossTaskAttentionLayer(self.hidden_dim, cross_feed_forward_dim, self.cross_heads, dropout)
 
-        # ouput projection
-        self.output_fc1 = nn.Linear(
-            in_steps * self.hidden_dim, out_steps * output_dim
-        )
-        self.output_fc2 = nn.Linear(
-            in_steps * self.hidden_dim, out_steps * output_dim
-        )
+        # ouput
+        self.output_fc1 = nn.Linear(in_steps * self.hidden_dim, out_steps * output_dim)
+        self.output_fc2 = nn.Linear(in_steps * self.hidden_dim, out_steps * output_dim)
 
     def forward(self, x):
         # x: (batch_size, in_steps, num_nodes, input_dim+tod+dow=3)
@@ -292,22 +284,20 @@ class MTLSTformer(nn.Module):
         x2 = self.input_fc2(x2)  # (batch_size, in_steps, num_nodes, input_emb_dim)
 
         features = []
-        if self.tod_emb_dim > 0:
-            tod_emb = self.tod_embedding(
+        tod_emb = self.tod_embedding(
                 (tod * self.steps_per_day).long()
             )  # (batch_size, in_steps, num_nodes, tod_emb_dim)
-            features.append(tod_emb)
-        if self.dow_emb_dim > 0:
-            dow_emb = self.dow_embedding(
+        features.append(tod_emb)
+        dow_emb = self.dow_embedding(
                 dow.long()
             )  # (batch_size, in_steps, num_nodes, dow_emb_dim)
-            features.append(dow_emb)
-        if self.adaptive_emb_dim > 0:
-            adp_emb = self.adaptive_embedding.expand(
+        features.append(dow_emb)
+        adp_emb = self.adaptive_embedding.expand(
                 size=(batch_size, *self.adaptive_embedding.shape)
             )
-            features.append(adp_emb)
+        features.append(adp_emb)
         features = torch.cat(features, dim=-1)
+        
         x1 = torch.concat([x1, features], dim=-1)  # (batch_size, in_steps, num_nodes, hidden_dim)
         x2 = torch.concat([x2, features], dim=-1)  # (batch_size, in_steps, num_nodes, hidden_dim)
 
