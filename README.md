@@ -14,6 +14,10 @@ torchinfo
 ```
 
 ## Datasets
+dataset:
+- Manchester
+- PEMS04
+- PEMS08
 If you need the original datasets, please refer to [STSGCN](https://github.com/Davidham3/STSGCN) (including PEMS04, and PEMS08)
 
 ## Training Commands
@@ -23,7 +27,3 @@ cd model/
 python train.py -d <dataset> 
 ```
 
-dataset:
-- Manchester
-- PEMS04
-- PEMS08
