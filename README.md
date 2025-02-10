@@ -1,6 +1,7 @@
-## MTNet: A Multi-task Learning Framework that Integrates Intra-task and Task-specific Dependencies for Traffic Forecasting
+# MTNet
+This is the pytorch implementation of MTNet.
 
-#### Required Packages
+## Required Packages
 
 ```
 pytorch>=1.11
@@ -12,7 +13,7 @@ pickle
 torchinfo
 ```
 
-#### Training Commands
+## Training Commands
 
 ```bash
 cd model/
