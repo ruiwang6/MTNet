@@ -23,18 +23,7 @@ from lib.utils import (
 )
 from lib.metrics import RMSE_MAE_MAPE
 from lib.data_prepare import get_dataloaders_from_index_data
-# from model.MTL_STAEformer_0726_1 import STAEformer
 from model.MTNet import MTLSTformer
-# from model.MTL_MTLSTformer import MTLSTformer
-# from model.MTL_MTLSTformer_noTemporal import MTLSTformer
-# from model.MTL_MTLSTformer_noSpatial import MTLSTformer
-# from model.MTL_MTLSTformer_selfAttention import MTLSTformer
-
-
-# from model.MTL_MTLSTformer_noSpatialTemporal import MTLSTformer
-# from model.MTL_MTLSTformer_MLP import MTLSTformer
-# ! X shape: (B, T, N, C)
-
 
 @torch.no_grad()
 def eval_model(model, valset_loader, criterion):
@@ -258,7 +247,6 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--dataset", type=str, default="pems04")
-    # parser.add_argument("-d", "--dataset", type=str, default="Manchester")
     parser.add_argument("-g", "--gpu_num", type=int, default=0)
     args = parser.parse_args()
 
@@ -388,4 +376,3 @@ if __name__ == "__main__":
     test_model(model, testset_loader, dataset, log=log)
 
     log.close()
-    # os.system("/usr/bin/shutdown")  # 加上之后自动服务器自动关机
