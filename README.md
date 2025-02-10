@@ -14,7 +14,6 @@ torchinfo
 ```
 
 ## Datasets
-dataset:
 - Manchester
 - PEMS04
 - PEMS08
