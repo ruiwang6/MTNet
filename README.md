@@ -3,6 +3,9 @@ This is the pytorch implementation of MTNet. MTNet is a multi-task learning fram
 
 <img src="Figures/model.jpg" height="300"/>
 
+## Model Comparison
+The folder 'Model Comparison' contains the training logs of MTNet and Benchmarks.
+
 ## Required Packages
 
 ```
