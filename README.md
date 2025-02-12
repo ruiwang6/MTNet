@@ -28,7 +28,7 @@ Download PEMS04 and PEMS08 datasets provided by [STSGCN](https://github.com/Davi
 ## Training Commands
 
 ```bash
-cd scripts/
+cd model/
 python train.py -d <dataset> -g <gpu_id>
 ```
 
