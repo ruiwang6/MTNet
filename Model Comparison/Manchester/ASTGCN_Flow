@@ -1,0 +1,436 @@
+ssh://root@region-41.seetacloud.com:53669/root/miniconda3/bin/python -u /project/ASTGCN-pytorch-master/train_ASTGCN_r.py
+Read configuration file: configurations/Manchester_astgcn.conf
+CUDA: True cuda:0
+folder_dir: astgcn_r_h1d1w1_channel1_1.000000e-03
+params_path: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03
+load file: /project/ASTGCN-pytorch-master/data/Manchester/ManchesterDataFinall_r1_d1_w1_astcgn
+train: torch.Size([8292, 277, 1, 4]) torch.Size([8292, 277, 1, 4]) torch.Size([8292, 277, 1, 4]) torch.Size([8292, 277, 4])
+val: torch.Size([2764, 277, 1, 4]) torch.Size([2764, 277, 1, 4]) torch.Size([2764, 277, 1, 4]) torch.Size([2764, 277, 4])
+test: torch.Size([2765, 277, 1, 4]) torch.Size([2765, 277, 1, 4]) torch.Size([2765, 277, 1, 4]) torch.Size([2765, 277, 4])
+(277, 277)
+delete the old one and create params directory experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03
+param list:
+CUDA	 cuda:0
+in_channels	 1
+nb_block	 2
+nb_chev_filter	 64
+nb_time_filter	 64
+time_strides	 1
+batch_size	 32
+graph_signal_matrix_filename	 /project/ASTGCN-pytorch-master/data/Manchester/ManchesterDataFinall.npz
+start_epoch	 0
+epochs	 100
+ASTGCN(
+  (submodule): ModuleList(
+    (0): ASTGCN_submodule(
+      (BlockList): ModuleList(
+        (0): ASTGCN_block(
+          (TAt): Temporal_Attention_layer()
+          (SAt): Spatial_Attention_layer()
+          (cheb_conv_SAt): cheb_conv_withSAt(
+            (Theta): ParameterList(
+                (0): Parameter containing: [torch.cuda.FloatTensor of size 1x64 (GPU 0)]
+                (1): Parameter containing: [torch.cuda.FloatTensor of size 1x64 (GPU 0)]
+                (2): Parameter containing: [torch.cuda.FloatTensor of size 1x64 (GPU 0)]
+            )
+          )
+          (time_conv): Conv2d(64, 64, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+          (residual_conv): Conv2d(1, 64, kernel_size=(1, 1), stride=(1, 1))
+          (ln): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+        )
+        (1): ASTGCN_block(
+          (TAt): Temporal_Attention_layer()
+          (SAt): Spatial_Attention_layer()
+          (cheb_conv_SAt): cheb_conv_withSAt(
+            (Theta): ParameterList(
+                (0): Parameter containing: [torch.cuda.FloatTensor of size 64x64 (GPU 0)]
+                (1): Parameter containing: [torch.cuda.FloatTensor of size 64x64 (GPU 0)]
+                (2): Parameter containing: [torch.cuda.FloatTensor of size 64x64 (GPU 0)]
+            )
+          )
+          (time_conv): Conv2d(64, 64, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+          (residual_conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+          (ln): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (final_conv): Conv2d(4, 4, kernel_size=(1, 64), stride=(1, 1))
+    )
+    (1): ASTGCN_submodule(
+      (BlockList): ModuleList(
+        (0): ASTGCN_block(
+          (TAt): Temporal_Attention_layer()
+          (SAt): Spatial_Attention_layer()
+          (cheb_conv_SAt): cheb_conv_withSAt(
+            (Theta): ParameterList(
+                (0): Parameter containing: [torch.cuda.FloatTensor of size 1x64 (GPU 0)]
+                (1): Parameter containing: [torch.cuda.FloatTensor of size 1x64 (GPU 0)]
+                (2): Parameter containing: [torch.cuda.FloatTensor of size 1x64 (GPU 0)]
+            )
+          )
+          (time_conv): Conv2d(64, 64, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+          (residual_conv): Conv2d(1, 64, kernel_size=(1, 1), stride=(1, 1))
+          (ln): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+        )
+        (1): ASTGCN_block(
+          (TAt): Temporal_Attention_layer()
+          (SAt): Spatial_Attention_layer()
+          (cheb_conv_SAt): cheb_conv_withSAt(
+            (Theta): ParameterList(
+                (0): Parameter containing: [torch.cuda.FloatTensor of size 64x64 (GPU 0)]
+                (1): Parameter containing: [torch.cuda.FloatTensor of size 64x64 (GPU 0)]
+                (2): Parameter containing: [torch.cuda.FloatTensor of size 64x64 (GPU 0)]
+            )
+          )
+          (time_conv): Conv2d(64, 64, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+          (residual_conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+          (ln): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (final_conv): Conv2d(4, 4, kernel_size=(1, 64), stride=(1, 1))
+    )
+    (2): ASTGCN_submodule(
+      (BlockList): ModuleList(
+        (0): ASTGCN_block(
+          (TAt): Temporal_Attention_layer()
+          (SAt): Spatial_Attention_layer()
+          (cheb_conv_SAt): cheb_conv_withSAt(
+            (Theta): ParameterList(
+                (0): Parameter containing: [torch.cuda.FloatTensor of size 1x64 (GPU 0)]
+                (1): Parameter containing: [torch.cuda.FloatTensor of size 1x64 (GPU 0)]
+                (2): Parameter containing: [torch.cuda.FloatTensor of size 1x64 (GPU 0)]
+            )
+          )
+          (time_conv): Conv2d(64, 64, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+          (residual_conv): Conv2d(1, 64, kernel_size=(1, 1), stride=(1, 1))
+          (ln): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+        )
+        (1): ASTGCN_block(
+          (TAt): Temporal_Attention_layer()
+          (SAt): Spatial_Attention_layer()
+          (cheb_conv_SAt): cheb_conv_withSAt(
+            (Theta): ParameterList(
+                (0): Parameter containing: [torch.cuda.FloatTensor of size 64x64 (GPU 0)]
+                (1): Parameter containing: [torch.cuda.FloatTensor of size 64x64 (GPU 0)]
+                (2): Parameter containing: [torch.cuda.FloatTensor of size 64x64 (GPU 0)]
+            )
+          )
+          (time_conv): Conv2d(64, 64, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+          (residual_conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+          (ln): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (final_conv): Conv2d(4, 4, kernel_size=(1, 64), stride=(1, 1))
+    )
+  )
+)
+Net's state_dict:
+submodule.0.W 	 torch.Size([277, 4])
+submodule.0.BlockList.0.TAt.U1 	 torch.Size([277])
+submodule.0.BlockList.0.TAt.U2 	 torch.Size([1, 277])
+submodule.0.BlockList.0.TAt.U3 	 torch.Size([1])
+submodule.0.BlockList.0.TAt.be 	 torch.Size([1, 4, 4])
+submodule.0.BlockList.0.TAt.Ve 	 torch.Size([4, 4])
+submodule.0.BlockList.0.SAt.W1 	 torch.Size([4])
+submodule.0.BlockList.0.SAt.W2 	 torch.Size([1, 4])
+submodule.0.BlockList.0.SAt.W3 	 torch.Size([1])
+submodule.0.BlockList.0.SAt.bs 	 torch.Size([1, 277, 277])
+submodule.0.BlockList.0.SAt.Vs 	 torch.Size([277, 277])
+submodule.0.BlockList.0.cheb_conv_SAt.Theta.0 	 torch.Size([1, 64])
+submodule.0.BlockList.0.cheb_conv_SAt.Theta.1 	 torch.Size([1, 64])
+submodule.0.BlockList.0.cheb_conv_SAt.Theta.2 	 torch.Size([1, 64])
+submodule.0.BlockList.0.time_conv.weight 	 torch.Size([64, 64, 1, 3])
+submodule.0.BlockList.0.time_conv.bias 	 torch.Size([64])
+submodule.0.BlockList.0.residual_conv.weight 	 torch.Size([64, 1, 1, 1])
+submodule.0.BlockList.0.residual_conv.bias 	 torch.Size([64])
+submodule.0.BlockList.0.ln.weight 	 torch.Size([64])
+submodule.0.BlockList.0.ln.bias 	 torch.Size([64])
+submodule.0.BlockList.1.TAt.U1 	 torch.Size([277])
+submodule.0.BlockList.1.TAt.U2 	 torch.Size([64, 277])
+submodule.0.BlockList.1.TAt.U3 	 torch.Size([64])
+submodule.0.BlockList.1.TAt.be 	 torch.Size([1, 4, 4])
+submodule.0.BlockList.1.TAt.Ve 	 torch.Size([4, 4])
+submodule.0.BlockList.1.SAt.W1 	 torch.Size([4])
+submodule.0.BlockList.1.SAt.W2 	 torch.Size([64, 4])
+submodule.0.BlockList.1.SAt.W3 	 torch.Size([64])
+submodule.0.BlockList.1.SAt.bs 	 torch.Size([1, 277, 277])
+submodule.0.BlockList.1.SAt.Vs 	 torch.Size([277, 277])
+submodule.0.BlockList.1.cheb_conv_SAt.Theta.0 	 torch.Size([64, 64])
+submodule.0.BlockList.1.cheb_conv_SAt.Theta.1 	 torch.Size([64, 64])
+submodule.0.BlockList.1.cheb_conv_SAt.Theta.2 	 torch.Size([64, 64])
+submodule.0.BlockList.1.time_conv.weight 	 torch.Size([64, 64, 1, 3])
+submodule.0.BlockList.1.time_conv.bias 	 torch.Size([64])
+submodule.0.BlockList.1.residual_conv.weight 	 torch.Size([64, 64, 1, 1])
+submodule.0.BlockList.1.residual_conv.bias 	 torch.Size([64])
+submodule.0.BlockList.1.ln.weight 	 torch.Size([64])
+submodule.0.BlockList.1.ln.bias 	 torch.Size([64])
+submodule.0.final_conv.weight 	 torch.Size([4, 4, 1, 64])
+submodule.0.final_conv.bias 	 torch.Size([4])
+submodule.1.W 	 torch.Size([277, 4])
+submodule.1.BlockList.0.TAt.U1 	 torch.Size([277])
+submodule.1.BlockList.0.TAt.U2 	 torch.Size([1, 277])
+submodule.1.BlockList.0.TAt.U3 	 torch.Size([1])
+submodule.1.BlockList.0.TAt.be 	 torch.Size([1, 4, 4])
+submodule.1.BlockList.0.TAt.Ve 	 torch.Size([4, 4])
+submodule.1.BlockList.0.SAt.W1 	 torch.Size([4])
+submodule.1.BlockList.0.SAt.W2 	 torch.Size([1, 4])
+submodule.1.BlockList.0.SAt.W3 	 torch.Size([1])
+submodule.1.BlockList.0.SAt.bs 	 torch.Size([1, 277, 277])
+submodule.1.BlockList.0.SAt.Vs 	 torch.Size([277, 277])
+submodule.1.BlockList.0.cheb_conv_SAt.Theta.0 	 torch.Size([1, 64])
+submodule.1.BlockList.0.cheb_conv_SAt.Theta.1 	 torch.Size([1, 64])
+submodule.1.BlockList.0.cheb_conv_SAt.Theta.2 	 torch.Size([1, 64])
+submodule.1.BlockList.0.time_conv.weight 	 torch.Size([64, 64, 1, 3])
+submodule.1.BlockList.0.time_conv.bias 	 torch.Size([64])
+submodule.1.BlockList.0.residual_conv.weight 	 torch.Size([64, 1, 1, 1])
+submodule.1.BlockList.0.residual_conv.bias 	 torch.Size([64])
+submodule.1.BlockList.0.ln.weight 	 torch.Size([64])
+submodule.1.BlockList.0.ln.bias 	 torch.Size([64])
+submodule.1.BlockList.1.TAt.U1 	 torch.Size([277])
+submodule.1.BlockList.1.TAt.U2 	 torch.Size([64, 277])
+submodule.1.BlockList.1.TAt.U3 	 torch.Size([64])
+submodule.1.BlockList.1.TAt.be 	 torch.Size([1, 4, 4])
+submodule.1.BlockList.1.TAt.Ve 	 torch.Size([4, 4])
+submodule.1.BlockList.1.SAt.W1 	 torch.Size([4])
+submodule.1.BlockList.1.SAt.W2 	 torch.Size([64, 4])
+submodule.1.BlockList.1.SAt.W3 	 torch.Size([64])
+submodule.1.BlockList.1.SAt.bs 	 torch.Size([1, 277, 277])
+submodule.1.BlockList.1.SAt.Vs 	 torch.Size([277, 277])
+submodule.1.BlockList.1.cheb_conv_SAt.Theta.0 	 torch.Size([64, 64])
+submodule.1.BlockList.1.cheb_conv_SAt.Theta.1 	 torch.Size([64, 64])
+submodule.1.BlockList.1.cheb_conv_SAt.Theta.2 	 torch.Size([64, 64])
+submodule.1.BlockList.1.time_conv.weight 	 torch.Size([64, 64, 1, 3])
+submodule.1.BlockList.1.time_conv.bias 	 torch.Size([64])
+submodule.1.BlockList.1.residual_conv.weight 	 torch.Size([64, 64, 1, 1])
+submodule.1.BlockList.1.residual_conv.bias 	 torch.Size([64])
+submodule.1.BlockList.1.ln.weight 	 torch.Size([64])
+submodule.1.BlockList.1.ln.bias 	 torch.Size([64])
+submodule.1.final_conv.weight 	 torch.Size([4, 4, 1, 64])
+submodule.1.final_conv.bias 	 torch.Size([4])
+submodule.2.W 	 torch.Size([277, 4])
+submodule.2.BlockList.0.TAt.U1 	 torch.Size([277])
+submodule.2.BlockList.0.TAt.U2 	 torch.Size([1, 277])
+submodule.2.BlockList.0.TAt.U3 	 torch.Size([1])
+submodule.2.BlockList.0.TAt.be 	 torch.Size([1, 4, 4])
+submodule.2.BlockList.0.TAt.Ve 	 torch.Size([4, 4])
+submodule.2.BlockList.0.SAt.W1 	 torch.Size([4])
+submodule.2.BlockList.0.SAt.W2 	 torch.Size([1, 4])
+submodule.2.BlockList.0.SAt.W3 	 torch.Size([1])
+submodule.2.BlockList.0.SAt.bs 	 torch.Size([1, 277, 277])
+submodule.2.BlockList.0.SAt.Vs 	 torch.Size([277, 277])
+submodule.2.BlockList.0.cheb_conv_SAt.Theta.0 	 torch.Size([1, 64])
+submodule.2.BlockList.0.cheb_conv_SAt.Theta.1 	 torch.Size([1, 64])
+submodule.2.BlockList.0.cheb_conv_SAt.Theta.2 	 torch.Size([1, 64])
+submodule.2.BlockList.0.time_conv.weight 	 torch.Size([64, 64, 1, 3])
+submodule.2.BlockList.0.time_conv.bias 	 torch.Size([64])
+submodule.2.BlockList.0.residual_conv.weight 	 torch.Size([64, 1, 1, 1])
+submodule.2.BlockList.0.residual_conv.bias 	 torch.Size([64])
+submodule.2.BlockList.0.ln.weight 	 torch.Size([64])
+submodule.2.BlockList.0.ln.bias 	 torch.Size([64])
+submodule.2.BlockList.1.TAt.U1 	 torch.Size([277])
+submodule.2.BlockList.1.TAt.U2 	 torch.Size([64, 277])
+submodule.2.BlockList.1.TAt.U3 	 torch.Size([64])
+submodule.2.BlockList.1.TAt.be 	 torch.Size([1, 4, 4])
+submodule.2.BlockList.1.TAt.Ve 	 torch.Size([4, 4])
+submodule.2.BlockList.1.SAt.W1 	 torch.Size([4])
+submodule.2.BlockList.1.SAt.W2 	 torch.Size([64, 4])
+submodule.2.BlockList.1.SAt.W3 	 torch.Size([64])
+submodule.2.BlockList.1.SAt.bs 	 torch.Size([1, 277, 277])
+submodule.2.BlockList.1.SAt.Vs 	 torch.Size([277, 277])
+submodule.2.BlockList.1.cheb_conv_SAt.Theta.0 	 torch.Size([64, 64])
+submodule.2.BlockList.1.cheb_conv_SAt.Theta.1 	 torch.Size([64, 64])
+submodule.2.BlockList.1.cheb_conv_SAt.Theta.2 	 torch.Size([64, 64])
+submodule.2.BlockList.1.time_conv.weight 	 torch.Size([64, 64, 1, 3])
+submodule.2.BlockList.1.time_conv.bias 	 torch.Size([64])
+submodule.2.BlockList.1.residual_conv.weight 	 torch.Size([64, 64, 1, 1])
+submodule.2.BlockList.1.residual_conv.bias 	 torch.Size([64])
+submodule.2.BlockList.1.ln.weight 	 torch.Size([64])
+submodule.2.BlockList.1.ln.bias 	 torch.Size([64])
+submodule.2.final_conv.weight 	 torch.Size([4, 4, 1, 64])
+submodule.2.final_conv.bias 	 torch.Size([4])
+Net's total params: 1109403
+Optimizer's state_dict:
+state 	 {}
+param_groups 	 [{'lr': 0.001, 'betas': (0.9, 0.999), 'eps': 1e-08, 'weight_decay': 0, 'amsgrad': False, 'maximize': False, 'params': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122]}]
+validation batch 1 / 87, loss: 580058.31
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_0.params
+validation batch 1 / 87, loss: 350296.78
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_1.params
+validation batch 1 / 87, loss: 37308.41
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_2.params
+validation batch 1 / 87, loss: 5334.55
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_3.params
+global step: 1000, training loss: 6947.17, time: 207.74s
+validation batch 1 / 87, loss: 3206.85
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_4.params
+validation batch 1 / 87, loss: 3141.68
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_5.params
+validation batch 1 / 87, loss: 2523.92
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_6.params
+validation batch 1 / 87, loss: 2399.33
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_7.params
+global step: 2000, training loss: 3491.94, time: 415.55s
+validation batch 1 / 87, loss: 2470.61
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_8.params
+validation batch 1 / 87, loss: 2301.99
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_9.params
+validation batch 1 / 87, loss: 2468.58
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_10.params
+validation batch 1 / 87, loss: 2559.34
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_11.params
+global step: 3000, training loss: 2492.27, time: 633.23s
+validation batch 1 / 87, loss: 2272.43
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_12.params
+validation batch 1 / 87, loss: 3129.35
+validation batch 1 / 87, loss: 3113.79
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_14.params
+validation batch 1 / 87, loss: 2547.39
+global step: 4000, training loss: 4370.61, time: 840.44s
+validation batch 1 / 87, loss: 2158.61
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_16.params
+validation batch 1 / 87, loss: 2208.43
+validation batch 1 / 87, loss: 2150.54
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_18.params
+validation batch 1 / 87, loss: 2412.51
+global step: 5000, training loss: 3170.57, time: 1046.70s
+validation batch 1 / 87, loss: 2207.81
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_20.params
+validation batch 1 / 87, loss: 2308.25
+validation batch 1 / 87, loss: 2291.77
+validation batch 1 / 87, loss: 2953.34
+global step: 6000, training loss: 4763.24, time: 1254.94s
+validation batch 1 / 87, loss: 2098.60
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_24.params
+validation batch 1 / 87, loss: 2166.45
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_25.params
+validation batch 1 / 87, loss: 2511.81
+global step: 7000, training loss: 2796.95, time: 1447.62s
+validation batch 1 / 87, loss: 2201.26
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_27.params
+validation batch 1 / 87, loss: 2111.46
+validation batch 1 / 87, loss: 2211.82
+validation batch 1 / 87, loss: 2194.19
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_30.params
+global step: 8000, training loss: 2290.20, time: 1655.14s
+validation batch 1 / 87, loss: 2124.78
+validation batch 1 / 87, loss: 2092.18
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_32.params
+validation batch 1 / 87, loss: 2253.86
+validation batch 1 / 87, loss: 2465.67
+global step: 9000, training loss: 2178.52, time: 1861.75s
+validation batch 1 / 87, loss: 2304.67
+validation batch 1 / 87, loss: 2054.14
+validation batch 1 / 87, loss: 2070.77
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_37.params
+validation batch 1 / 87, loss: 2060.38
+global step: 10000, training loss: 2450.10, time: 2069.23s
+validation batch 1 / 87, loss: 2081.40
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_39.params
+validation batch 1 / 87, loss: 2089.49
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_40.params
+validation batch 1 / 87, loss: 2196.48
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_41.params
+validation batch 1 / 87, loss: 2039.47
+global step: 11000, training loss: 1899.74, time: 2280.75s
+validation batch 1 / 87, loss: 2064.57
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_43.params
+validation batch 1 / 87, loss: 2221.84
+validation batch 1 / 87, loss: 2296.93
+validation batch 1 / 87, loss: 2254.56
+global step: 12000, training loss: 3298.54, time: 2488.93s
+validation batch 1 / 87, loss: 2037.42
+validation batch 1 / 87, loss: 2051.00
+validation batch 1 / 87, loss: 2091.35
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_49.params
+global step: 13000, training loss: 1781.71, time: 2683.23s
+validation batch 1 / 87, loss: 2170.29
+validation batch 1 / 87, loss: 2327.64
+validation batch 1 / 87, loss: 2071.19
+validation batch 1 / 87, loss: 2178.63
+global step: 14000, training loss: 1858.76, time: 2895.83s
+validation batch 1 / 87, loss: 2989.97
+validation batch 1 / 87, loss: 2063.42
+validation batch 1 / 87, loss: 2035.03
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_56.params
+validation batch 1 / 87, loss: 2051.00
+global step: 15000, training loss: 2408.00, time: 3115.42s
+validation batch 1 / 87, loss: 2218.91
+validation batch 1 / 87, loss: 2108.96
+validation batch 1 / 87, loss: 2034.94
+validation batch 1 / 87, loss: 1986.88
+global step: 16000, training loss: 2391.56, time: 3326.29s
+validation batch 1 / 87, loss: 2549.81
+validation batch 1 / 87, loss: 2075.54
+validation batch 1 / 87, loss: 2059.81
+validation batch 1 / 87, loss: 2104.55
+global step: 17000, training loss: 1768.18, time: 3535.44s
+validation batch 1 / 87, loss: 2050.81
+validation batch 1 / 87, loss: 1998.93
+validation batch 1 / 87, loss: 2012.86
+validation batch 1 / 87, loss: 2005.69
+global step: 18000, training loss: 2570.07, time: 3746.64s
+validation batch 1 / 87, loss: 2584.52
+validation batch 1 / 87, loss: 2015.61
+save parameters to file: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_71.params
+validation batch 1 / 87, loss: 2036.00
+validation batch 1 / 87, loss: 2389.09
+global step: 19000, training loss: 2161.14, time: 3962.95s
+validation batch 1 / 87, loss: 1934.67
+validation batch 1 / 87, loss: 1958.18
+validation batch 1 / 87, loss: 2036.33
+global step: 20000, training loss: 2454.19, time: 4162.65s
+validation batch 1 / 87, loss: 2019.31
+validation batch 1 / 87, loss: 2136.95
+validation batch 1 / 87, loss: 2021.63
+validation batch 1 / 87, loss: 2233.04
+global step: 21000, training loss: 1683.87, time: 4369.74s
+validation batch 1 / 87, loss: 2072.47
+validation batch 1 / 87, loss: 2238.79
+validation batch 1 / 87, loss: 2074.23
+validation batch 1 / 87, loss: 2172.67
+global step: 22000, training loss: 2590.82, time: 4575.53s
+validation batch 1 / 87, loss: 2190.40
+validation batch 1 / 87, loss: 2334.98
+validation batch 1 / 87, loss: 2036.69
+validation batch 1 / 87, loss: 2011.47
+global step: 23000, training loss: 1940.39, time: 4780.15s
+validation batch 1 / 87, loss: 2150.11
+validation batch 1 / 87, loss: 2084.29
+validation batch 1 / 87, loss: 2475.32
+validation batch 1 / 87, loss: 2360.26
+global step: 24000, training loss: 2144.97, time: 4991.83s
+validation batch 1 / 87, loss: 2043.36
+validation batch 1 / 87, loss: 2063.37
+validation batch 1 / 87, loss: 2101.80
+validation batch 1 / 87, loss: 2134.09
+global step: 25000, training loss: 2233.91, time: 5203.93s
+validation batch 1 / 87, loss: 2289.43
+validation batch 1 / 87, loss: 2374.24
+validation batch 1 / 87, loss: 2022.11
+global step: 26000, training loss: 1019.61, time: 5402.45s
+best epoch: 71
+load weight from: experiments2/Manchester/astgcn_r_h1d1w1_channel1_1.000000e-03/epoch_71.params
+predicting data set batch 1 / 87
+prediction: (2765, 277, 4)
+data_target_tensor: (2765, 277, 4)
+current epoch: 71, predict 0 points
+MAE: 28.04
+RMSE: 44.64
+MAPE: 18.14
+current epoch: 71, predict 1 points
+MAE: 32.30
+RMSE: 52.62
+MAPE: 21.76
+current epoch: 71, predict 2 points
+MAE: 34.97
+RMSE: 57.63
+MAPE: 24.50
+current epoch: 71, predict 3 points
+MAE: 38.05
+RMSE: 62.80
+MAPE: 27.10
+all MAE: 33.34
+all RMSE: 54.83
+all MAPE: 22.88
+[28.041872, 44.635446901730326, 18.13962161540985, 32.301952, 52.62181041774052, 21.76315039396286, 34.970646, 57.63136319260113, 24.499672651290894, 38.048992, 62.79669616172594, 27.103689312934875, 33.340862, 54.83198324626559, 22.87652939558029]
+
+Process finished with exit code 0

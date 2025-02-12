@@ -1,0 +1,837 @@
+ssh://root@region-42.seetacloud.com:18622/root/miniconda3/bin/python -u /project/DSTAGNN-main/train_DSTAGNN_my.py
+Read configuration file: configurations/PEMS08_dstagnn.conf
+CUDA: True cuda:0
+folder_dir: dstagnn_h1d0w0_channel1_1.000000e-04
+params_path: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04
+load file: ./data/PEMS08/PEMS08_r1_d0_w0_dstagnn
+train: torch.Size([10699, 170, 1, 12]) torch.Size([10699, 170, 12])
+val: torch.Size([3567, 170, 1, 12]) torch.Size([3567, 170, 12])
+test: torch.Size([3567, 170, 1, 12]) torch.Size([3567, 170, 12])
+delete the old one and create params directory myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04
+param list:
+CUDA	 cuda:0
+in_channels	 1
+nb_block	 4
+nb_chev_filter	 32
+nb_time_filter	 32
+time_strides	 1
+batch_size	 64
+graph_signal_matrix_filename	 ./data/PEMS08/PEMS08.npz
+start_epoch	 0
+epochs	 100
+DSTAGNN_submodule(
+  (BlockList): ModuleList(
+    (0): DSTAGNN_block(
+      (sigmoid): Sigmoid()
+      (tanh): Tanh()
+      (relu): ReLU(inplace=True)
+      (pre_conv): Conv2d(12, 512, kernel_size=(1, 1), stride=(1, 1))
+      (EmbedT): Embedding(
+        (pos_embed): Embedding(12, 170)
+        (norm): LayerNorm((170,), eps=1e-05, elementwise_affine=True)
+      )
+      (EmbedS): Embedding(
+        (pos_embed): Embedding(170, 512)
+        (norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (TAt): MultiHeadAttention(
+        (W_Q): Linear(in_features=170, out_features=96, bias=False)
+        (W_K): Linear(in_features=170, out_features=96, bias=False)
+        (W_V): Linear(in_features=170, out_features=96, bias=False)
+        (fc): Linear(in_features=96, out_features=170, bias=False)
+      )
+      (SAt): SMultiHeadAttention(
+        (W_Q): Linear(in_features=512, out_features=96, bias=False)
+        (W_K): Linear(in_features=512, out_features=96, bias=False)
+      )
+      (cheb_conv_SAt): cheb_conv_withSAt(
+        (relu): ReLU(inplace=True)
+        (Theta): ParameterList(
+            (0): Parameter containing: [torch.cuda.FloatTensor of size 1x32 (GPU 0)]
+            (1): Parameter containing: [torch.cuda.FloatTensor of size 1x32 (GPU 0)]
+            (2): Parameter containing: [torch.cuda.FloatTensor of size 1x32 (GPU 0)]
+        )
+        (mask): ParameterList(
+            (0): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+            (1): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+            (2): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+        )
+      )
+      (gtu3): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 3), stride=(1, 1))
+      )
+      (gtu5): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 5), stride=(1, 1))
+      )
+      (gtu7): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 7), stride=(1, 1))
+      )
+      (pooling): MaxPool2d(kernel_size=(1, 2), stride=(1, 2), padding=0, dilation=1, ceil_mode=False)
+      (residual_conv): Conv2d(1, 32, kernel_size=(1, 1), stride=(1, 1))
+      (dropout): Dropout(p=0.05, inplace=False)
+      (fcmy): Sequential(
+        (0): Linear(in_features=24, out_features=12, bias=True)
+        (1): Dropout(p=0.05, inplace=False)
+      )
+      (ln): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+    )
+    (1): DSTAGNN_block(
+      (sigmoid): Sigmoid()
+      (tanh): Tanh()
+      (relu): ReLU(inplace=True)
+      (pre_conv): Conv2d(12, 512, kernel_size=(1, 32), stride=(1, 1))
+      (EmbedT): Embedding(
+        (pos_embed): Embedding(12, 170)
+        (norm): LayerNorm((170,), eps=1e-05, elementwise_affine=True)
+      )
+      (EmbedS): Embedding(
+        (pos_embed): Embedding(170, 512)
+        (norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (TAt): MultiHeadAttention(
+        (W_Q): Linear(in_features=170, out_features=96, bias=False)
+        (W_K): Linear(in_features=170, out_features=96, bias=False)
+        (W_V): Linear(in_features=170, out_features=96, bias=False)
+        (fc): Linear(in_features=96, out_features=170, bias=False)
+      )
+      (SAt): SMultiHeadAttention(
+        (W_Q): Linear(in_features=512, out_features=96, bias=False)
+        (W_K): Linear(in_features=512, out_features=96, bias=False)
+      )
+      (cheb_conv_SAt): cheb_conv_withSAt(
+        (relu): ReLU(inplace=True)
+        (Theta): ParameterList(
+            (0): Parameter containing: [torch.cuda.FloatTensor of size 32x32 (GPU 0)]
+            (1): Parameter containing: [torch.cuda.FloatTensor of size 32x32 (GPU 0)]
+            (2): Parameter containing: [torch.cuda.FloatTensor of size 32x32 (GPU 0)]
+        )
+        (mask): ParameterList(
+            (0): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+            (1): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+            (2): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+        )
+      )
+      (gtu3): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 3), stride=(1, 1))
+      )
+      (gtu5): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 5), stride=(1, 1))
+      )
+      (gtu7): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 7), stride=(1, 1))
+      )
+      (pooling): MaxPool2d(kernel_size=(1, 2), stride=(1, 2), padding=0, dilation=1, ceil_mode=False)
+      (residual_conv): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))
+      (dropout): Dropout(p=0.05, inplace=False)
+      (fcmy): Sequential(
+        (0): Linear(in_features=24, out_features=12, bias=True)
+        (1): Dropout(p=0.05, inplace=False)
+      )
+      (ln): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+    )
+    (2): DSTAGNN_block(
+      (sigmoid): Sigmoid()
+      (tanh): Tanh()
+      (relu): ReLU(inplace=True)
+      (pre_conv): Conv2d(12, 512, kernel_size=(1, 32), stride=(1, 1))
+      (EmbedT): Embedding(
+        (pos_embed): Embedding(12, 170)
+        (norm): LayerNorm((170,), eps=1e-05, elementwise_affine=True)
+      )
+      (EmbedS): Embedding(
+        (pos_embed): Embedding(170, 512)
+        (norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (TAt): MultiHeadAttention(
+        (W_Q): Linear(in_features=170, out_features=96, bias=False)
+        (W_K): Linear(in_features=170, out_features=96, bias=False)
+        (W_V): Linear(in_features=170, out_features=96, bias=False)
+        (fc): Linear(in_features=96, out_features=170, bias=False)
+      )
+      (SAt): SMultiHeadAttention(
+        (W_Q): Linear(in_features=512, out_features=96, bias=False)
+        (W_K): Linear(in_features=512, out_features=96, bias=False)
+      )
+      (cheb_conv_SAt): cheb_conv_withSAt(
+        (relu): ReLU(inplace=True)
+        (Theta): ParameterList(
+            (0): Parameter containing: [torch.cuda.FloatTensor of size 32x32 (GPU 0)]
+            (1): Parameter containing: [torch.cuda.FloatTensor of size 32x32 (GPU 0)]
+            (2): Parameter containing: [torch.cuda.FloatTensor of size 32x32 (GPU 0)]
+        )
+        (mask): ParameterList(
+            (0): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+            (1): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+            (2): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+        )
+      )
+      (gtu3): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 3), stride=(1, 1))
+      )
+      (gtu5): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 5), stride=(1, 1))
+      )
+      (gtu7): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 7), stride=(1, 1))
+      )
+      (pooling): MaxPool2d(kernel_size=(1, 2), stride=(1, 2), padding=0, dilation=1, ceil_mode=False)
+      (residual_conv): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))
+      (dropout): Dropout(p=0.05, inplace=False)
+      (fcmy): Sequential(
+        (0): Linear(in_features=24, out_features=12, bias=True)
+        (1): Dropout(p=0.05, inplace=False)
+      )
+      (ln): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+    )
+    (3): DSTAGNN_block(
+      (sigmoid): Sigmoid()
+      (tanh): Tanh()
+      (relu): ReLU(inplace=True)
+      (pre_conv): Conv2d(12, 512, kernel_size=(1, 32), stride=(1, 1))
+      (EmbedT): Embedding(
+        (pos_embed): Embedding(12, 170)
+        (norm): LayerNorm((170,), eps=1e-05, elementwise_affine=True)
+      )
+      (EmbedS): Embedding(
+        (pos_embed): Embedding(170, 512)
+        (norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (TAt): MultiHeadAttention(
+        (W_Q): Linear(in_features=170, out_features=96, bias=False)
+        (W_K): Linear(in_features=170, out_features=96, bias=False)
+        (W_V): Linear(in_features=170, out_features=96, bias=False)
+        (fc): Linear(in_features=96, out_features=170, bias=False)
+      )
+      (SAt): SMultiHeadAttention(
+        (W_Q): Linear(in_features=512, out_features=96, bias=False)
+        (W_K): Linear(in_features=512, out_features=96, bias=False)
+      )
+      (cheb_conv_SAt): cheb_conv_withSAt(
+        (relu): ReLU(inplace=True)
+        (Theta): ParameterList(
+            (0): Parameter containing: [torch.cuda.FloatTensor of size 32x32 (GPU 0)]
+            (1): Parameter containing: [torch.cuda.FloatTensor of size 32x32 (GPU 0)]
+            (2): Parameter containing: [torch.cuda.FloatTensor of size 32x32 (GPU 0)]
+        )
+        (mask): ParameterList(
+            (0): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+            (1): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+            (2): Parameter containing: [torch.cuda.FloatTensor of size 170x170 (GPU 0)]
+        )
+      )
+      (gtu3): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 3), stride=(1, 1))
+      )
+      (gtu5): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 5), stride=(1, 1))
+      )
+      (gtu7): GTU(
+        (tanh): Tanh()
+        (sigmoid): Sigmoid()
+        (con2out): Conv2d(32, 64, kernel_size=(1, 7), stride=(1, 1))
+      )
+      (pooling): MaxPool2d(kernel_size=(1, 2), stride=(1, 2), padding=0, dilation=1, ceil_mode=False)
+      (residual_conv): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))
+      (dropout): Dropout(p=0.05, inplace=False)
+      (fcmy): Sequential(
+        (0): Linear(in_features=24, out_features=12, bias=True)
+        (1): Dropout(p=0.05, inplace=False)
+      )
+      (ln): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (final_conv): Conv2d(48, 128, kernel_size=(1, 32), stride=(1, 1))
+  (final_fc): Linear(in_features=128, out_features=12, bias=True)
+)
+Net's state_dict:
+BlockList.0.pre_conv.weight 	 torch.Size([512, 12, 1, 1])
+BlockList.0.pre_conv.bias 	 torch.Size([512])
+BlockList.0.EmbedT.pos_embed.weight 	 torch.Size([12, 170])
+BlockList.0.EmbedT.norm.weight 	 torch.Size([170])
+BlockList.0.EmbedT.norm.bias 	 torch.Size([170])
+BlockList.0.EmbedS.pos_embed.weight 	 torch.Size([170, 512])
+BlockList.0.EmbedS.norm.weight 	 torch.Size([512])
+BlockList.0.EmbedS.norm.bias 	 torch.Size([512])
+BlockList.0.TAt.W_Q.weight 	 torch.Size([96, 170])
+BlockList.0.TAt.W_K.weight 	 torch.Size([96, 170])
+BlockList.0.TAt.W_V.weight 	 torch.Size([96, 170])
+BlockList.0.TAt.fc.weight 	 torch.Size([170, 96])
+BlockList.0.SAt.W_Q.weight 	 torch.Size([96, 512])
+BlockList.0.SAt.W_K.weight 	 torch.Size([96, 512])
+BlockList.0.cheb_conv_SAt.Theta.0 	 torch.Size([1, 32])
+BlockList.0.cheb_conv_SAt.Theta.1 	 torch.Size([1, 32])
+BlockList.0.cheb_conv_SAt.Theta.2 	 torch.Size([1, 32])
+BlockList.0.cheb_conv_SAt.mask.0 	 torch.Size([170, 170])
+BlockList.0.cheb_conv_SAt.mask.1 	 torch.Size([170, 170])
+BlockList.0.cheb_conv_SAt.mask.2 	 torch.Size([170, 170])
+BlockList.0.gtu3.con2out.weight 	 torch.Size([64, 32, 1, 3])
+BlockList.0.gtu3.con2out.bias 	 torch.Size([64])
+BlockList.0.gtu5.con2out.weight 	 torch.Size([64, 32, 1, 5])
+BlockList.0.gtu5.con2out.bias 	 torch.Size([64])
+BlockList.0.gtu7.con2out.weight 	 torch.Size([64, 32, 1, 7])
+BlockList.0.gtu7.con2out.bias 	 torch.Size([64])
+BlockList.0.residual_conv.weight 	 torch.Size([32, 1, 1, 1])
+BlockList.0.residual_conv.bias 	 torch.Size([32])
+BlockList.0.fcmy.0.weight 	 torch.Size([12, 24])
+BlockList.0.fcmy.0.bias 	 torch.Size([12])
+BlockList.0.ln.weight 	 torch.Size([32])
+BlockList.0.ln.bias 	 torch.Size([32])
+BlockList.1.pre_conv.weight 	 torch.Size([512, 12, 1, 32])
+BlockList.1.pre_conv.bias 	 torch.Size([512])
+BlockList.1.EmbedT.pos_embed.weight 	 torch.Size([12, 170])
+BlockList.1.EmbedT.norm.weight 	 torch.Size([170])
+BlockList.1.EmbedT.norm.bias 	 torch.Size([170])
+BlockList.1.EmbedS.pos_embed.weight 	 torch.Size([170, 512])
+BlockList.1.EmbedS.norm.weight 	 torch.Size([512])
+BlockList.1.EmbedS.norm.bias 	 torch.Size([512])
+BlockList.1.TAt.W_Q.weight 	 torch.Size([96, 170])
+BlockList.1.TAt.W_K.weight 	 torch.Size([96, 170])
+BlockList.1.TAt.W_V.weight 	 torch.Size([96, 170])
+BlockList.1.TAt.fc.weight 	 torch.Size([170, 96])
+BlockList.1.SAt.W_Q.weight 	 torch.Size([96, 512])
+BlockList.1.SAt.W_K.weight 	 torch.Size([96, 512])
+BlockList.1.cheb_conv_SAt.Theta.0 	 torch.Size([32, 32])
+BlockList.1.cheb_conv_SAt.Theta.1 	 torch.Size([32, 32])
+BlockList.1.cheb_conv_SAt.Theta.2 	 torch.Size([32, 32])
+BlockList.1.cheb_conv_SAt.mask.0 	 torch.Size([170, 170])
+BlockList.1.cheb_conv_SAt.mask.1 	 torch.Size([170, 170])
+BlockList.1.cheb_conv_SAt.mask.2 	 torch.Size([170, 170])
+BlockList.1.gtu3.con2out.weight 	 torch.Size([64, 32, 1, 3])
+BlockList.1.gtu3.con2out.bias 	 torch.Size([64])
+BlockList.1.gtu5.con2out.weight 	 torch.Size([64, 32, 1, 5])
+BlockList.1.gtu5.con2out.bias 	 torch.Size([64])
+BlockList.1.gtu7.con2out.weight 	 torch.Size([64, 32, 1, 7])
+BlockList.1.gtu7.con2out.bias 	 torch.Size([64])
+BlockList.1.residual_conv.weight 	 torch.Size([32, 32, 1, 1])
+BlockList.1.residual_conv.bias 	 torch.Size([32])
+BlockList.1.fcmy.0.weight 	 torch.Size([12, 24])
+BlockList.1.fcmy.0.bias 	 torch.Size([12])
+BlockList.1.ln.weight 	 torch.Size([32])
+BlockList.1.ln.bias 	 torch.Size([32])
+BlockList.2.pre_conv.weight 	 torch.Size([512, 12, 1, 32])
+BlockList.2.pre_conv.bias 	 torch.Size([512])
+BlockList.2.EmbedT.pos_embed.weight 	 torch.Size([12, 170])
+BlockList.2.EmbedT.norm.weight 	 torch.Size([170])
+BlockList.2.EmbedT.norm.bias 	 torch.Size([170])
+BlockList.2.EmbedS.pos_embed.weight 	 torch.Size([170, 512])
+BlockList.2.EmbedS.norm.weight 	 torch.Size([512])
+BlockList.2.EmbedS.norm.bias 	 torch.Size([512])
+BlockList.2.TAt.W_Q.weight 	 torch.Size([96, 170])
+BlockList.2.TAt.W_K.weight 	 torch.Size([96, 170])
+BlockList.2.TAt.W_V.weight 	 torch.Size([96, 170])
+BlockList.2.TAt.fc.weight 	 torch.Size([170, 96])
+BlockList.2.SAt.W_Q.weight 	 torch.Size([96, 512])
+BlockList.2.SAt.W_K.weight 	 torch.Size([96, 512])
+BlockList.2.cheb_conv_SAt.Theta.0 	 torch.Size([32, 32])
+BlockList.2.cheb_conv_SAt.Theta.1 	 torch.Size([32, 32])
+BlockList.2.cheb_conv_SAt.Theta.2 	 torch.Size([32, 32])
+BlockList.2.cheb_conv_SAt.mask.0 	 torch.Size([170, 170])
+BlockList.2.cheb_conv_SAt.mask.1 	 torch.Size([170, 170])
+BlockList.2.cheb_conv_SAt.mask.2 	 torch.Size([170, 170])
+BlockList.2.gtu3.con2out.weight 	 torch.Size([64, 32, 1, 3])
+BlockList.2.gtu3.con2out.bias 	 torch.Size([64])
+BlockList.2.gtu5.con2out.weight 	 torch.Size([64, 32, 1, 5])
+BlockList.2.gtu5.con2out.bias 	 torch.Size([64])
+BlockList.2.gtu7.con2out.weight 	 torch.Size([64, 32, 1, 7])
+BlockList.2.gtu7.con2out.bias 	 torch.Size([64])
+BlockList.2.residual_conv.weight 	 torch.Size([32, 32, 1, 1])
+BlockList.2.residual_conv.bias 	 torch.Size([32])
+BlockList.2.fcmy.0.weight 	 torch.Size([12, 24])
+BlockList.2.fcmy.0.bias 	 torch.Size([12])
+BlockList.2.ln.weight 	 torch.Size([32])
+BlockList.2.ln.bias 	 torch.Size([32])
+BlockList.3.pre_conv.weight 	 torch.Size([512, 12, 1, 32])
+BlockList.3.pre_conv.bias 	 torch.Size([512])
+BlockList.3.EmbedT.pos_embed.weight 	 torch.Size([12, 170])
+BlockList.3.EmbedT.norm.weight 	 torch.Size([170])
+BlockList.3.EmbedT.norm.bias 	 torch.Size([170])
+BlockList.3.EmbedS.pos_embed.weight 	 torch.Size([170, 512])
+BlockList.3.EmbedS.norm.weight 	 torch.Size([512])
+BlockList.3.EmbedS.norm.bias 	 torch.Size([512])
+BlockList.3.TAt.W_Q.weight 	 torch.Size([96, 170])
+BlockList.3.TAt.W_K.weight 	 torch.Size([96, 170])
+BlockList.3.TAt.W_V.weight 	 torch.Size([96, 170])
+BlockList.3.TAt.fc.weight 	 torch.Size([170, 96])
+BlockList.3.SAt.W_Q.weight 	 torch.Size([96, 512])
+BlockList.3.SAt.W_K.weight 	 torch.Size([96, 512])
+BlockList.3.cheb_conv_SAt.Theta.0 	 torch.Size([32, 32])
+BlockList.3.cheb_conv_SAt.Theta.1 	 torch.Size([32, 32])
+BlockList.3.cheb_conv_SAt.Theta.2 	 torch.Size([32, 32])
+BlockList.3.cheb_conv_SAt.mask.0 	 torch.Size([170, 170])
+BlockList.3.cheb_conv_SAt.mask.1 	 torch.Size([170, 170])
+BlockList.3.cheb_conv_SAt.mask.2 	 torch.Size([170, 170])
+BlockList.3.gtu3.con2out.weight 	 torch.Size([64, 32, 1, 3])
+BlockList.3.gtu3.con2out.bias 	 torch.Size([64])
+BlockList.3.gtu5.con2out.weight 	 torch.Size([64, 32, 1, 5])
+BlockList.3.gtu5.con2out.bias 	 torch.Size([64])
+BlockList.3.gtu7.con2out.weight 	 torch.Size([64, 32, 1, 7])
+BlockList.3.gtu7.con2out.bias 	 torch.Size([64])
+BlockList.3.residual_conv.weight 	 torch.Size([32, 32, 1, 1])
+BlockList.3.residual_conv.bias 	 torch.Size([32])
+BlockList.3.fcmy.0.weight 	 torch.Size([12, 24])
+BlockList.3.fcmy.0.bias 	 torch.Size([12])
+BlockList.3.ln.weight 	 torch.Size([32])
+BlockList.3.ln.bias 	 torch.Size([32])
+final_conv.weight 	 torch.Size([128, 48, 1, 32])
+final_conv.bias 	 torch.Size([128])
+final_fc.weight 	 torch.Size([12, 128])
+final_fc.bias 	 torch.Size([12])
+Net's total params: 2296860
+Optimizer's state_dict:
+state 	 {}
+param_groups 	 [{'lr': 0.0001, 'betas': (0.9, 0.999), 'eps': 1e-08, 'weight_decay': 0, 'amsgrad': False, 'maximize': False, 'params': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131]}]
+current epoch:  0
+validation batch 1 / 56, loss: 65.783401
+val loss 62.82407072612217
+best epoch:  0
+best val loss:  62.82407072612217
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_0.params
+current epoch:  1
+validation batch 1 / 56, loss: 1.216818
+val loss 1.8838546382529395
+best epoch:  1
+best val loss:  1.8838546382529395
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_1.params
+current epoch:  2
+validation batch 1 / 56, loss: 0.994958
+val loss 1.6310950560229165
+best epoch:  2
+best val loss:  1.6310950560229165
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_2.params
+current epoch:  3
+validation batch 1 / 56, loss: 0.762158
+val loss 1.4161480409758431
+best epoch:  3
+best val loss:  1.4161480409758431
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_3.params
+current epoch:  4
+validation batch 1 / 56, loss: 0.697087
+val loss 1.3620493497167314
+best epoch:  4
+best val loss:  1.3620493497167314
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_4.params
+current epoch:  5
+validation batch 1 / 56, loss: 0.618864
+val loss 1.275764986872673
+best epoch:  5
+best val loss:  1.275764986872673
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_5.params
+global step: 1000, training loss: 1.203267, time: 813.116555s
+current epoch:  6
+validation batch 1 / 56, loss: 0.641889
+val loss 1.2851317003369331
+current epoch:  7
+validation batch 1 / 56, loss: 0.586528
+val loss 1.2407530487648077
+best epoch:  7
+best val loss:  1.2407530487648077
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_7.params
+current epoch:  8
+validation batch 1 / 56, loss: 0.557398
+val loss 1.2055841790778297
+best epoch:  8
+best val loss:  1.2055841790778297
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_8.params
+current epoch:  9
+validation batch 1 / 56, loss: 0.563024
+val loss 1.21246295103005
+current epoch:  10
+validation batch 1 / 56, loss: 0.518410
+val loss 1.1644149704703264
+best epoch:  10
+best val loss:  1.1644149704703264
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_10.params
+current epoch:  11
+validation batch 1 / 56, loss: 0.498804
+val loss 1.145576074719429
+best epoch:  11
+best val loss:  1.145576074719429
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_11.params
+global step: 2000, training loss: 1.009046, time: 1620.305903s
+current epoch:  12
+validation batch 1 / 56, loss: 0.565232
+val loss 1.185650113437857
+current epoch:  13
+validation batch 1 / 56, loss: 0.491243
+val loss 1.1316392836826188
+best epoch:  13
+best val loss:  1.1316392836826188
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_13.params
+current epoch:  14
+validation batch 1 / 56, loss: 0.529002
+val loss 1.1544146724045277
+current epoch:  15
+validation batch 1 / 56, loss: 0.488617
+val loss 1.122551828622818
+best epoch:  15
+best val loss:  1.122551828622818
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_15.params
+current epoch:  16
+validation batch 1 / 56, loss: 0.429321
+val loss 1.0827253114964281
+best epoch:  16
+best val loss:  1.0827253114964281
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_16.params
+current epoch:  17
+validation batch 1 / 56, loss: 0.453980
+val loss 1.0970557811004775
+global step: 3000, training loss: 0.885334, time: 2417.513561s
+current epoch:  18
+validation batch 1 / 56, loss: 0.496347
+val loss 1.125396997800895
+current epoch:  19
+validation batch 1 / 56, loss: 0.492404
+val loss 1.1272423128996576
+current epoch:  20
+validation batch 1 / 56, loss: 0.456257
+val loss 1.0979596706373351
+current epoch:  21
+validation batch 1 / 56, loss: 0.438521
+val loss 1.082731729639428
+current epoch:  22
+validation batch 1 / 56, loss: 0.443227
+val loss 1.0746879540383816
+best epoch:  22
+best val loss:  1.0746879540383816
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_22.params
+current epoch:  23
+validation batch 1 / 56, loss: 0.435592
+val loss 1.0818802932543414
+global step: 4000, training loss: 0.848163, time: 3219.713870s
+current epoch:  24
+validation batch 1 / 56, loss: 0.454520
+val loss 1.100302695695843
+current epoch:  25
+validation batch 1 / 56, loss: 0.424011
+val loss 1.074622186699084
+best epoch:  25
+best val loss:  1.074622186699084
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_25.params
+current epoch:  26
+validation batch 1 / 56, loss: 0.420635
+val loss 1.0732084294514996
+best epoch:  26
+best val loss:  1.0732084294514996
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_26.params
+current epoch:  27
+validation batch 1 / 56, loss: 0.413063
+val loss 1.0700456484087877
+best epoch:  27
+best val loss:  1.0700456484087877
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_27.params
+current epoch:  28
+validation batch 1 / 56, loss: 0.422245
+val loss 1.0691168228430408
+best epoch:  28
+best val loss:  1.0691168228430408
+save parameters to file: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_28.params
+current epoch:  29
+validation batch 1 / 56, loss: 0.438215
+val loss 1.0879503302276134
+global step: 5000, training loss: 0.827406, time: 4016.953214s
+current epoch:  30
+validation batch 1 / 56, loss: 0.413903
+val loss 1.0694593813802515
+current epoch:  31
+validation batch 1 / 56, loss: 0.416357
+val loss 1.077320114842483
+current epoch:  32
+validation batch 1 / 56, loss: 0.421040
+val loss 1.0763629701520716
+current epoch:  33
+validation batch 1 / 56, loss: 0.438630
+val loss 1.0801299193075724
+current epoch:  34
+validation batch 1 / 56, loss: 0.416927
+val loss 1.0720502558563436
+current epoch:  35
+validation batch 1 / 56, loss: 0.422555
+val loss 1.0776706146342414
+global step: 6000, training loss: 0.786718, time: 4825.342800s
+current epoch:  36
+validation batch 1 / 56, loss: 0.410572
+val loss 1.0723006017506123
+current epoch:  37
+validation batch 1 / 56, loss: 0.405761
+val loss 1.0739782841077872
+current epoch:  38
+validation batch 1 / 56, loss: 0.440461
+val loss 1.0872778679643358
+current epoch:  39
+validation batch 1 / 56, loss: 0.406167
+val loss 1.070827645914895
+current epoch:  40
+validation batch 1 / 56, loss: 0.443748
+val loss 1.0916360590074743
+current epoch:  41
+validation batch 1 / 56, loss: 0.415046
+val loss 1.076035204742636
+global step: 7000, training loss: 0.763617, time: 5636.205290s
+current epoch:  42
+validation batch 1 / 56, loss: 0.400784
+val loss 1.0724193751811981
+current epoch:  43
+validation batch 1 / 56, loss: 0.404939
+val loss 1.0768875064594405
+current epoch:  44
+validation batch 1 / 56, loss: 0.417462
+val loss 1.0889402824853147
+current epoch:  45
+validation batch 1 / 56, loss: 0.426786
+val loss 1.1051840814096587
+current epoch:  46
+validation batch 1 / 56, loss: 0.410152
+val loss 1.0800963443304812
+current epoch:  47
+validation batch 1 / 56, loss: 0.396194
+val loss 1.0767607662294592
+global step: 8000, training loss: 0.752273, time: 6437.745395s
+current epoch:  48
+validation batch 1 / 56, loss: 0.413237
+val loss 1.0823806646679128
+current epoch:  49
+validation batch 1 / 56, loss: 0.418590
+val loss 1.089421948151929
+current epoch:  50
+validation batch 1 / 56, loss: 0.415039
+val loss 1.0884308607450552
+current epoch:  51
+validation batch 1 / 56, loss: 0.413246
+val loss 1.0813541960503374
+current epoch:  52
+validation batch 1 / 56, loss: 0.401197
+val loss 1.0794961101242475
+current epoch:  53
+validation batch 1 / 56, loss: 0.414439
+val loss 1.094223731862647
+global step: 9000, training loss: 0.694424, time: 7227.807191s
+current epoch:  54
+validation batch 1 / 56, loss: 0.404570
+val loss 1.0737617840724332
+current epoch:  55
+validation batch 1 / 56, loss: 0.403803
+val loss 1.0870268930281912
+current epoch:  56
+validation batch 1 / 56, loss: 0.402320
+val loss 1.0866725189345223
+current epoch:  57
+validation batch 1 / 56, loss: 0.395529
+val loss 1.0858819378273827
+current epoch:  58
+validation batch 1 / 56, loss: 0.402020
+val loss 1.0880386637789863
+current epoch:  59
+validation batch 1 / 56, loss: 0.399585
+val loss 1.0859159837876047
+global step: 10000, training loss: 0.696194, time: 8019.695420s
+current epoch:  60
+validation batch 1 / 56, loss: 0.402799
+val loss 1.0895824347223555
+current epoch:  61
+validation batch 1 / 56, loss: 0.434661
+val loss 1.111141531595162
+current epoch:  62
+validation batch 1 / 56, loss: 0.405421
+val loss 1.0971908127622945
+current epoch:  63
+validation batch 1 / 56, loss: 0.411242
+val loss 1.102566510438919
+current epoch:  64
+validation batch 1 / 56, loss: 0.409120
+val loss 1.0982744922595364
+current epoch:  65
+validation batch 1 / 56, loss: 0.400502
+val loss 1.0893730707466602
+global step: 11000, training loss: 0.651314, time: 8794.992759s
+current epoch:  66
+validation batch 1 / 56, loss: 0.400191
+val loss 1.090613986232451
+current epoch:  67
+validation batch 1 / 56, loss: 0.417010
+val loss 1.1136774915669645
+current epoch:  68
+validation batch 1 / 56, loss: 0.401342
+val loss 1.0970055019216878
+current epoch:  69
+validation batch 1 / 56, loss: 0.391910
+val loss 1.096093509878431
+current epoch:  70
+validation batch 1 / 56, loss: 0.389961
+val loss 1.0924925820103712
+current epoch:  71
+validation batch 1 / 56, loss: 0.399283
+val loss 1.0947002310838019
+global step: 12000, training loss: 0.671631, time: 9569.490981s
+current epoch:  72
+validation batch 1 / 56, loss: 0.397748
+val loss 1.095880852746112
+current epoch:  73
+validation batch 1 / 56, loss: 0.394139
+val loss 1.095770458557776
+current epoch:  74
+validation batch 1 / 56, loss: 0.390658
+val loss 1.0982065376426493
+current epoch:  75
+validation batch 1 / 56, loss: 0.402050
+val loss 1.101246035524777
+current epoch:  76
+validation batch 1 / 56, loss: 0.397091
+val loss 1.1031991764903069
+current epoch:  77
+validation batch 1 / 56, loss: 0.391383
+val loss 1.1037562106336867
+global step: 13000, training loss: 0.723077, time: 10346.298448s
+current epoch:  78
+validation batch 1 / 56, loss: 0.392300
+val loss 1.09922278459583
+current epoch:  79
+validation batch 1 / 56, loss: 0.389207
+val loss 1.102689619575228
+current epoch:  80
+validation batch 1 / 56, loss: 0.397830
+val loss 1.0991647749074869
+current epoch:  81
+validation batch 1 / 56, loss: 0.399600
+val loss 1.1097993249339717
+current epoch:  82
+validation batch 1 / 56, loss: 0.398041
+val loss 1.102018409541675
+current epoch:  83
+validation batch 1 / 56, loss: 0.396065
+val loss 1.1053974202701025
+global step: 14000, training loss: 0.664879, time: 11144.326311s
+current epoch:  84
+validation batch 1 / 56, loss: 0.390509
+val loss 1.1017664612403937
+current epoch:  85
+validation batch 1 / 56, loss: 0.400560
+val loss 1.1104681039495128
+current epoch:  86
+validation batch 1 / 56, loss: 0.396531
+val loss 1.1091742744403226
+current epoch:  87
+validation batch 1 / 56, loss: 0.418530
+val loss 1.129831652556147
+current epoch:  88
+validation batch 1 / 56, loss: 0.395748
+val loss 1.109134955065591
+current epoch:  89
+validation batch 1 / 56, loss: 0.391886
+val loss 1.1041786186397076
+global step: 15000, training loss: 0.657190, time: 11944.412745s
+current epoch:  90
+validation batch 1 / 56, loss: 0.393443
+val loss 1.1069932021200657
+current epoch:  91
+validation batch 1 / 56, loss: 0.408513
+val loss 1.1119136299405779
+current epoch:  92
+validation batch 1 / 56, loss: 0.399010
+val loss 1.1114677291895663
+current epoch:  93
+validation batch 1 / 56, loss: 0.393031
+val loss 1.106129254613604
+current epoch:  94
+validation batch 1 / 56, loss: 0.398347
+val loss 1.1074587952877795
+current epoch:  95
+validation batch 1 / 56, loss: 0.394117
+val loss 1.111778084720884
+global step: 16000, training loss: 0.615449, time: 12738.607273s
+current epoch:  96
+validation batch 1 / 56, loss: 0.413002
+val loss 1.124216442661626
+current epoch:  97
+validation batch 1 / 56, loss: 0.406556
+val loss 1.1269920473652226
+current epoch:  98
+validation batch 1 / 56, loss: 0.397027
+val loss 1.1107879898377828
+current epoch:  99
+validation batch 1 / 56, loss: 0.395695
+val loss 1.1181260171745504
+best epoch: 28
+Average Training Time: 114.3803 secs/epoch
+Average Inference Time: 19.2724 secs
+best epoch: 28
+load weight from: myexperiments/PEMS08/dstagnn_h1d0w0_channel1_1.000000e-04/epoch_28.params
+predicting data set batch 1 / 56
+input: (3567, 170, 1, 12)
+prediction: (3567, 170, 12)
+data_target_tensor: (3567, 170, 12)
+current epoch: 28, predict 1-th point
+MAE: 0.900589
+RMSE: 2.059729
+MAPE: 2.065617
+current epoch: 28, predict 2-th point
+MAE: 1.126667
+RMSE: 2.536475
+MAPE: 2.511284
+current epoch: 28, predict 3-th point
+MAE: 1.251897
+RMSE: 2.924411
+MAPE: 2.807384
+current epoch: 28, predict 4-th point
+MAE: 1.344640
+RMSE: 3.205107
+MAPE: 3.028253
+current epoch: 28, predict 5-th point
+MAE: 1.411665
+RMSE: 3.402938
+MAPE: 3.184215
+current epoch: 28, predict 6-th point
+MAE: 1.479107
+RMSE: 3.619646
+MAPE: 3.365058
+current epoch: 28, predict 7-th point
+MAE: 1.535808
+RMSE: 3.790887
+MAPE: 3.514972
+current epoch: 28, predict 8-th point
+MAE: 1.583512
+RMSE: 3.913862
+MAPE: 3.628762
+current epoch: 28, predict 9-th point
+MAE: 1.629635
+RMSE: 4.045071
+MAPE: 3.749005
+current epoch: 28, predict 10-th point
+MAE: 1.688879
+RMSE: 4.163399
+MAPE: 3.888748
+current epoch: 28, predict 11-th point
+MAE: 1.717444
+RMSE: 4.265499
+MAPE: 3.969646
+current epoch: 28, predict 12-th point
+MAE: 1.764349
+RMSE: 4.357984
+MAPE: 4.077950
+all MAE: 1.452850
+all RMSE: 3.591138
+all MAPE: 3.315910
+[0.90058935, 2.0597291309083343, 2.0656168460845947, 1.1266667, 2.536475451109435, 2.5112835690379143, 1.251897, 2.924411101439428, 2.8073839843273163, 1.3446399, 3.2051065409979667, 3.0282532796263695, 1.4116652, 3.402937932473295, 3.1842146068811417, 1.4791074, 3.619645735545744, 3.3650584518909454, 1.5358081, 3.7908873263645555, 3.5149719566106796, 1.5835124, 3.913861846349093, 3.628762438893318, 1.6296349, 4.045071115139768, 3.7490054965019226, 1.6888793, 4.163399419898871, 3.8887478411197662, 1.7174438, 4.265499350684906, 3.9696458727121353, 1.7643485, 4.357983657687227, 4.077949747443199, 1.4528497, 3.591137541866712, 3.315909579396248]
+
+Process finished with exit code -1

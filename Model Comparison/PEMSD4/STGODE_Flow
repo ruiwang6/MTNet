@@ -1,0 +1,1401 @@
+ssh://root@region-42.seetacloud.com:33037/root/miniconda3/bin/python -u /project/STGODE-main/run_stode.py
+{'remote': False, 'num_gpu': 0, 'epochs': 100, 'batch_size': 32, 'filename': 'PEMS04', 'train_ratio': 0.6, 'valid_ratio': 0.2, 'his_length': 12, 'pred_length': 12, 'sigma1': 0.1, 'sigma2': 10, 'thres1': 0.6, 'thres2': 0.5, 'lr': 0.002, 'log': False, 'log_file': 'data/log(PEMS04)'}
+average degree of spatial graph is 1.1009771986970684
+average degree of semantic graph is 6.267100977198697
+*****************Model Parameter*****************
+sp_blocks.0.0.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.0.0.temporal1.conv.bias torch.Size([64]) True
+sp_blocks.0.0.temporal1.network.0.0.weight torch.Size([64, 1, 1, 2]) True
+sp_blocks.0.0.temporal1.network.0.0.bias torch.Size([64]) True
+sp_blocks.0.0.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.0.0.temporal1.network.1.0.bias torch.Size([32]) True
+sp_blocks.0.0.temporal1.downsample.weight torch.Size([64, 1, 1, 1]) True
+sp_blocks.0.0.temporal1.downsample.bias torch.Size([64]) True
+sp_blocks.0.0.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+sp_blocks.0.0.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+sp_blocks.0.0.odeg.odeblock.odefunc.d torch.Size([64]) True
+sp_blocks.0.0.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+sp_blocks.0.0.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+sp_blocks.0.0.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.0.0.temporal2.conv.bias torch.Size([64]) True
+sp_blocks.0.0.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+sp_blocks.0.0.temporal2.network.0.0.bias torch.Size([64]) True
+sp_blocks.0.0.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.0.0.temporal2.network.1.0.bias torch.Size([32]) True
+sp_blocks.0.0.batch_norm.weight torch.Size([307]) True
+sp_blocks.0.0.batch_norm.bias torch.Size([307]) True
+sp_blocks.0.1.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.0.1.temporal1.conv.bias torch.Size([64]) True
+sp_blocks.0.1.temporal1.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+sp_blocks.0.1.temporal1.network.0.0.bias torch.Size([64]) True
+sp_blocks.0.1.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.0.1.temporal1.network.1.0.bias torch.Size([32]) True
+sp_blocks.0.1.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+sp_blocks.0.1.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+sp_blocks.0.1.odeg.odeblock.odefunc.d torch.Size([64]) True
+sp_blocks.0.1.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+sp_blocks.0.1.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+sp_blocks.0.1.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.0.1.temporal2.conv.bias torch.Size([64]) True
+sp_blocks.0.1.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+sp_blocks.0.1.temporal2.network.0.0.bias torch.Size([64]) True
+sp_blocks.0.1.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.0.1.temporal2.network.1.0.bias torch.Size([32]) True
+sp_blocks.0.1.batch_norm.weight torch.Size([307]) True
+sp_blocks.0.1.batch_norm.bias torch.Size([307]) True
+sp_blocks.1.0.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.1.0.temporal1.conv.bias torch.Size([64]) True
+sp_blocks.1.0.temporal1.network.0.0.weight torch.Size([64, 1, 1, 2]) True
+sp_blocks.1.0.temporal1.network.0.0.bias torch.Size([64]) True
+sp_blocks.1.0.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.1.0.temporal1.network.1.0.bias torch.Size([32]) True
+sp_blocks.1.0.temporal1.downsample.weight torch.Size([64, 1, 1, 1]) True
+sp_blocks.1.0.temporal1.downsample.bias torch.Size([64]) True
+sp_blocks.1.0.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+sp_blocks.1.0.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+sp_blocks.1.0.odeg.odeblock.odefunc.d torch.Size([64]) True
+sp_blocks.1.0.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+sp_blocks.1.0.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+sp_blocks.1.0.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.1.0.temporal2.conv.bias torch.Size([64]) True
+sp_blocks.1.0.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+sp_blocks.1.0.temporal2.network.0.0.bias torch.Size([64]) True
+sp_blocks.1.0.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.1.0.temporal2.network.1.0.bias torch.Size([32]) True
+sp_blocks.1.0.batch_norm.weight torch.Size([307]) True
+sp_blocks.1.0.batch_norm.bias torch.Size([307]) True
+sp_blocks.1.1.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.1.1.temporal1.conv.bias torch.Size([64]) True
+sp_blocks.1.1.temporal1.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+sp_blocks.1.1.temporal1.network.0.0.bias torch.Size([64]) True
+sp_blocks.1.1.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.1.1.temporal1.network.1.0.bias torch.Size([32]) True
+sp_blocks.1.1.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+sp_blocks.1.1.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+sp_blocks.1.1.odeg.odeblock.odefunc.d torch.Size([64]) True
+sp_blocks.1.1.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+sp_blocks.1.1.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+sp_blocks.1.1.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.1.1.temporal2.conv.bias torch.Size([64]) True
+sp_blocks.1.1.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+sp_blocks.1.1.temporal2.network.0.0.bias torch.Size([64]) True
+sp_blocks.1.1.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.1.1.temporal2.network.1.0.bias torch.Size([32]) True
+sp_blocks.1.1.batch_norm.weight torch.Size([307]) True
+sp_blocks.1.1.batch_norm.bias torch.Size([307]) True
+sp_blocks.2.0.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.2.0.temporal1.conv.bias torch.Size([64]) True
+sp_blocks.2.0.temporal1.network.0.0.weight torch.Size([64, 1, 1, 2]) True
+sp_blocks.2.0.temporal1.network.0.0.bias torch.Size([64]) True
+sp_blocks.2.0.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.2.0.temporal1.network.1.0.bias torch.Size([32]) True
+sp_blocks.2.0.temporal1.downsample.weight torch.Size([64, 1, 1, 1]) True
+sp_blocks.2.0.temporal1.downsample.bias torch.Size([64]) True
+sp_blocks.2.0.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+sp_blocks.2.0.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+sp_blocks.2.0.odeg.odeblock.odefunc.d torch.Size([64]) True
+sp_blocks.2.0.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+sp_blocks.2.0.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+sp_blocks.2.0.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.2.0.temporal2.conv.bias torch.Size([64]) True
+sp_blocks.2.0.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+sp_blocks.2.0.temporal2.network.0.0.bias torch.Size([64]) True
+sp_blocks.2.0.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.2.0.temporal2.network.1.0.bias torch.Size([32]) True
+sp_blocks.2.0.batch_norm.weight torch.Size([307]) True
+sp_blocks.2.0.batch_norm.bias torch.Size([307]) True
+sp_blocks.2.1.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.2.1.temporal1.conv.bias torch.Size([64]) True
+sp_blocks.2.1.temporal1.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+sp_blocks.2.1.temporal1.network.0.0.bias torch.Size([64]) True
+sp_blocks.2.1.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.2.1.temporal1.network.1.0.bias torch.Size([32]) True
+sp_blocks.2.1.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+sp_blocks.2.1.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+sp_blocks.2.1.odeg.odeblock.odefunc.d torch.Size([64]) True
+sp_blocks.2.1.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+sp_blocks.2.1.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+sp_blocks.2.1.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+sp_blocks.2.1.temporal2.conv.bias torch.Size([64]) True
+sp_blocks.2.1.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+sp_blocks.2.1.temporal2.network.0.0.bias torch.Size([64]) True
+sp_blocks.2.1.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+sp_blocks.2.1.temporal2.network.1.0.bias torch.Size([32]) True
+sp_blocks.2.1.batch_norm.weight torch.Size([307]) True
+sp_blocks.2.1.batch_norm.bias torch.Size([307]) True
+se_blocks.0.0.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.0.0.temporal1.conv.bias torch.Size([64]) True
+se_blocks.0.0.temporal1.network.0.0.weight torch.Size([64, 1, 1, 2]) True
+se_blocks.0.0.temporal1.network.0.0.bias torch.Size([64]) True
+se_blocks.0.0.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.0.0.temporal1.network.1.0.bias torch.Size([32]) True
+se_blocks.0.0.temporal1.downsample.weight torch.Size([64, 1, 1, 1]) True
+se_blocks.0.0.temporal1.downsample.bias torch.Size([64]) True
+se_blocks.0.0.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+se_blocks.0.0.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+se_blocks.0.0.odeg.odeblock.odefunc.d torch.Size([64]) True
+se_blocks.0.0.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+se_blocks.0.0.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+se_blocks.0.0.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.0.0.temporal2.conv.bias torch.Size([64]) True
+se_blocks.0.0.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+se_blocks.0.0.temporal2.network.0.0.bias torch.Size([64]) True
+se_blocks.0.0.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.0.0.temporal2.network.1.0.bias torch.Size([32]) True
+se_blocks.0.0.batch_norm.weight torch.Size([307]) True
+se_blocks.0.0.batch_norm.bias torch.Size([307]) True
+se_blocks.0.1.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.0.1.temporal1.conv.bias torch.Size([64]) True
+se_blocks.0.1.temporal1.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+se_blocks.0.1.temporal1.network.0.0.bias torch.Size([64]) True
+se_blocks.0.1.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.0.1.temporal1.network.1.0.bias torch.Size([32]) True
+se_blocks.0.1.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+se_blocks.0.1.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+se_blocks.0.1.odeg.odeblock.odefunc.d torch.Size([64]) True
+se_blocks.0.1.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+se_blocks.0.1.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+se_blocks.0.1.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.0.1.temporal2.conv.bias torch.Size([64]) True
+se_blocks.0.1.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+se_blocks.0.1.temporal2.network.0.0.bias torch.Size([64]) True
+se_blocks.0.1.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.0.1.temporal2.network.1.0.bias torch.Size([32]) True
+se_blocks.0.1.batch_norm.weight torch.Size([307]) True
+se_blocks.0.1.batch_norm.bias torch.Size([307]) True
+se_blocks.1.0.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.1.0.temporal1.conv.bias torch.Size([64]) True
+se_blocks.1.0.temporal1.network.0.0.weight torch.Size([64, 1, 1, 2]) True
+se_blocks.1.0.temporal1.network.0.0.bias torch.Size([64]) True
+se_blocks.1.0.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.1.0.temporal1.network.1.0.bias torch.Size([32]) True
+se_blocks.1.0.temporal1.downsample.weight torch.Size([64, 1, 1, 1]) True
+se_blocks.1.0.temporal1.downsample.bias torch.Size([64]) True
+se_blocks.1.0.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+se_blocks.1.0.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+se_blocks.1.0.odeg.odeblock.odefunc.d torch.Size([64]) True
+se_blocks.1.0.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+se_blocks.1.0.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+se_blocks.1.0.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.1.0.temporal2.conv.bias torch.Size([64]) True
+se_blocks.1.0.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+se_blocks.1.0.temporal2.network.0.0.bias torch.Size([64]) True
+se_blocks.1.0.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.1.0.temporal2.network.1.0.bias torch.Size([32]) True
+se_blocks.1.0.batch_norm.weight torch.Size([307]) True
+se_blocks.1.0.batch_norm.bias torch.Size([307]) True
+se_blocks.1.1.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.1.1.temporal1.conv.bias torch.Size([64]) True
+se_blocks.1.1.temporal1.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+se_blocks.1.1.temporal1.network.0.0.bias torch.Size([64]) True
+se_blocks.1.1.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.1.1.temporal1.network.1.0.bias torch.Size([32]) True
+se_blocks.1.1.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+se_blocks.1.1.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+se_blocks.1.1.odeg.odeblock.odefunc.d torch.Size([64]) True
+se_blocks.1.1.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+se_blocks.1.1.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+se_blocks.1.1.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.1.1.temporal2.conv.bias torch.Size([64]) True
+se_blocks.1.1.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+se_blocks.1.1.temporal2.network.0.0.bias torch.Size([64]) True
+se_blocks.1.1.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.1.1.temporal2.network.1.0.bias torch.Size([32]) True
+se_blocks.1.1.batch_norm.weight torch.Size([307]) True
+se_blocks.1.1.batch_norm.bias torch.Size([307]) True
+se_blocks.2.0.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.2.0.temporal1.conv.bias torch.Size([64]) True
+se_blocks.2.0.temporal1.network.0.0.weight torch.Size([64, 1, 1, 2]) True
+se_blocks.2.0.temporal1.network.0.0.bias torch.Size([64]) True
+se_blocks.2.0.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.2.0.temporal1.network.1.0.bias torch.Size([32]) True
+se_blocks.2.0.temporal1.downsample.weight torch.Size([64, 1, 1, 1]) True
+se_blocks.2.0.temporal1.downsample.bias torch.Size([64]) True
+se_blocks.2.0.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+se_blocks.2.0.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+se_blocks.2.0.odeg.odeblock.odefunc.d torch.Size([64]) True
+se_blocks.2.0.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+se_blocks.2.0.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+se_blocks.2.0.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.2.0.temporal2.conv.bias torch.Size([64]) True
+se_blocks.2.0.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+se_blocks.2.0.temporal2.network.0.0.bias torch.Size([64]) True
+se_blocks.2.0.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.2.0.temporal2.network.1.0.bias torch.Size([32]) True
+se_blocks.2.0.batch_norm.weight torch.Size([307]) True
+se_blocks.2.0.batch_norm.bias torch.Size([307]) True
+se_blocks.2.1.temporal1.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.2.1.temporal1.conv.bias torch.Size([64]) True
+se_blocks.2.1.temporal1.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+se_blocks.2.1.temporal1.network.0.0.bias torch.Size([64]) True
+se_blocks.2.1.temporal1.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.2.1.temporal1.network.1.0.bias torch.Size([32]) True
+se_blocks.2.1.odeg.odeblock.odefunc.alpha torch.Size([307]) True
+se_blocks.2.1.odeg.odeblock.odefunc.w torch.Size([64, 64]) True
+se_blocks.2.1.odeg.odeblock.odefunc.d torch.Size([64]) True
+se_blocks.2.1.odeg.odeblock.odefunc.w2 torch.Size([12, 12]) True
+se_blocks.2.1.odeg.odeblock.odefunc.d2 torch.Size([12]) True
+se_blocks.2.1.temporal2.conv.weight torch.Size([64, 32, 1, 2]) True
+se_blocks.2.1.temporal2.conv.bias torch.Size([64]) True
+se_blocks.2.1.temporal2.network.0.0.weight torch.Size([64, 64, 1, 2]) True
+se_blocks.2.1.temporal2.network.0.0.bias torch.Size([64]) True
+se_blocks.2.1.temporal2.network.1.0.weight torch.Size([32, 64, 1, 2]) True
+se_blocks.2.1.temporal2.network.1.0.bias torch.Size([32]) True
+se_blocks.2.1.batch_norm.weight torch.Size([307]) True
+se_blocks.2.1.batch_norm.bias torch.Size([307]) True
+pred.0.weight torch.Size([384, 768]) True
+pred.0.bias torch.Size([384]) True
+pred.2.weight torch.Size([12, 384]) True
+pred.2.bias torch.Size([12]) True
+Total params num: 712200
+*****************Finish Parameter****************
+=====Epoch 1=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.48it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.99it/s]
+New best results!
+
+##on train data## loss: 0.08792443309307287, 
+##on train data## rmse loss: 41.26030960322926, mae loss: 27.211864297494948, mape loss: 21.49510977778045
+##on valid data## rmse loss: 43.21817837121352, mae loss: 28.597724248778146, mape loss: 20.61591328315015
+
+=====Epoch 2=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.47it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.00it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.09it/s]
+New best results!
+
+##on train data## loss: 0.03351322286205847, 
+##on train data## rmse loss: 39.5950090180403, mae loss: 26.70336311868152, mape loss: 24.168237622054118
+##on valid data## rmse loss: 41.07554738026745, mae loss: 27.74528467430259, mape loss: 22.994137288264508
+
+=====Epoch 3=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.47it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.00it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.06it/s]
+New best results!
+
+##on train data## loss: 0.03153345068483233, 
+##on train data## rmse loss: 38.23983288411075, mae loss: 25.058922185837847, mape loss: 20.544069400935804
+##on valid data## rmse loss: 39.72569231717092, mae loss: 26.142487292019826, mape loss: 19.610457558114575
+
+=====Epoch 4=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.00it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.05it/s]
+
+##on train data## loss: 0.033630193943310085, 
+##on train data## rmse loss: 38.95294271025268, mae loss: 25.942111771061736, mape loss: 24.118400472889906
+##on valid data## rmse loss: 40.62518584053471, mae loss: 27.085783238680857, mape loss: 22.85628632273314
+
+=====Epoch 5=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.99it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.10it/s]
+New best results!
+
+##on train data## loss: 0.029589960556594457, 
+##on train data## rmse loss: 37.411353525125755, mae loss: 24.375459089219195, mape loss: 20.286384599763643
+##on valid data## rmse loss: 38.77606157986623, mae loss: 25.351957537093252, mape loss: 19.270510057795722
+
+=====Epoch 6=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.00it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.03it/s]
+
+##on train data## loss: 0.02926434291257236, 
+##on train data## rmse loss: 40.26639314567518, mae loss: 26.641326082577496, mape loss: 21.01878656437562
+##on valid data## rmse loss: 42.25792046313016, mae loss: 28.087517486428315, mape loss: 20.06306673558253
+
+=====Epoch 7=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.05it/s]
+
+##on train data## loss: 0.028413192005886597, 
+##on train data## rmse loss: 38.2574978234633, mae loss: 26.706076082193626, mape loss: 32.99632343293736
+##on valid data## rmse loss: 38.955726623535156, mae loss: 27.2020365697033, mape loss: 30.67203120521779
+
+=====Epoch 8=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.07it/s]
+New best results!
+
+##on train data## loss: 0.027678935249693365, 
+##on train data## rmse loss: 36.49074733782115, mae loss: 23.9536322587691, mape loss: 19.712869035747815
+##on valid data## rmse loss: 37.7663105298888, mae loss: 24.89318439195741, mape loss: 18.638577572298498
+
+=====Epoch 9=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.06it/s]
+
+##on train data## loss: 0.027548887122586463, 
+##on train data## rmse loss: 38.3614491156812, mae loss: 25.24241851110878, mape loss: 18.980712968410934
+##on valid data## rmse loss: 40.15361793086214, mae loss: 26.49875162232597, mape loss: 17.99750693564145
+
+=====Epoch 10=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.47it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.07it/s]
+New best results!
+
+##on train data## loss: 0.02667948911142237, 
+##on train data## rmse loss: 35.78575683689717, mae loss: 23.665056474553715, mape loss: 21.0966557264328
+##on valid data## rmse loss: 37.11420735773051, mae loss: 24.643762678470253, mape loss: 19.931736644708884
+
+=====Epoch 11=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.99it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.08it/s]
+New best results!
+
+##on train data## loss: 0.026236370217593962, 
+##on train data## rmse loss: 35.53655057583215, mae loss: 23.330001759079266, mape loss: 19.81076474459666
+##on valid data## rmse loss: 36.599090576171875, mae loss: 24.105055305193055, mape loss: 18.573539718142097
+
+=====Epoch 12=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.03it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.02it/s]
+
+##on train data## loss: 0.02628680787769691, 
+##on train data## rmse loss: 36.39049140762233, mae loss: 23.947135337493705, mape loss: 18.279082384311927
+##on valid data## rmse loss: 37.83357659825739, mae loss: 24.970415763135225, mape loss: 17.337253760054427
+
+=====Epoch 13=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.10it/s]
+
+##on train data## loss: 0.026284733523597132, 
+##on train data## rmse loss: 36.40258242649102, mae loss: 24.344838514268023, mape loss: 18.789952548232467
+##on valid data## rmse loss: 38.07330333061938, mae loss: 25.534160721976804, mape loss: 18.050647400460154
+
+=====Epoch 14=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.11it/s]
+
+##on train data## loss: 0.0256019310451716, 
+##on train data## rmse loss: 35.59291296185187, mae loss: 23.589537512581302, mape loss: 18.705456675785893
+##on valid data## rmse loss: 36.936847380872045, mae loss: 24.548072203150337, mape loss: 17.792345625611972
+
+=====Epoch 15=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.04it/s]
+
+##on train data## loss: 0.025182850951762318, 
+##on train data## rmse loss: 35.97104451041552, mae loss: 24.95370431816053, mape loss: 27.917906103081673
+##on valid data## rmse loss: 36.94786298499917, mae loss: 25.637087516064913, mape loss: 26.189610572918404
+
+=====Epoch 16=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.11it/s]
+New best results!
+
+##on train data## loss: 0.02507248176437504, 
+##on train data## rmse loss: 35.42473187836461, mae loss: 23.704081613312727, mape loss: 22.103611239284838
+##on valid data## rmse loss: 36.54181969840572, mae loss: 24.458826874786954, mape loss: 20.671922657287347
+
+=====Epoch 17=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.08it/s]
+
+##on train data## loss: 0.024843733956885036, 
+##on train data## rmse loss: 36.08068946022657, mae loss: 23.67415753250602, mape loss: 18.367467558233994
+##on valid data## rmse loss: 37.68069105328254, mae loss: 24.80738132404831, mape loss: 17.437320961704796
+
+=====Epoch 18=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.04it/s]
+New best results!
+
+##on train data## loss: 0.024592629771492205, 
+##on train data## rmse loss: 34.696155164226795, mae loss: 22.70325992392294, mape loss: 18.748313694630028
+##on valid data## rmse loss: 36.120207912517046, mae loss: 23.712465466193432, mape loss: 17.65596288836227
+
+=====Epoch 19=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.14it/s]
+
+##on train data## loss: 0.024235125537375984, 
+##on train data## rmse loss: 34.98944743774222, mae loss: 23.28607246710819, mape loss: 19.7980523578026
+##on valid data## rmse loss: 36.16565628771512, mae loss: 24.100040435791016, mape loss: 18.918503708434553
+
+=====Epoch 20=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.99it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.05it/s]
+New best results!
+
+##on train data## loss: 0.024245017337021214, 
+##on train data## rmse loss: 34.4584085536453, mae loss: 22.55989664305681, mape loss: 19.37744451581307
+##on valid data## rmse loss: 35.78051468111434, mae loss: 23.528845085287994, mape loss: 18.393297662150186
+
+=====Epoch 21=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.03it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.06it/s]
+New best results!
+
+##on train data## loss: 0.0240172268178478, 
+##on train data## rmse loss: 34.32373487124653, mae loss: 22.245949331319558, mape loss: 16.896469595859635
+##on valid data## rmse loss: 35.672619585720994, mae loss: 23.206704517580427, mape loss: 16.1324273443447
+
+=====Epoch 22=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.11it/s]
+
+##on train data## loss: 0.024338576116792437, 
+##on train data## rmse loss: 35.03497123118466, mae loss: 22.736734762131793, mape loss: 17.24568081539382
+##on valid data## rmse loss: 36.09352543668927, mae loss: 23.539060394718962, mape loss: 16.565585417567558
+
+=====Epoch 23=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.03it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.04it/s]
+New best results!
+
+##on train data## loss: 0.023888247078811785, 
+##on train data## rmse loss: 34.49165882254547, mae loss: 22.57242177567392, mape loss: 17.64661321568789
+##on valid data## rmse loss: 35.523451661163904, mae loss: 23.3307602540502, mape loss: 16.71231335626458
+
+=====Epoch 24=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.10it/s]
+
+##on train data## loss: 0.02422959919808046, 
+##on train data## rmse loss: 34.63837282912536, mae loss: 22.8428201555456, mape loss: 18.299497804551756
+##on valid data## rmse loss: 35.90058517456055, mae loss: 23.745579863494296, mape loss: 17.51903126121692
+
+=====Epoch 25=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.03it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.10it/s]
+
+##on train data## loss: 0.02397755642989709, 
+##on train data## rmse loss: 34.85406966179422, mae loss: 23.37793015534023, mape loss: 22.64286815276686
+##on valid data## rmse loss: 35.65440751921456, mae loss: 23.91351561276418, mape loss: 21.157438617269946
+
+=====Epoch 26=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.71it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.74it/s]
+
+##on train data## loss: 0.023914225920800516, 
+##on train data## rmse loss: 35.290881084945966, mae loss: 23.643899983580006, mape loss: 18.58086219561175
+##on valid data## rmse loss: 36.72033236161718, mae loss: 24.656541032611198, mape loss: 17.923145642820394
+
+=====Epoch 27=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.42it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.10it/s]
+
+##on train data## loss: 0.023496267866085534, 
+##on train data## rmse loss: 34.21012231838778, mae loss: 22.7827407968869, mape loss: 21.386007233610695
+##on valid data## rmse loss: 35.592028509895755, mae loss: 23.740432145460595, mape loss: 20.216835529174446
+
+=====Epoch 28=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.83it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.09it/s]
+
+##on train data## loss: 0.02360744291108172, 
+##on train data## rmse loss: 34.156821280905284, mae loss: 22.199809368301487, mape loss: 16.792028903398872
+##on valid data## rmse loss: 35.70414350617607, mae loss: 23.311811843008364, mape loss: 16.10408622138905
+
+=====Epoch 29=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.01it/s]
+
+##on train data## loss: 0.023460096826062263, 
+##on train data## rmse loss: 34.79245540330995, mae loss: 22.695890828498506, mape loss: 16.875419273691357
+##on valid data## rmse loss: 36.45870476848674, mae loss: 23.8378242096811, mape loss: 16.130425598261493
+
+=====Epoch 30=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.04it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.11it/s]
+New best results!
+
+##on train data## loss: 0.023523751742926972, 
+##on train data## rmse loss: 34.01146823955032, mae loss: 22.35981469784143, mape loss: 19.433833785214514
+##on valid data## rmse loss: 35.37497086794871, mae loss: 23.312599236110472, mape loss: 18.353517606573284
+
+=====Epoch 31=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.03it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.05it/s]
+
+##on train data## loss: 0.02319057315658286, 
+##on train data## rmse loss: 34.047212480748975, mae loss: 22.582594001818002, mape loss: 21.005856044262462
+##on valid data## rmse loss: 35.40462166408323, mae loss: 23.52119537569442, mape loss: 19.864867332409013
+
+=====Epoch 32=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.04it/s]
+New best results!
+
+##on train data## loss: 0.023259732620380585, 
+##on train data## rmse loss: 34.03719258458359, mae loss: 22.67656580007301, mape loss: 22.141498599037433
+##on valid data## rmse loss: 35.311313377236424, mae loss: 23.551545646955383, mape loss: 20.87194712938003
+
+=====Epoch 33=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.09it/s]
+New best results!
+
+##on train data## loss: 0.023226890748120704, 
+##on train data## rmse loss: 33.712644666995644, mae loss: 21.925250671194785, mape loss: 16.50935835527174
+##on valid data## rmse loss: 35.0810269589694, mae loss: 22.882420036028016, mape loss: 15.719163783316342
+
+=====Epoch 34=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.03it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.04it/s]
+New best results!
+
+##on train data## loss: 0.022863215626270143, 
+##on train data## rmse loss: 33.67186856419785, mae loss: 21.878202672274607, mape loss: 17.135328288723088
+##on valid data## rmse loss: 34.862541504626, mae loss: 22.69719102247706, mape loss: 16.183918573946322
+
+=====Epoch 35=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.07it/s]
+
+##on train data## loss: 0.022842344734232006, 
+##on train data## rmse loss: 33.91529263190503, mae loss: 22.43609469191833, mape loss: 20.490030335180414
+##on valid data## rmse loss: 35.2102344440964, mae loss: 23.325618312043964, mape loss: 19.289370260710985
+
+=====Epoch 36=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.99it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.06it/s]
+
+##on train data## loss: 0.022813374200050935, 
+##on train data## rmse loss: 34.43483560790056, mae loss: 22.5770372774616, mape loss: 20.22136892162779
+##on valid data## rmse loss: 35.644738539209904, mae loss: 23.438531317800845, mape loss: 19.25815227177908
+
+=====Epoch 37=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.00it/s]
+
+##on train data## loss: 0.022849844871147437, 
+##on train data## rmse loss: 33.52167262071334, mae loss: 21.764230266307134, mape loss: 17.0546468815901
+##on valid data## rmse loss: 34.9578905825345, mae loss: 22.73915267440508, mape loss: 16.16560014070205
+
+=====Epoch 38=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.08it/s]
+
+##on train data## loss: 0.022726445968421, 
+##on train data## rmse loss: 33.88662834887235, mae loss: 22.257002710546338, mape loss: 18.42088576101657
+##on valid data## rmse loss: 35.534876031695674, mae loss: 23.39617919921875, mape loss: 17.383482279080265
+
+=====Epoch 39=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.09it/s]
+New best results!
+
+##on train data## loss: 0.022688788391134276, 
+##on train data## rmse loss: 33.56518141428629, mae loss: 21.921927398105836, mape loss: 19.318115022384895
+##on valid data## rmse loss: 34.790946618565975, mae loss: 22.777492685138053, mape loss: 18.22289395725952
+
+=====Epoch 40=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.00it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.99it/s]
+
+##on train data## loss: 0.02265402364819867, 
+##on train data## rmse loss: 33.519781610500885, mae loss: 21.74737146965363, mape loss: 16.03229712671454
+##on valid data## rmse loss: 35.046389201901995, mae loss: 22.79516268676182, mape loss: 15.319554423386196
+
+=====Epoch 41=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.03it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.11it/s]
+
+##on train data## loss: 0.02273255193008567, 
+##on train data## rmse loss: 34.09611608997081, mae loss: 22.256318278282695, mape loss: 16.20107906513244
+##on valid data## rmse loss: 35.79900187366414, mae loss: 23.43430699042554, mape loss: 15.62807247886118
+
+=====Epoch 42=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.02it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.08it/s]
+New best results!
+
+##on train data## loss: 0.022677995815123402, 
+##on train data## rmse loss: 33.51642665623119, mae loss: 21.735739024180287, mape loss: 17.488269029923206
+##on valid data## rmse loss: 34.71258755449979, mae loss: 22.55801551746872, mape loss: 16.59313736237445
+
+=====Epoch 43=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.01it/s]
+
+##on train data## loss: 0.022470234963550884, 
+##on train data## rmse loss: 33.271579838398864, mae loss: 21.536414044458162, mape loss: 16.260887092014528
+##on valid data## rmse loss: 34.751866232674075, mae loss: 22.54197131462817, mape loss: 15.573951095904944
+
+=====Epoch 44=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.11it/s]
+New best results!
+
+##on train data## loss: 0.022563596197503543, 
+##on train data## rmse loss: 33.30760372209849, mae loss: 21.57250768433577, mape loss: 16.430572092345674
+##on valid data## rmse loss: 34.694359365499245, mae loss: 22.50546374410953, mape loss: 15.654089990651832
+
+=====Epoch 45=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.93it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.99it/s]
+
+##on train data## loss: 0.02233940036674528, 
+##on train data## rmse loss: 33.66847088052042, mae loss: 22.13131933392219, mape loss: 18.773596452654534
+##on valid data## rmse loss: 34.771863487531554, mae loss: 22.84057606391187, mape loss: 17.670803488987797
+
+=====Epoch 46=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.42it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.87it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.95it/s]
+
+##on train data## loss: 0.022462668155068123, 
+##on train data## rmse loss: 33.72693321539921, mae loss: 22.305103907795072, mape loss: 18.678046139718603
+##on valid data## rmse loss: 34.98826465966567, mae loss: 23.1367878464033, mape loss: 17.844294433323842
+
+=====Epoch 47=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.94it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.99it/s]
+New best results!
+
+##on train data## loss: 0.022350746892252058, 
+##on train data## rmse loss: 33.23651921974038, mae loss: 21.500194573552353, mape loss: 16.451846039707554
+##on valid data## rmse loss: 34.6047230846477, mae loss: 22.434223876809174, mape loss: 15.670077151285028
+
+=====Epoch 48=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.74it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.59it/s]
+
+##on train data## loss: 0.022394039152693824, 
+##on train data## rmse loss: 33.387167588719784, mae loss: 21.645478914368827, mape loss: 17.26192796380265
+##on valid data## rmse loss: 34.83036082645632, mae loss: 22.61105326886447, mape loss: 16.418033416541117
+
+=====Epoch 49=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.44it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.90it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.96it/s]
+
+##on train data## loss: 0.02230435862856091, 
+##on train data## rmse loss: 34.05145928244921, mae loss: 22.41370853088187, mape loss: 19.299608112881018
+##on valid data## rmse loss: 35.544632029983234, mae loss: 23.411463683506227, mape loss: 18.448767431502073
+
+=====Epoch 50=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.96it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.02it/s]
+New best results!
+
+##on train data## loss: 0.022366439452125405, 
+##on train data## rmse loss: 33.24369271596273, mae loss: 21.630131763482243, mape loss: 16.6217972694328
+##on valid data## rmse loss: 34.550576120052696, mae loss: 22.49384858473292, mape loss: 15.928986654529032
+
+=====Epoch 51=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.94it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.92it/s]
+New best results!
+
+##on train data## loss: 0.021606253852493734, 
+##on train data## rmse loss: 32.81678967505881, mae loss: 21.24293600238344, mape loss: 17.376111675077265
+##on valid data## rmse loss: 34.26255825330626, mae loss: 22.17875286318221, mape loss: 16.420633303669263
+
+=====Epoch 52=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.95it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.01it/s]
+
+##on train data## loss: 0.021668587802505156, 
+##on train data## rmse loss: 32.8287954990219, mae loss: 21.211287732394236, mape loss: 15.84407590891955
+##on valid data## rmse loss: 34.39289855957031, mae loss: 22.235842200945008, mape loss: 15.107668156050286
+
+=====Epoch 53=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.87it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.97it/s]
+
+##on train data## loss: 0.02157492173613055, 
+##on train data## rmse loss: 33.093199777903045, mae loss: 21.41912437534932, mape loss: 15.565648838971397
+##on valid data## rmse loss: 34.85618918796755, mae loss: 22.577705617220897, mape loss: 14.871617041106495
+
+=====Epoch 54=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.96it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.96it/s]
+
+##on train data## loss: 0.021638129477582452, 
+##on train data## rmse loss: 33.06299821985593, mae loss: 21.866255868156003, mape loss: 20.515281519612426
+##on valid data## rmse loss: 34.39249465150653, mae loss: 22.70299179149124, mape loss: 19.330583175398267
+
+=====Epoch 55=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.97it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.03it/s]
+
+##on train data## loss: 0.021500290831281518, 
+##on train data## rmse loss: 32.8045477057403, mae loss: 21.255188648055935, mape loss: 16.64160747291907
+##on valid data## rmse loss: 34.40604917058405, mae loss: 22.327051864480072, mape loss: 15.806114111306533
+
+=====Epoch 56=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.94it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.03it/s]
+New best results!
+
+##on train data## loss: 0.021472254735798394, 
+##on train data## rmse loss: 32.83016110666143, mae loss: 21.345132947717822, mape loss: 17.358764214148312
+##on valid data## rmse loss: 34.2313225224333, mae loss: 22.261084106733215, mape loss: 16.494297292434943
+
+=====Epoch 57=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.95it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.99it/s]
+
+##on train data## loss: 0.021591138806334644, 
+##on train data## rmse loss: 32.81017379640783, mae loss: 21.220884718984927, mape loss: 15.60895655233905
+##on valid data## rmse loss: 34.35060992330875, mae loss: 22.271295025663555, mape loss: 15.018773887236163
+
+=====Epoch 58=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.89it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.90it/s]
+New best results!
+
+##on train data## loss: 0.021533905417195656, 
+##on train data## rmse loss: 32.69944881343242, mae loss: 21.07322289208946, mape loss: 16.11125679604662
+##on valid data## rmse loss: 34.06083474069271, mae loss: 21.941378377518564, mape loss: 15.26537484858396
+
+=====Epoch 59=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.94it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.00it/s]
+
+##on train data## loss: 0.021484365472980077, 
+##on train data## rmse loss: 32.71006353846136, mae loss: 21.16572157541911, mape loss: 16.380070735635996
+##on valid data## rmse loss: 34.23008191810464, mae loss: 22.137324765043438, mape loss: 15.535749839443081
+
+=====Epoch 60=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.08it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.03it/s]
+
+##on train data## loss: 0.021481680818511255, 
+##on train data## rmse loss: 32.8177556511741, mae loss: 21.218828069339008, mape loss: 16.208167711518847
+##on valid data## rmse loss: 34.33777152367358, mae loss: 22.189469355457234, mape loss: 15.431496978930706
+
+=====Epoch 61=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.88it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.04it/s]
+
+##on train data## loss: 0.02146854370234991, 
+##on train data## rmse loss: 32.83253718322178, mae loss: 21.42582935957039, mape loss: 18.26401858959558
+##on valid data## rmse loss: 34.29987434171281, mae loss: 22.343344886347932, mape loss: 17.174009669501828
+
+=====Epoch 62=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.95it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.99it/s]
+
+##on train data## loss: 0.021411211349936964, 
+##on train data## rmse loss: 32.682854838341285, mae loss: 21.130321958529873, mape loss: 15.972598061059257
+##on valid data## rmse loss: 34.24261381041329, mae loss: 22.152263713332843, mape loss: 15.278352164434937
+
+=====Epoch 63=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.94it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.02it/s]
+
+##on train data## loss: 0.02137104155343471, 
+##on train data## rmse loss: 32.65496618642747, mae loss: 21.07416128962295, mape loss: 15.633713292344561
+##on valid data## rmse loss: 34.12923157889888, mae loss: 22.05699236887806, mape loss: 14.937150112862858
+
+=====Epoch 64=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.94it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.99it/s]
+
+##on train data## loss: 0.02135825818463129, 
+##on train data## rmse loss: 32.60773514201806, mae loss: 21.04334723874458, mape loss: 15.750945186090169
+##on valid data## rmse loss: 34.19841465860043, mae loss: 22.103432637340617, mape loss: 15.127581849975407
+
+=====Epoch 65=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.97it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.97it/s]
+New best results!
+
+##on train data## loss: 0.021283943718592137, 
+##on train data## rmse loss: 32.48897507505597, mae loss: 20.957662012592053, mape loss: 15.977051127819145
+##on valid data## rmse loss: 34.00893146586868, mae loss: 21.947203150335348, mape loss: 15.232320544573495
+
+=====Epoch 66=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.95it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.97it/s]
+New best results!
+
+##on train data## loss: 0.021355316382627818, 
+##on train data## rmse loss: 32.54572778377893, mae loss: 20.970524511997056, mape loss: 16.090035309675354
+##on valid data## rmse loss: 33.956792849414754, mae loss: 21.878078820570458, mape loss: 15.266956227286807
+
+=====Epoch 67=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.95it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.04it/s]
+
+##on train data## loss: 0.021338405597181816, 
+##on train data## rmse loss: 32.58762439991693, mae loss: 20.997853081181365, mape loss: 15.909139666729754
+##on valid data## rmse loss: 34.03883421196128, mae loss: 21.956584930419922, mape loss: 15.158378867045888
+
+=====Epoch 68=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.97it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.04it/s]
+
+##on train data## loss: 0.02132510926879052, 
+##on train data## rmse loss: 32.568890811512304, mae loss: 21.03313489829969, mape loss: 15.898466766255456
+##on valid data## rmse loss: 34.09884837888322, mae loss: 22.04029731030734, mape loss: 15.193490009262877
+
+=====Epoch 69=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.96it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.04it/s]
+
+##on train data## loss: 0.021315323440768058, 
+##on train data## rmse loss: 32.57754565184971, mae loss: 20.95859764506982, mape loss: 16.111642515884256
+##on valid data## rmse loss: 33.98466236186477, mae loss: 21.88661118273465, mape loss: 15.315360955472263
+
+=====Epoch 70=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.99it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.00it/s]
+
+##on train data## loss: 0.02126828878649376, 
+##on train data## rmse loss: 32.738781077306975, mae loss: 21.075338663545043, mape loss: 15.796507426402854
+##on valid data## rmse loss: 34.17792343643477, mae loss: 22.006780372475678, mape loss: 15.002114374963742
+
+=====Epoch 71=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.00it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.04it/s]
+
+##on train data## loss: 0.02126703604634078, 
+##on train data## rmse loss: 32.77861535174292, mae loss: 21.25119664534083, mape loss: 15.62122125764313
+##on valid data## rmse loss: 34.58855206111692, mae loss: 22.422531001972704, mape loss: 14.975325833514052
+
+=====Epoch 72=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.00it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.09it/s]
+
+##on train data## loss: 0.02127217117158122, 
+##on train data## rmse loss: 32.549642826776086, mae loss: 21.18285399862805, mape loss: 18.34082212650551
+##on valid data## rmse loss: 34.11691221201195, mae loss: 22.17480533527878, mape loss: 17.32622209303784
+
+=====Epoch 73=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.47it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.69it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.00it/s]
+
+##on train data## loss: 0.021278106089119078, 
+##on train data## rmse loss: 32.70151342236021, mae loss: 21.211449569126344, mape loss: 16.525957192171294
+##on valid data## rmse loss: 34.353889375362755, mae loss: 22.30268940835629, mape loss: 15.731935652921784
+
+=====Epoch 74=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.00it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.09it/s]
+
+##on train data## loss: 0.021141576053539536, 
+##on train data## rmse loss: 32.58856681008009, mae loss: 21.039572391869886, mape loss: 15.642327426364586
+##on valid data## rmse loss: 34.12757772769568, mae loss: 22.034702319019246, mape loss: 14.916163774312666
+
+=====Epoch 75=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.00it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.11it/s]
+
+##on train data## loss: 0.021308568839288358, 
+##on train data## rmse loss: 32.59477232087333, mae loss: 21.073667520247167, mape loss: 16.21709854441619
+##on valid data## rmse loss: 34.26812234914528, mae loss: 22.1607737631168, mape loss: 15.455724629309943
+
+=====Epoch 76=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.47it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.03it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.94it/s]
+New best results!
+
+##on train data## loss: 0.021214295228439494, 
+##on train data## rmse loss: 32.530023916712345, mae loss: 20.93778138190695, mape loss: 16.00867362704667
+##on valid data## rmse loss: 33.9295768737793, mae loss: 21.842607786070626, mape loss: 15.220746383914408
+
+=====Epoch 77=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:59<00:00,  5.39it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.65it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.67it/s]
+
+##on train data## loss: 0.02113199525998917, 
+##on train data## rmse loss: 32.5233974216869, mae loss: 21.02274918106367, mape loss: 15.594126466872558
+##on valid data## rmse loss: 34.10232005929047, mae loss: 22.02518500921861, mape loss: 14.93437260670482
+
+=====Epoch 78=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.89it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.93it/s]
+
+##on train data## loss: 0.021125534760220995, 
+##on train data## rmse loss: 32.49632846184497, mae loss: 21.069350116657763, mape loss: 17.009576217933272
+##on valid data## rmse loss: 34.11163583791481, mae loss: 22.104580753254442, mape loss: 16.13038123216269
+
+=====Epoch 79=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.89it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.00it/s]
+
+##on train data## loss: 0.021176100020302728, 
+##on train data## rmse loss: 32.50302039452319, mae loss: 21.049920753862875, mape loss: 16.631935564976818
+##on valid data## rmse loss: 34.02860907788546, mae loss: 22.045232502919323, mape loss: 15.81332673722843
+
+=====Epoch 80=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.93it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.00it/s]
+
+##on train data## loss: 0.021167131249189564, 
+##on train data## rmse loss: 32.62365411962353, mae loss: 21.276537055489403, mape loss: 18.401818394473512
+##on valid data## rmse loss: 34.22150921371748, mae loss: 22.303035484170014, mape loss: 17.351841209632045
+
+=====Epoch 81=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.94it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.02it/s]
+
+##on train data## loss: 0.02113748965609186, 
+##on train data## rmse loss: 32.445278767519774, mae loss: 20.978058629065938, mape loss: 16.821144942967397
+##on valid data## rmse loss: 34.00196350745435, mae loss: 21.976268390439593, mape loss: 15.96822662735885
+
+=====Epoch 82=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.91it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.99it/s]
+
+##on train data## loss: 0.02104266883172798, 
+##on train data## rmse loss: 32.453701355172406, mae loss: 21.016621379732335, mape loss: 15.941199158909935
+##on valid data## rmse loss: 34.042961246562456, mae loss: 22.077374044454324, mape loss: 15.238388065459594
+
+=====Epoch 83=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.95it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.97it/s]
+
+##on train data## loss: 0.021097440395574523, 
+##on train data## rmse loss: 32.47158214880985, mae loss: 21.00452593437531, mape loss: 15.839615553242606
+##on valid data## rmse loss: 34.005856729903314, mae loss: 21.974731931146586, mape loss: 15.147921358639339
+
+=====Epoch 84=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.94it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.97it/s]
+New best results!
+
+##on train data## loss: 0.021082163044491654, 
+##on train data## rmse loss: 32.50289731655481, mae loss: 20.961716549951326, mape loss: 15.483973604047074
+##on valid data## rmse loss: 33.92900040464581, mae loss: 21.896061699345427, mape loss: 14.768938628851243
+
+=====Epoch 85=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.94it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.97it/s]
+
+##on train data## loss: 0.021111299412664753, 
+##on train data## rmse loss: 32.78498016213471, mae loss: 21.3444120838957, mape loss: 15.677448872875118
+##on valid data## rmse loss: 34.47618963133614, mae loss: 22.467817378493976, mape loss: 15.145000239025872
+
+=====Epoch 86=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.91it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.97it/s]
+
+##on train data## loss: 0.02105743624562831, 
+##on train data## rmse loss: 32.38368001374059, mae loss: 20.882610345036728, mape loss: 15.724895833610738
+##on valid data## rmse loss: 34.10466289520264, mae loss: 21.998807277319568, mape loss: 15.064394157731309
+
+=====Epoch 87=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.90it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.01it/s]
+
+##on train data## loss: 0.021051866301106958, 
+##on train data## rmse loss: 32.56551614197545, mae loss: 20.996662421796305, mape loss: 16.068541598301262
+##on valid data## rmse loss: 34.014784704964114, mae loss: 21.92162420164864, mape loss: 15.329657157637039
+
+=====Epoch 88=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.42it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.86it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.95it/s]
+
+##on train data## loss: 0.0210236580573819, 
+##on train data## rmse loss: 32.39070350119153, mae loss: 20.907313808705073, mape loss: 15.660215049700916
+##on valid data## rmse loss: 34.01284145859053, mae loss: 21.950057335619658, mape loss: 15.035725954287457
+
+=====Epoch 89=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.90it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.01it/s]
+
+##on train data## loss: 0.021037939549335895, 
+##on train data## rmse loss: 32.48177796489787, mae loss: 20.99075590889409, mape loss: 15.733190661050239
+##on valid data## rmse loss: 34.108096104747844, mae loss: 22.0496955007877, mape loss: 14.981247456568592
+
+=====Epoch 90=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.98it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.01it/s]
+New best results!
+
+##on train data## loss: 0.021038627322271186, 
+##on train data## rmse loss: 32.421430143920134, mae loss: 20.946427477230817, mape loss: 16.023385482576657
+##on valid data## rmse loss: 33.911135025744166, mae loss: 21.90645039756343, mape loss: 15.319213995112563
+
+=====Epoch 91=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.99it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.01it/s]
+
+##on train data## loss: 0.02100816834717989, 
+##on train data## rmse loss: 32.47793167042283, mae loss: 20.96949351208765, mape loss: 15.690006043925974
+##on valid data## rmse loss: 34.1988484184697, mae loss: 22.07326799068811, mape loss: 15.03593346701478
+
+=====Epoch 92=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.99it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.99it/s]
+
+##on train data## loss: 0.021018161666843126, 
+##on train data## rmse loss: 32.807076975984394, mae loss: 21.811380062463147, mape loss: 21.603070438470482
+##on valid data## rmse loss: 34.16118521060584, mae loss: 22.652138566071134, mape loss: 20.327878476313824
+
+=====Epoch 93=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.44it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.90it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.90it/s]
+
+##on train data## loss: 0.02103075457725135, 
+##on train data## rmse loss: 32.52448917484883, mae loss: 21.02690981019218, mape loss: 15.756795157051686
+##on valid data## rmse loss: 34.00958514663408, mae loss: 21.99715443377225, mape loss: 15.16288365676718
+
+=====Epoch 94=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.96it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.06it/s]
+New best results!
+
+##on train data## loss: 0.020984316537590145, 
+##on train data## rmse loss: 32.215395561554146, mae loss: 20.755109457099962, mape loss: 15.430492528204647
+##on valid data## rmse loss: 33.737080376103236, mae loss: 21.741275193556298, mape loss: 14.728201672715961
+
+=====Epoch 95=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.91it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.05it/s]
+
+##on train data## loss: 0.020947326416934624, 
+##on train data## rmse loss: 32.42139475600524, mae loss: 20.89804036962161, mape loss: 15.599841865822205
+##on valid data## rmse loss: 34.110991298027756, mae loss: 22.012546179429542, mape loss: 15.01183436726624
+
+=====Epoch 96=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.01it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.10it/s]
+
+##on train data## loss: 0.020986487210359214, 
+##on train data## rmse loss: 32.49479120482439, mae loss: 21.242084899038638, mape loss: 18.291003866203177
+##on valid data## rmse loss: 34.205786794986366, mae loss: 22.332084619774008, mape loss: 17.387073388639486
+
+=====Epoch 97=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.46it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 15.03it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 15.08it/s]
+
+##on train data## loss: 0.020995114194873557, 
+##on train data## rmse loss: 32.279444274662424, mae loss: 20.916712269093257, mape loss: 16.851858452618497
+##on valid data## rmse loss: 33.793025934471274, mae loss: 21.888990168301564, mape loss: 15.937494683378148
+
+=====Epoch 98=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.71it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.73it/s]
+
+##on train data## loss: 0.020943172413668356, 
+##on train data## rmse loss: 32.408295121582796, mae loss: 20.892220557110864, mape loss: 16.33950558098607
+##on valid data## rmse loss: 33.88470892636281, mae loss: 21.808024964242612, mape loss: 15.464664018660221
+
+=====Epoch 99=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.47it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.93it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.90it/s]
+
+##on train data## loss: 0.020931559699769103, 
+##on train data## rmse loss: 32.42026324841961, mae loss: 20.95940654082868, mape loss: 16.804426156406134
+##on valid data## rmse loss: 33.859611817126, mae loss: 21.850744355399655, mape loss: 15.896371477898562
+
+=====Epoch 100=====
+Training...
+100%|█████████████████████████████████████████| 318/318 [00:58<00:00,  5.45it/s]
+Evaluating...
+100%|█████████████████████████████████████████| 318/318 [00:21<00:00, 14.77it/s]
+100%|█████████████████████████████████████████| 106/106 [00:07<00:00, 14.77it/s]
+
+##on train data## loss: 0.020964191195631178, 
+##on train data## rmse loss: 32.64061573316466, mae loss: 21.507887624344736, mape loss: 20.597713773355544
+##on valid data## rmse loss: 34.22355768815527, mae loss: 22.475987956209003, mape loss: 19.437857998429603
+
+best_epoch 94 net_params_PEMS04_0_94.pkl
+100%|█████████████████████████████████████████| 106/106 [00:06<00:00, 15.99it/s]
+2024-09-22 10:58:06.055 | INFO     | __main__:test_eval:100 - Horizon 01, MAE: 17.84, RMSE: 27.93, MAPE: 12.6049%
+2024-09-22 10:58:06.083 | INFO     | __main__:test_eval:100 - Horizon 02, MAE: 18.79, RMSE: 29.36, MAPE: 13.0723%
+2024-09-22 10:58:06.108 | INFO     | __main__:test_eval:100 - Horizon 03, MAE: 19.63, RMSE: 30.53, MAPE: 13.4280%
+2024-09-22 10:58:06.134 | INFO     | __main__:test_eval:100 - Horizon 04, MAE: 20.22, RMSE: 31.37, MAPE: 13.8142%
+2024-09-22 10:58:06.160 | INFO     | __main__:test_eval:100 - Horizon 05, MAE: 20.73, RMSE: 32.10, MAPE: 14.1603%
+2024-09-22 10:58:06.185 | INFO     | __main__:test_eval:100 - Horizon 06, MAE: 21.29, RMSE: 32.88, MAPE: 14.6185%
+2024-09-22 10:58:06.211 | INFO     | __main__:test_eval:100 - Horizon 07, MAE: 21.89, RMSE: 33.68, MAPE: 15.0960%
+2024-09-22 10:58:06.237 | INFO     | __main__:test_eval:100 - Horizon 08, MAE: 22.46, RMSE: 34.44, MAPE: 15.4044%
+2024-09-22 10:58:06.262 | INFO     | __main__:test_eval:100 - Horizon 09, MAE: 23.02, RMSE: 35.16, MAPE: 15.7490%
+2024-09-22 10:58:06.288 | INFO     | __main__:test_eval:100 - Horizon 10, MAE: 23.56, RMSE: 35.83, MAPE: 16.0214%
+2024-09-22 10:58:06.315 | INFO     | __main__:test_eval:100 - Horizon 11, MAE: 24.25, RMSE: 36.67, MAPE: 16.4547%
+2024-09-22 10:58:06.348 | INFO     | __main__:test_eval:100 - Horizon 12, MAE: 25.06, RMSE: 37.73, MAPE: 17.0885%
+2024-09-22 10:58:07.043 | INFO     | __main__:test_eval:106 - Average Horizon, MAE: 21.56, RMSE: 33.26, MAPE: 14.7927%
+##on test data## rmse loss: 33.26413345336914, mae loss: 21.56165313720703, mape loss: 14.792689681053162
+2024-09-22 10:58:07.044 | INFO     | __main__:main:212 - Average Training Time: 19.6061 secs/epoch
+2024-09-22 10:58:07.044 | INFO     | __main__:main:214 - Average Inference Time: 6.2165 secs
+
+Process finished with exit code -1

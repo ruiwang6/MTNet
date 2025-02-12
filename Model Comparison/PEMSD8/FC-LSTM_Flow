@@ -1,0 +1,1046 @@
+ssh://root@region-42.seetacloud.com:47645/root/miniconda3/bin/python -u /project/Seq2Seq/model/Run.py
+/project/Seq2Seq
+*****************Model Parameter*****************
+Encoder.lstm.weight_ih_l0 torch.Size([256, 1]) True
+Encoder.lstm.weight_hh_l0 torch.Size([256, 64]) True
+Encoder.lstm.bias_ih_l0 torch.Size([256]) True
+Encoder.lstm.bias_hh_l0 torch.Size([256]) True
+Encoder.lstm.weight_ih_l1 torch.Size([256, 64]) True
+Encoder.lstm.weight_hh_l1 torch.Size([256, 64]) True
+Encoder.lstm.bias_ih_l1 torch.Size([256]) True
+Encoder.lstm.bias_hh_l1 torch.Size([256]) True
+Decoder.lstm.weight_ih_l0 torch.Size([256, 1]) True
+Decoder.lstm.weight_hh_l0 torch.Size([256, 64]) True
+Decoder.lstm.bias_ih_l0 torch.Size([256]) True
+Decoder.lstm.bias_hh_l0 torch.Size([256]) True
+Decoder.lstm.weight_ih_l1 torch.Size([256, 64]) True
+Decoder.lstm.weight_hh_l1 torch.Size([256, 64]) True
+Decoder.lstm.bias_ih_l1 torch.Size([256]) True
+Decoder.lstm.bias_hh_l1 torch.Size([256]) True
+Decoder.linear.weight torch.Size([1, 64]) True
+Decoder.linear.bias torch.Size([1]) True
+Total params num: 100929
+*****************Finish Parameter****************
+Load PEMSD8 Dataset shaped:  (17856, 170, 1) 82.3 3.0 63.76298 64.9
+Normalize the dataset by Standard Normalization
+Train:  (10691, 12, 170, 1) (10691, 12, 170, 1)
+Val:  (3548, 12, 170, 1) (3548, 12, 170, 1)
+Test:  (3548, 12, 170, 1) (3548, 12, 170, 1)
+2024-07-06 08:54: Experiment log path in: /project/Seq2Seq/model/experiments/PEMSD8/20240706085451
+2024-07-06 08:54: Train Epoch 1: 0/167 Loss: 64.036102
+2024-07-06 08:54: Train Epoch 1: 20/167 Loss: 53.205978
+2024-07-06 08:54: Train Epoch 1: 40/167 Loss: 49.471695
+2024-07-06 08:54: Train Epoch 1: 60/167 Loss: 43.994244
+2024-07-06 08:54: Train Epoch 1: 80/167 Loss: 39.930458
+2024-07-06 08:54: Train Epoch 1: 100/167 Loss: 34.857788
+2024-07-06 08:54: Train Epoch 1: 120/167 Loss: 30.535048
+2024-07-06 08:54: Train Epoch 1: 140/167 Loss: 27.141474
+2024-07-06 08:54: Train Epoch 1: 160/167 Loss: 23.408848
+2024-07-06 08:54: **********Train Epoch 1: averaged Loss: 39.641479, tf_ratio: 1.000000
+2024-07-06 08:54: **********Val Epoch 1: average Loss: 21.934068
+2024-07-06 08:54: *********************************Current best model saved!
+2024-07-06 08:54: Train Epoch 2: 0/167 Loss: 21.899960
+2024-07-06 08:54: Train Epoch 2: 20/167 Loss: 18.070818
+2024-07-06 08:54: Train Epoch 2: 40/167 Loss: 14.600669
+2024-07-06 08:54: Train Epoch 2: 60/167 Loss: 11.112018
+2024-07-06 08:54: Train Epoch 2: 80/167 Loss: 7.740354
+2024-07-06 08:55: Train Epoch 2: 100/167 Loss: 5.259811
+2024-07-06 08:55: Train Epoch 2: 120/167 Loss: 3.756604
+2024-07-06 08:55: Train Epoch 2: 140/167 Loss: 3.452163
+2024-07-06 08:55: Train Epoch 2: 160/167 Loss: 3.547601
+2024-07-06 08:55: **********Train Epoch 2: averaged Loss: 9.353489, tf_ratio: 1.000000
+2024-07-06 08:55: **********Val Epoch 2: average Loss: 3.699414
+2024-07-06 08:55: *********************************Current best model saved!
+2024-07-06 08:55: Train Epoch 3: 0/167 Loss: 3.853952
+2024-07-06 08:55: Train Epoch 3: 20/167 Loss: 3.636761
+2024-07-06 08:55: Train Epoch 3: 40/167 Loss: 3.813092
+2024-07-06 08:55: Train Epoch 3: 60/167 Loss: 2.960078
+2024-07-06 08:55: Train Epoch 3: 80/167 Loss: 2.176156
+2024-07-06 08:55: Train Epoch 3: 100/167 Loss: 1.822496
+2024-07-06 08:55: Train Epoch 3: 120/167 Loss: 1.677645
+2024-07-06 08:55: Train Epoch 3: 140/167 Loss: 1.621990
+2024-07-06 08:55: Train Epoch 3: 160/167 Loss: 1.597578
+2024-07-06 08:55: **********Train Epoch 3: averaged Loss: 2.497497, tf_ratio: 1.000000
+2024-07-06 08:55: **********Val Epoch 3: average Loss: 1.662310
+2024-07-06 08:55: *********************************Current best model saved!
+2024-07-06 08:55: Train Epoch 4: 0/167 Loss: 1.752477
+2024-07-06 08:55: Train Epoch 4: 20/167 Loss: 1.385553
+2024-07-06 08:55: Train Epoch 4: 40/167 Loss: 1.504790
+2024-07-06 08:55: Train Epoch 4: 60/167 Loss: 1.509265
+2024-07-06 08:55: Train Epoch 4: 80/167 Loss: 1.402518
+2024-07-06 08:55: Train Epoch 4: 100/167 Loss: 1.351660
+2024-07-06 08:55: Train Epoch 4: 120/167 Loss: 1.493874
+2024-07-06 08:55: Train Epoch 4: 140/167 Loss: 1.503371
+2024-07-06 08:55: Train Epoch 4: 160/167 Loss: 1.394608
+2024-07-06 08:55: **********Train Epoch 4: averaged Loss: 1.506178, tf_ratio: 1.000000
+2024-07-06 08:55: **********Val Epoch 4: average Loss: 1.565305
+2024-07-06 08:55: *********************************Current best model saved!
+2024-07-06 08:55: Train Epoch 5: 0/167 Loss: 1.445979
+2024-07-06 08:55: Train Epoch 5: 20/167 Loss: 1.442143
+2024-07-06 08:55: Train Epoch 5: 40/167 Loss: 1.554694
+2024-07-06 08:55: Train Epoch 5: 60/167 Loss: 1.507847
+2024-07-06 08:55: Train Epoch 5: 80/167 Loss: 1.445555
+2024-07-06 08:55: Train Epoch 5: 100/167 Loss: 1.375799
+2024-07-06 08:55: Train Epoch 5: 120/167 Loss: 1.442260
+2024-07-06 08:55: Train Epoch 5: 140/167 Loss: 1.481000
+2024-07-06 08:55: Train Epoch 5: 160/167 Loss: 1.523802
+2024-07-06 08:55: **********Train Epoch 5: averaged Loss: 1.483529, tf_ratio: 1.000000
+2024-07-06 08:55: **********Val Epoch 5: average Loss: 1.586480
+2024-07-06 08:55: Train Epoch 6: 0/167 Loss: 1.514712
+2024-07-06 08:55: Train Epoch 6: 20/167 Loss: 1.418993
+2024-07-06 08:55: Train Epoch 6: 40/167 Loss: 1.571280
+2024-07-06 08:55: Train Epoch 6: 60/167 Loss: 1.564813
+2024-07-06 08:55: Train Epoch 6: 80/167 Loss: 1.443746
+2024-07-06 08:55: Train Epoch 6: 100/167 Loss: 1.447149
+2024-07-06 08:55: Train Epoch 6: 120/167 Loss: 1.318677
+2024-07-06 08:55: Train Epoch 6: 140/167 Loss: 1.511774
+2024-07-06 08:55: Train Epoch 6: 160/167 Loss: 1.369577
+2024-07-06 08:55: **********Train Epoch 6: averaged Loss: 1.471771, tf_ratio: 1.000000
+2024-07-06 08:55: **********Val Epoch 6: average Loss: 1.568296
+2024-07-06 08:55: Train Epoch 7: 0/167 Loss: 1.469772
+2024-07-06 08:55: Train Epoch 7: 20/167 Loss: 1.623138
+2024-07-06 08:55: Train Epoch 7: 40/167 Loss: 1.326343
+2024-07-06 08:55: Train Epoch 7: 60/167 Loss: 1.599220
+2024-07-06 08:55: Train Epoch 7: 80/167 Loss: 1.503782
+2024-07-06 08:55: Train Epoch 7: 100/167 Loss: 1.530890
+2024-07-06 08:55: Train Epoch 7: 120/167 Loss: 1.496079
+2024-07-06 08:55: Train Epoch 7: 140/167 Loss: 1.382336
+2024-07-06 08:55: Train Epoch 7: 160/167 Loss: 1.512155
+2024-07-06 08:55: **********Train Epoch 7: averaged Loss: 1.469164, tf_ratio: 1.000000
+2024-07-06 08:55: **********Val Epoch 7: average Loss: 1.545176
+2024-07-06 08:55: *********************************Current best model saved!
+2024-07-06 08:55: Train Epoch 8: 0/167 Loss: 1.470576
+2024-07-06 08:55: Train Epoch 8: 20/167 Loss: 1.486710
+2024-07-06 08:55: Train Epoch 8: 40/167 Loss: 1.484317
+2024-07-06 08:55: Train Epoch 8: 60/167 Loss: 1.515125
+2024-07-06 08:55: Train Epoch 8: 80/167 Loss: 1.404353
+2024-07-06 08:55: Train Epoch 8: 100/167 Loss: 1.496030
+2024-07-06 08:55: Train Epoch 8: 120/167 Loss: 1.400802
+2024-07-06 08:55: Train Epoch 8: 140/167 Loss: 1.403813
+2024-07-06 08:55: Train Epoch 8: 160/167 Loss: 1.517721
+2024-07-06 08:55: **********Train Epoch 8: averaged Loss: 1.461723, tf_ratio: 1.000000
+2024-07-06 08:55: **********Val Epoch 8: average Loss: 1.540985
+2024-07-06 08:55: *********************************Current best model saved!
+2024-07-06 08:55: Train Epoch 9: 0/167 Loss: 1.357880
+2024-07-06 08:55: Train Epoch 9: 20/167 Loss: 1.353746
+2024-07-06 08:55: Train Epoch 9: 40/167 Loss: 1.486123
+2024-07-06 08:55: Train Epoch 9: 60/167 Loss: 1.415291
+2024-07-06 08:55: Train Epoch 9: 80/167 Loss: 1.586024
+2024-07-06 08:55: Train Epoch 9: 100/167 Loss: 1.487407
+2024-07-06 08:55: Train Epoch 9: 120/167 Loss: 1.557628
+2024-07-06 08:55: Train Epoch 9: 140/167 Loss: 1.525371
+2024-07-06 08:55: Train Epoch 9: 160/167 Loss: 1.524199
+2024-07-06 08:55: **********Train Epoch 9: averaged Loss: 1.466448, tf_ratio: 1.000000
+2024-07-06 08:55: **********Val Epoch 9: average Loss: 1.541167
+2024-07-06 08:55: Train Epoch 10: 0/167 Loss: 1.491178
+2024-07-06 08:55: Train Epoch 10: 20/167 Loss: 1.280884
+2024-07-06 08:55: Train Epoch 10: 40/167 Loss: 1.461030
+2024-07-06 08:55: Train Epoch 10: 60/167 Loss: 1.620931
+2024-07-06 08:55: Train Epoch 10: 80/167 Loss: 1.475916
+2024-07-06 08:55: Train Epoch 10: 100/167 Loss: 1.560549
+2024-07-06 08:55: Train Epoch 10: 120/167 Loss: 1.516391
+2024-07-06 08:55: Train Epoch 10: 140/167 Loss: 1.430691
+2024-07-06 08:55: Train Epoch 10: 160/167 Loss: 1.340734
+2024-07-06 08:55: **********Train Epoch 10: averaged Loss: 1.456743, tf_ratio: 1.000000
+2024-07-06 08:55: **********Val Epoch 10: average Loss: 1.541150
+2024-07-06 08:55: Train Epoch 11: 0/167 Loss: 1.550186
+2024-07-06 08:55: Train Epoch 11: 20/167 Loss: 1.367652
+2024-07-06 08:55: Train Epoch 11: 40/167 Loss: 1.558815
+2024-07-06 08:55: Train Epoch 11: 60/167 Loss: 1.536638
+2024-07-06 08:55: Train Epoch 11: 80/167 Loss: 1.450889
+2024-07-06 08:55: Train Epoch 11: 100/167 Loss: 1.314124
+2024-07-06 08:55: Train Epoch 11: 120/167 Loss: 1.521314
+2024-07-06 08:55: Train Epoch 11: 140/167 Loss: 1.335788
+2024-07-06 08:55: Train Epoch 11: 160/167 Loss: 1.376629
+2024-07-06 08:55: **********Train Epoch 11: averaged Loss: 1.454148, tf_ratio: 1.000000
+2024-07-06 08:55: **********Val Epoch 11: average Loss: 1.539084
+2024-07-06 08:55: *********************************Current best model saved!
+2024-07-06 08:55: Train Epoch 12: 0/167 Loss: 1.659103
+2024-07-06 08:55: Train Epoch 12: 20/167 Loss: 1.530020
+2024-07-06 08:55: Train Epoch 12: 40/167 Loss: 1.464358
+2024-07-06 08:55: Train Epoch 12: 60/167 Loss: 1.405872
+2024-07-06 08:55: Train Epoch 12: 80/167 Loss: 1.549481
+2024-07-06 08:56: Train Epoch 12: 100/167 Loss: 1.366582
+2024-07-06 08:56: Train Epoch 12: 120/167 Loss: 1.536519
+2024-07-06 08:56: Train Epoch 12: 140/167 Loss: 1.497289
+2024-07-06 08:56: Train Epoch 12: 160/167 Loss: 1.326431
+2024-07-06 08:56: **********Train Epoch 12: averaged Loss: 1.456099, tf_ratio: 1.000000
+2024-07-06 08:56: **********Val Epoch 12: average Loss: 1.541068
+2024-07-06 08:56: Train Epoch 13: 0/167 Loss: 1.441381
+2024-07-06 08:56: Train Epoch 13: 20/167 Loss: 1.509262
+2024-07-06 08:56: Train Epoch 13: 40/167 Loss: 1.459001
+2024-07-06 08:56: Train Epoch 13: 60/167 Loss: 1.511351
+2024-07-06 08:56: Train Epoch 13: 80/167 Loss: 1.448168
+2024-07-06 08:56: Train Epoch 13: 100/167 Loss: 1.489372
+2024-07-06 08:56: Train Epoch 13: 120/167 Loss: 1.498897
+2024-07-06 08:56: Train Epoch 13: 140/167 Loss: 1.462697
+2024-07-06 08:56: Train Epoch 13: 160/167 Loss: 1.452954
+2024-07-06 08:56: **********Train Epoch 13: averaged Loss: 1.453640, tf_ratio: 1.000000
+2024-07-06 08:56: **********Val Epoch 13: average Loss: 1.540462
+2024-07-06 08:56: Train Epoch 14: 0/167 Loss: 1.434845
+2024-07-06 08:56: Train Epoch 14: 20/167 Loss: 1.443068
+2024-07-06 08:56: Train Epoch 14: 40/167 Loss: 1.352714
+2024-07-06 08:56: Train Epoch 14: 60/167 Loss: 1.446407
+2024-07-06 08:56: Train Epoch 14: 80/167 Loss: 1.420736
+2024-07-06 08:56: Train Epoch 14: 100/167 Loss: 1.319992
+2024-07-06 08:56: Train Epoch 14: 120/167 Loss: 1.363539
+2024-07-06 08:56: Train Epoch 14: 140/167 Loss: 1.385506
+2024-07-06 08:56: Train Epoch 14: 160/167 Loss: 1.442635
+2024-07-06 08:56: **********Train Epoch 14: averaged Loss: 1.456782, tf_ratio: 1.000000
+2024-07-06 08:56: **********Val Epoch 14: average Loss: 1.538476
+2024-07-06 08:56: *********************************Current best model saved!
+2024-07-06 08:56: Train Epoch 15: 0/167 Loss: 1.462330
+2024-07-06 08:56: Train Epoch 15: 20/167 Loss: 1.374242
+2024-07-06 08:56: Train Epoch 15: 40/167 Loss: 1.378355
+2024-07-06 08:56: Train Epoch 15: 60/167 Loss: 1.476939
+2024-07-06 08:56: Train Epoch 15: 80/167 Loss: 1.437954
+2024-07-06 08:56: Train Epoch 15: 100/167 Loss: 1.343838
+2024-07-06 08:56: Train Epoch 15: 120/167 Loss: 1.499569
+2024-07-06 08:56: Train Epoch 15: 140/167 Loss: 1.546465
+2024-07-06 08:56: Train Epoch 15: 160/167 Loss: 1.470191
+2024-07-06 08:56: **********Train Epoch 15: averaged Loss: 1.450242, tf_ratio: 1.000000
+2024-07-06 08:56: **********Val Epoch 15: average Loss: 1.536151
+2024-07-06 08:56: *********************************Current best model saved!
+2024-07-06 08:56: Train Epoch 16: 0/167 Loss: 1.449157
+2024-07-06 08:56: Train Epoch 16: 20/167 Loss: 1.436618
+2024-07-06 08:56: Train Epoch 16: 40/167 Loss: 1.326447
+2024-07-06 08:56: Train Epoch 16: 60/167 Loss: 1.658696
+2024-07-06 08:56: Train Epoch 16: 80/167 Loss: 1.514610
+2024-07-06 08:56: Train Epoch 16: 100/167 Loss: 1.417774
+2024-07-06 08:56: Train Epoch 16: 120/167 Loss: 1.345550
+2024-07-06 08:56: Train Epoch 16: 140/167 Loss: 1.518652
+2024-07-06 08:56: Train Epoch 16: 160/167 Loss: 1.432868
+2024-07-06 08:56: **********Train Epoch 16: averaged Loss: 1.451004, tf_ratio: 1.000000
+2024-07-06 08:56: **********Val Epoch 16: average Loss: 1.532506
+2024-07-06 08:56: *********************************Current best model saved!
+2024-07-06 08:56: Train Epoch 17: 0/167 Loss: 1.332502
+2024-07-06 08:56: Train Epoch 17: 20/167 Loss: 1.521851
+2024-07-06 08:56: Train Epoch 17: 40/167 Loss: 1.545233
+2024-07-06 08:56: Train Epoch 17: 60/167 Loss: 1.558264
+2024-07-06 08:56: Train Epoch 17: 80/167 Loss: 1.505171
+2024-07-06 08:56: Train Epoch 17: 100/167 Loss: 1.504209
+2024-07-06 08:56: Train Epoch 17: 120/167 Loss: 1.527571
+2024-07-06 08:56: Train Epoch 17: 140/167 Loss: 1.433440
+2024-07-06 08:56: Train Epoch 17: 160/167 Loss: 1.496959
+2024-07-06 08:56: **********Train Epoch 17: averaged Loss: 1.449595, tf_ratio: 1.000000
+2024-07-06 08:56: **********Val Epoch 17: average Loss: 1.533941
+2024-07-06 08:56: Train Epoch 18: 0/167 Loss: 1.493117
+2024-07-06 08:56: Train Epoch 18: 20/167 Loss: 1.512350
+2024-07-06 08:56: Train Epoch 18: 40/167 Loss: 1.481618
+2024-07-06 08:56: Train Epoch 18: 60/167 Loss: 1.452186
+2024-07-06 08:56: Train Epoch 18: 80/167 Loss: 1.469568
+2024-07-06 08:56: Train Epoch 18: 100/167 Loss: 1.446171
+2024-07-06 08:56: Train Epoch 18: 120/167 Loss: 1.317346
+2024-07-06 08:56: Train Epoch 18: 140/167 Loss: 1.439267
+2024-07-06 08:56: Train Epoch 18: 160/167 Loss: 1.395086
+2024-07-06 08:56: **********Train Epoch 18: averaged Loss: 1.445054, tf_ratio: 1.000000
+2024-07-06 08:56: **********Val Epoch 18: average Loss: 1.531336
+2024-07-06 08:56: *********************************Current best model saved!
+2024-07-06 08:56: Train Epoch 19: 0/167 Loss: 1.604805
+2024-07-06 08:56: Train Epoch 19: 20/167 Loss: 1.355933
+2024-07-06 08:56: Train Epoch 19: 40/167 Loss: 1.326610
+2024-07-06 08:56: Train Epoch 19: 60/167 Loss: 1.475932
+2024-07-06 08:56: Train Epoch 19: 80/167 Loss: 1.497462
+2024-07-06 08:56: Train Epoch 19: 100/167 Loss: 1.370344
+2024-07-06 08:56: Train Epoch 19: 120/167 Loss: 1.595008
+2024-07-06 08:56: Train Epoch 19: 140/167 Loss: 1.403335
+2024-07-06 08:56: Train Epoch 19: 160/167 Loss: 1.463502
+2024-07-06 08:56: **********Train Epoch 19: averaged Loss: 1.446780, tf_ratio: 1.000000
+2024-07-06 08:56: **********Val Epoch 19: average Loss: 1.554129
+2024-07-06 08:56: Train Epoch 20: 0/167 Loss: 1.480892
+2024-07-06 08:56: Train Epoch 20: 20/167 Loss: 1.471619
+2024-07-06 08:56: Train Epoch 20: 40/167 Loss: 1.497892
+2024-07-06 08:56: Train Epoch 20: 60/167 Loss: 1.403701
+2024-07-06 08:56: Train Epoch 20: 80/167 Loss: 1.390962
+2024-07-06 08:56: Train Epoch 20: 100/167 Loss: 1.335020
+2024-07-06 08:56: Train Epoch 20: 120/167 Loss: 1.392950
+2024-07-06 08:56: Train Epoch 20: 140/167 Loss: 1.472013
+2024-07-06 08:56: Train Epoch 20: 160/167 Loss: 1.409916
+2024-07-06 08:56: **********Train Epoch 20: averaged Loss: 1.444513, tf_ratio: 1.000000
+2024-07-06 08:56: **********Val Epoch 20: average Loss: 1.530438
+2024-07-06 08:56: *********************************Current best model saved!
+2024-07-06 08:56: Train Epoch 21: 0/167 Loss: 1.431644
+2024-07-06 08:56: Train Epoch 21: 20/167 Loss: 1.456420
+2024-07-06 08:56: Train Epoch 21: 40/167 Loss: 1.516790
+2024-07-06 08:56: Train Epoch 21: 60/167 Loss: 1.478066
+2024-07-06 08:56: Train Epoch 21: 80/167 Loss: 1.437856
+2024-07-06 08:56: Train Epoch 21: 100/167 Loss: 1.460856
+2024-07-06 08:56: Train Epoch 21: 120/167 Loss: 1.404191
+2024-07-06 08:56: Train Epoch 21: 140/167 Loss: 1.361687
+2024-07-06 08:56: Train Epoch 21: 160/167 Loss: 1.490770
+2024-07-06 08:56: **********Train Epoch 21: averaged Loss: 1.443937, tf_ratio: 1.000000
+2024-07-06 08:56: **********Val Epoch 21: average Loss: 1.532943
+2024-07-06 08:56: Train Epoch 22: 0/167 Loss: 1.396004
+2024-07-06 08:56: Train Epoch 22: 20/167 Loss: 1.438320
+2024-07-06 08:56: Train Epoch 22: 40/167 Loss: 1.456595
+2024-07-06 08:56: Train Epoch 22: 60/167 Loss: 1.431587
+2024-07-06 08:56: Train Epoch 22: 80/167 Loss: 1.385327
+2024-07-06 08:57: Train Epoch 22: 100/167 Loss: 1.384105
+2024-07-06 08:57: Train Epoch 22: 120/167 Loss: 1.344442
+2024-07-06 08:57: Train Epoch 22: 140/167 Loss: 1.464295
+2024-07-06 08:57: Train Epoch 22: 160/167 Loss: 1.430796
+2024-07-06 08:57: **********Train Epoch 22: averaged Loss: 1.445152, tf_ratio: 1.000000
+2024-07-06 08:57: **********Val Epoch 22: average Loss: 1.527558
+2024-07-06 08:57: *********************************Current best model saved!
+2024-07-06 08:57: Train Epoch 23: 0/167 Loss: 1.338876
+2024-07-06 08:57: Train Epoch 23: 20/167 Loss: 1.391704
+2024-07-06 08:57: Train Epoch 23: 40/167 Loss: 1.381325
+2024-07-06 08:57: Train Epoch 23: 60/167 Loss: 1.413966
+2024-07-06 08:57: Train Epoch 23: 80/167 Loss: 1.501578
+2024-07-06 08:57: Train Epoch 23: 100/167 Loss: 1.505056
+2024-07-06 08:57: Train Epoch 23: 120/167 Loss: 1.480855
+2024-07-06 08:57: Train Epoch 23: 140/167 Loss: 1.373504
+2024-07-06 08:57: Train Epoch 23: 160/167 Loss: 1.567545
+2024-07-06 08:57: **********Train Epoch 23: averaged Loss: 1.438916, tf_ratio: 1.000000
+2024-07-06 08:57: **********Val Epoch 23: average Loss: 1.529656
+2024-07-06 08:57: Train Epoch 24: 0/167 Loss: 1.491257
+2024-07-06 08:57: Train Epoch 24: 20/167 Loss: 1.560471
+2024-07-06 08:57: Train Epoch 24: 40/167 Loss: 1.563627
+2024-07-06 08:57: Train Epoch 24: 60/167 Loss: 1.398963
+2024-07-06 08:57: Train Epoch 24: 80/167 Loss: 1.392743
+2024-07-06 08:57: Train Epoch 24: 100/167 Loss: 1.328661
+2024-07-06 08:57: Train Epoch 24: 120/167 Loss: 1.453804
+2024-07-06 08:57: Train Epoch 24: 140/167 Loss: 1.519514
+2024-07-06 08:57: Train Epoch 24: 160/167 Loss: 1.385076
+2024-07-06 08:57: **********Train Epoch 24: averaged Loss: 1.441580, tf_ratio: 1.000000
+2024-07-06 08:57: **********Val Epoch 24: average Loss: 1.534225
+2024-07-06 08:57: Train Epoch 25: 0/167 Loss: 1.306566
+2024-07-06 08:57: Train Epoch 25: 20/167 Loss: 1.479881
+2024-07-06 08:57: Train Epoch 25: 40/167 Loss: 1.383119
+2024-07-06 08:57: Train Epoch 25: 60/167 Loss: 1.482947
+2024-07-06 08:57: Train Epoch 25: 80/167 Loss: 1.356017
+2024-07-06 08:57: Train Epoch 25: 100/167 Loss: 1.378147
+2024-07-06 08:57: Train Epoch 25: 120/167 Loss: 1.560148
+2024-07-06 08:57: Train Epoch 25: 140/167 Loss: 1.390117
+2024-07-06 08:57: Train Epoch 25: 160/167 Loss: 1.311036
+2024-07-06 08:57: **********Train Epoch 25: averaged Loss: 1.438118, tf_ratio: 1.000000
+2024-07-06 08:57: **********Val Epoch 25: average Loss: 1.525681
+2024-07-06 08:57: *********************************Current best model saved!
+2024-07-06 08:57: Train Epoch 26: 0/167 Loss: 1.316218
+2024-07-06 08:57: Train Epoch 26: 20/167 Loss: 1.347693
+2024-07-06 08:57: Train Epoch 26: 40/167 Loss: 1.464645
+2024-07-06 08:57: Train Epoch 26: 60/167 Loss: 1.339775
+2024-07-06 08:57: Train Epoch 26: 80/167 Loss: 1.444129
+2024-07-06 08:57: Train Epoch 26: 100/167 Loss: 1.423521
+2024-07-06 08:57: Train Epoch 26: 120/167 Loss: 1.322404
+2024-07-06 08:57: Train Epoch 26: 140/167 Loss: 1.446158
+2024-07-06 08:57: Train Epoch 26: 160/167 Loss: 1.423063
+2024-07-06 08:57: **********Train Epoch 26: averaged Loss: 1.436046, tf_ratio: 1.000000
+2024-07-06 08:57: **********Val Epoch 26: average Loss: 1.523071
+2024-07-06 08:57: *********************************Current best model saved!
+2024-07-06 08:57: Train Epoch 27: 0/167 Loss: 1.352227
+2024-07-06 08:57: Train Epoch 27: 20/167 Loss: 1.372071
+2024-07-06 08:57: Train Epoch 27: 40/167 Loss: 1.444618
+2024-07-06 08:57: Train Epoch 27: 60/167 Loss: 1.345490
+2024-07-06 08:57: Train Epoch 27: 80/167 Loss: 1.634282
+2024-07-06 08:57: Train Epoch 27: 100/167 Loss: 1.429077
+2024-07-06 08:57: Train Epoch 27: 120/167 Loss: 1.384361
+2024-07-06 08:57: Train Epoch 27: 140/167 Loss: 1.442508
+2024-07-06 08:57: Train Epoch 27: 160/167 Loss: 1.288056
+2024-07-06 08:57: **********Train Epoch 27: averaged Loss: 1.436718, tf_ratio: 1.000000
+2024-07-06 08:57: **********Val Epoch 27: average Loss: 1.538411
+2024-07-06 08:57: Train Epoch 28: 0/167 Loss: 1.365737
+2024-07-06 08:57: Train Epoch 28: 20/167 Loss: 1.337406
+2024-07-06 08:57: Train Epoch 28: 40/167 Loss: 1.533166
+2024-07-06 08:57: Train Epoch 28: 60/167 Loss: 1.496738
+2024-07-06 08:57: Train Epoch 28: 80/167 Loss: 1.450053
+2024-07-06 08:57: Train Epoch 28: 100/167 Loss: 1.474835
+2024-07-06 08:57: Train Epoch 28: 120/167 Loss: 1.593961
+2024-07-06 08:57: Train Epoch 28: 140/167 Loss: 1.475943
+2024-07-06 08:57: Train Epoch 28: 160/167 Loss: 1.410541
+2024-07-06 08:57: **********Train Epoch 28: averaged Loss: 1.435618, tf_ratio: 1.000000
+2024-07-06 08:57: **********Val Epoch 28: average Loss: 1.522467
+2024-07-06 08:57: *********************************Current best model saved!
+2024-07-06 08:57: Train Epoch 29: 0/167 Loss: 1.376842
+2024-07-06 08:57: Train Epoch 29: 20/167 Loss: 1.548127
+2024-07-06 08:57: Train Epoch 29: 40/167 Loss: 1.485664
+2024-07-06 08:57: Train Epoch 29: 60/167 Loss: 1.432707
+2024-07-06 08:57: Train Epoch 29: 80/167 Loss: 1.505535
+2024-07-06 08:57: Train Epoch 29: 100/167 Loss: 1.426778
+2024-07-06 08:57: Train Epoch 29: 120/167 Loss: 1.400724
+2024-07-06 08:57: Train Epoch 29: 140/167 Loss: 1.439250
+2024-07-06 08:57: Train Epoch 29: 160/167 Loss: 1.403684
+2024-07-06 08:57: **********Train Epoch 29: averaged Loss: 1.434925, tf_ratio: 1.000000
+2024-07-06 08:57: **********Val Epoch 29: average Loss: 1.524201
+2024-07-06 08:57: Train Epoch 30: 0/167 Loss: 1.353893
+2024-07-06 08:57: Train Epoch 30: 20/167 Loss: 1.372495
+2024-07-06 08:57: Train Epoch 30: 40/167 Loss: 1.435201
+2024-07-06 08:57: Train Epoch 30: 60/167 Loss: 1.527292
+2024-07-06 08:57: Train Epoch 30: 80/167 Loss: 1.421431
+2024-07-06 08:57: Train Epoch 30: 100/167 Loss: 1.456764
+2024-07-06 08:57: Train Epoch 30: 120/167 Loss: 1.457409
+2024-07-06 08:57: Train Epoch 30: 140/167 Loss: 1.328143
+2024-07-06 08:57: Train Epoch 30: 160/167 Loss: 1.398823
+2024-07-06 08:57: **********Train Epoch 30: averaged Loss: 1.432325, tf_ratio: 1.000000
+2024-07-06 08:57: **********Val Epoch 30: average Loss: 1.535251
+2024-07-06 08:57: Train Epoch 31: 0/167 Loss: 1.473446
+2024-07-06 08:57: Train Epoch 31: 20/167 Loss: 1.516841
+2024-07-06 08:57: Train Epoch 31: 40/167 Loss: 1.372194
+2024-07-06 08:57: Train Epoch 31: 60/167 Loss: 1.366984
+2024-07-06 08:57: Train Epoch 31: 80/167 Loss: 1.422865
+2024-07-06 08:57: Train Epoch 31: 100/167 Loss: 1.309180
+2024-07-06 08:57: Train Epoch 31: 120/167 Loss: 1.492812
+2024-07-06 08:57: Train Epoch 31: 140/167 Loss: 1.520697
+2024-07-06 08:57: Train Epoch 31: 160/167 Loss: 1.343613
+2024-07-06 08:57: **********Train Epoch 31: averaged Loss: 1.430913, tf_ratio: 1.000000
+2024-07-06 08:57: **********Val Epoch 31: average Loss: 1.523865
+2024-07-06 08:57: Train Epoch 32: 0/167 Loss: 1.558088
+2024-07-06 08:57: Train Epoch 32: 20/167 Loss: 1.524441
+2024-07-06 08:57: Train Epoch 32: 40/167 Loss: 1.349875
+2024-07-06 08:57: Train Epoch 32: 60/167 Loss: 1.465376
+2024-07-06 08:57: Train Epoch 32: 80/167 Loss: 1.396959
+2024-07-06 08:57: Train Epoch 32: 100/167 Loss: 1.621217
+2024-07-06 08:58: Train Epoch 32: 120/167 Loss: 1.443899
+2024-07-06 08:58: Train Epoch 32: 140/167 Loss: 1.483044
+2024-07-06 08:58: Train Epoch 32: 160/167 Loss: 1.418641
+2024-07-06 08:58: **********Train Epoch 32: averaged Loss: 1.428227, tf_ratio: 1.000000
+2024-07-06 08:58: **********Val Epoch 32: average Loss: 1.521241
+2024-07-06 08:58: *********************************Current best model saved!
+2024-07-06 08:58: Train Epoch 33: 0/167 Loss: 1.499117
+2024-07-06 08:58: Train Epoch 33: 20/167 Loss: 1.336528
+2024-07-06 08:58: Train Epoch 33: 40/167 Loss: 1.339581
+2024-07-06 08:58: Train Epoch 33: 60/167 Loss: 1.406121
+2024-07-06 08:58: Train Epoch 33: 80/167 Loss: 1.401848
+2024-07-06 08:58: Train Epoch 33: 100/167 Loss: 1.395982
+2024-07-06 08:58: Train Epoch 33: 120/167 Loss: 1.432461
+2024-07-06 08:58: Train Epoch 33: 140/167 Loss: 1.423077
+2024-07-06 08:58: Train Epoch 33: 160/167 Loss: 1.435095
+2024-07-06 08:58: **********Train Epoch 33: averaged Loss: 1.427927, tf_ratio: 1.000000
+2024-07-06 08:58: **********Val Epoch 33: average Loss: 1.521589
+2024-07-06 08:58: Train Epoch 34: 0/167 Loss: 1.366822
+2024-07-06 08:58: Train Epoch 34: 20/167 Loss: 1.339905
+2024-07-06 08:58: Train Epoch 34: 40/167 Loss: 1.458805
+2024-07-06 08:58: Train Epoch 34: 60/167 Loss: 1.326900
+2024-07-06 08:58: Train Epoch 34: 80/167 Loss: 1.592706
+2024-07-06 08:58: Train Epoch 34: 100/167 Loss: 1.423586
+2024-07-06 08:58: Train Epoch 34: 120/167 Loss: 1.440221
+2024-07-06 08:58: Train Epoch 34: 140/167 Loss: 1.574859
+2024-07-06 08:58: Train Epoch 34: 160/167 Loss: 1.279349
+2024-07-06 08:58: **********Train Epoch 34: averaged Loss: 1.425622, tf_ratio: 1.000000
+2024-07-06 08:58: **********Val Epoch 34: average Loss: 1.522130
+2024-07-06 08:58: Train Epoch 35: 0/167 Loss: 1.447544
+2024-07-06 08:58: Train Epoch 35: 20/167 Loss: 1.424579
+2024-07-06 08:58: Train Epoch 35: 40/167 Loss: 1.449238
+2024-07-06 08:58: Train Epoch 35: 60/167 Loss: 1.363184
+2024-07-06 08:58: Train Epoch 35: 80/167 Loss: 1.506433
+2024-07-06 08:58: Train Epoch 35: 100/167 Loss: 1.489880
+2024-07-06 08:58: Train Epoch 35: 120/167 Loss: 1.427289
+2024-07-06 08:58: Train Epoch 35: 140/167 Loss: 1.359247
+2024-07-06 08:58: Train Epoch 35: 160/167 Loss: 1.307521
+2024-07-06 08:58: **********Train Epoch 35: averaged Loss: 1.425911, tf_ratio: 1.000000
+2024-07-06 08:58: **********Val Epoch 35: average Loss: 1.514724
+2024-07-06 08:58: *********************************Current best model saved!
+2024-07-06 08:58: Train Epoch 36: 0/167 Loss: 1.473573
+2024-07-06 08:58: Train Epoch 36: 20/167 Loss: 1.442315
+2024-07-06 08:58: Train Epoch 36: 40/167 Loss: 1.471881
+2024-07-06 08:58: Train Epoch 36: 60/167 Loss: 1.442375
+2024-07-06 08:58: Train Epoch 36: 80/167 Loss: 1.479306
+2024-07-06 08:58: Train Epoch 36: 100/167 Loss: 1.481352
+2024-07-06 08:58: Train Epoch 36: 120/167 Loss: 1.499209
+2024-07-06 08:58: Train Epoch 36: 140/167 Loss: 1.481645
+2024-07-06 08:58: Train Epoch 36: 160/167 Loss: 1.483637
+2024-07-06 08:58: **********Train Epoch 36: averaged Loss: 1.422736, tf_ratio: 1.000000
+2024-07-06 08:58: **********Val Epoch 36: average Loss: 1.513368
+2024-07-06 08:58: *********************************Current best model saved!
+2024-07-06 08:58: Train Epoch 37: 0/167 Loss: 1.305211
+2024-07-06 08:58: Train Epoch 37: 20/167 Loss: 1.419865
+2024-07-06 08:58: Train Epoch 37: 40/167 Loss: 1.248968
+2024-07-06 08:58: Train Epoch 37: 60/167 Loss: 1.459182
+2024-07-06 08:58: Train Epoch 37: 80/167 Loss: 1.482385
+2024-07-06 08:58: Train Epoch 37: 100/167 Loss: 1.493290
+2024-07-06 08:58: Train Epoch 37: 120/167 Loss: 1.379127
+2024-07-06 08:58: Train Epoch 37: 140/167 Loss: 1.330490
+2024-07-06 08:58: Train Epoch 37: 160/167 Loss: 1.362192
+2024-07-06 08:58: **********Train Epoch 37: averaged Loss: 1.419729, tf_ratio: 1.000000
+2024-07-06 08:58: **********Val Epoch 37: average Loss: 1.515453
+2024-07-06 08:58: Train Epoch 38: 0/167 Loss: 1.361580
+2024-07-06 08:58: Train Epoch 38: 20/167 Loss: 1.383355
+2024-07-06 08:58: Train Epoch 38: 40/167 Loss: 1.440228
+2024-07-06 08:58: Train Epoch 38: 60/167 Loss: 1.457423
+2024-07-06 08:58: Train Epoch 38: 80/167 Loss: 1.513399
+2024-07-06 08:58: Train Epoch 38: 100/167 Loss: 1.410664
+2024-07-06 08:58: Train Epoch 38: 120/167 Loss: 1.337998
+2024-07-06 08:58: Train Epoch 38: 140/167 Loss: 1.470911
+2024-07-06 08:58: Train Epoch 38: 160/167 Loss: 1.481795
+2024-07-06 08:58: **********Train Epoch 38: averaged Loss: 1.421956, tf_ratio: 1.000000
+2024-07-06 08:58: **********Val Epoch 38: average Loss: 1.517578
+2024-07-06 08:58: Train Epoch 39: 0/167 Loss: 1.532021
+2024-07-06 08:58: Train Epoch 39: 20/167 Loss: 1.379234
+2024-07-06 08:58: Train Epoch 39: 40/167 Loss: 1.463668
+2024-07-06 08:58: Train Epoch 39: 60/167 Loss: 1.406827
+2024-07-06 08:58: Train Epoch 39: 80/167 Loss: 1.445711
+2024-07-06 08:58: Train Epoch 39: 100/167 Loss: 1.433178
+2024-07-06 08:58: Train Epoch 39: 120/167 Loss: 1.455818
+2024-07-06 08:58: Train Epoch 39: 140/167 Loss: 1.479576
+2024-07-06 08:58: Train Epoch 39: 160/167 Loss: 1.373261
+2024-07-06 08:58: **********Train Epoch 39: averaged Loss: 1.417281, tf_ratio: 1.000000
+2024-07-06 08:58: **********Val Epoch 39: average Loss: 1.507950
+2024-07-06 08:58: *********************************Current best model saved!
+2024-07-06 08:58: Train Epoch 40: 0/167 Loss: 1.446770
+2024-07-06 08:58: Train Epoch 40: 20/167 Loss: 1.567177
+2024-07-06 08:58: Train Epoch 40: 40/167 Loss: 1.306058
+2024-07-06 08:58: Train Epoch 40: 60/167 Loss: 1.386967
+2024-07-06 08:58: Train Epoch 40: 80/167 Loss: 1.470987
+2024-07-06 08:58: Train Epoch 40: 100/167 Loss: 1.490016
+2024-07-06 08:58: Train Epoch 40: 120/167 Loss: 1.433766
+2024-07-06 08:58: Train Epoch 40: 140/167 Loss: 1.384171
+2024-07-06 08:58: Train Epoch 40: 160/167 Loss: 1.373213
+2024-07-06 08:58: **********Train Epoch 40: averaged Loss: 1.413831, tf_ratio: 1.000000
+2024-07-06 08:58: **********Val Epoch 40: average Loss: 1.509680
+2024-07-06 08:58: Train Epoch 41: 0/167 Loss: 1.418306
+2024-07-06 08:58: Train Epoch 41: 20/167 Loss: 1.478321
+2024-07-06 08:58: Train Epoch 41: 40/167 Loss: 1.516720
+2024-07-06 08:58: Train Epoch 41: 60/167 Loss: 1.360214
+2024-07-06 08:58: Train Epoch 41: 80/167 Loss: 1.333772
+2024-07-06 08:58: Train Epoch 41: 100/167 Loss: 1.502715
+2024-07-06 08:58: Train Epoch 41: 120/167 Loss: 1.376606
+2024-07-06 08:58: Train Epoch 41: 140/167 Loss: 1.437651
+2024-07-06 08:58: Train Epoch 41: 160/167 Loss: 1.446024
+2024-07-06 08:58: **********Train Epoch 41: averaged Loss: 1.412121, tf_ratio: 1.000000
+2024-07-06 08:58: **********Val Epoch 41: average Loss: 1.507868
+2024-07-06 08:58: *********************************Current best model saved!
+2024-07-06 08:58: Train Epoch 42: 0/167 Loss: 1.373745
+2024-07-06 08:58: Train Epoch 42: 20/167 Loss: 1.400181
+2024-07-06 08:58: Train Epoch 42: 40/167 Loss: 1.287019
+2024-07-06 08:58: Train Epoch 42: 60/167 Loss: 1.328660
+2024-07-06 08:58: Train Epoch 42: 80/167 Loss: 1.443723
+2024-07-06 08:58: Train Epoch 42: 100/167 Loss: 1.441148
+2024-07-06 08:58: Train Epoch 42: 120/167 Loss: 1.339927
+2024-07-06 08:59: Train Epoch 42: 140/167 Loss: 1.378519
+2024-07-06 08:59: Train Epoch 42: 160/167 Loss: 1.458731
+2024-07-06 08:59: **********Train Epoch 42: averaged Loss: 1.412393, tf_ratio: 1.000000
+2024-07-06 08:59: **********Val Epoch 42: average Loss: 1.506084
+2024-07-06 08:59: *********************************Current best model saved!
+2024-07-06 08:59: Train Epoch 43: 0/167 Loss: 1.530540
+2024-07-06 08:59: Train Epoch 43: 20/167 Loss: 1.296619
+2024-07-06 08:59: Train Epoch 43: 40/167 Loss: 1.533606
+2024-07-06 08:59: Train Epoch 43: 60/167 Loss: 1.486223
+2024-07-06 08:59: Train Epoch 43: 80/167 Loss: 1.430198
+2024-07-06 08:59: Train Epoch 43: 100/167 Loss: 1.494807
+2024-07-06 08:59: Train Epoch 43: 120/167 Loss: 1.342622
+2024-07-06 08:59: Train Epoch 43: 140/167 Loss: 1.428135
+2024-07-06 08:59: Train Epoch 43: 160/167 Loss: 1.410769
+2024-07-06 08:59: **********Train Epoch 43: averaged Loss: 1.412068, tf_ratio: 1.000000
+2024-07-06 08:59: **********Val Epoch 43: average Loss: 1.505764
+2024-07-06 08:59: *********************************Current best model saved!
+2024-07-06 08:59: Train Epoch 44: 0/167 Loss: 1.512125
+2024-07-06 08:59: Train Epoch 44: 20/167 Loss: 1.280308
+2024-07-06 08:59: Train Epoch 44: 40/167 Loss: 1.258423
+2024-07-06 08:59: Train Epoch 44: 60/167 Loss: 1.431833
+2024-07-06 08:59: Train Epoch 44: 80/167 Loss: 1.273738
+2024-07-06 08:59: Train Epoch 44: 100/167 Loss: 1.351950
+2024-07-06 08:59: Train Epoch 44: 120/167 Loss: 1.373776
+2024-07-06 08:59: Train Epoch 44: 140/167 Loss: 1.453937
+2024-07-06 08:59: Train Epoch 44: 160/167 Loss: 1.317342
+2024-07-06 08:59: **********Train Epoch 44: averaged Loss: 1.407048, tf_ratio: 1.000000
+2024-07-06 08:59: **********Val Epoch 44: average Loss: 1.504026
+2024-07-06 08:59: *********************************Current best model saved!
+2024-07-06 08:59: Train Epoch 45: 0/167 Loss: 1.280540
+2024-07-06 08:59: Train Epoch 45: 20/167 Loss: 1.430828
+2024-07-06 08:59: Train Epoch 45: 40/167 Loss: 1.328215
+2024-07-06 08:59: Train Epoch 45: 60/167 Loss: 1.453527
+2024-07-06 08:59: Train Epoch 45: 80/167 Loss: 1.338447
+2024-07-06 08:59: Train Epoch 45: 100/167 Loss: 1.400927
+2024-07-06 08:59: Train Epoch 45: 120/167 Loss: 1.415074
+2024-07-06 08:59: Train Epoch 45: 140/167 Loss: 1.333777
+2024-07-06 08:59: Train Epoch 45: 160/167 Loss: 1.304333
+2024-07-06 08:59: **********Train Epoch 45: averaged Loss: 1.407371, tf_ratio: 1.000000
+2024-07-06 08:59: **********Val Epoch 45: average Loss: 1.510470
+2024-07-06 08:59: Train Epoch 46: 0/167 Loss: 1.376186
+2024-07-06 08:59: Train Epoch 46: 20/167 Loss: 1.354546
+2024-07-06 08:59: Train Epoch 46: 40/167 Loss: 1.425796
+2024-07-06 08:59: Train Epoch 46: 60/167 Loss: 1.464902
+2024-07-06 08:59: Train Epoch 46: 80/167 Loss: 1.507140
+2024-07-06 08:59: Train Epoch 46: 100/167 Loss: 1.457112
+2024-07-06 08:59: Train Epoch 46: 120/167 Loss: 1.366891
+2024-07-06 08:59: Train Epoch 46: 140/167 Loss: 1.408710
+2024-07-06 08:59: Train Epoch 46: 160/167 Loss: 1.500426
+2024-07-06 08:59: **********Train Epoch 46: averaged Loss: 1.405272, tf_ratio: 1.000000
+2024-07-06 08:59: **********Val Epoch 46: average Loss: 1.506505
+2024-07-06 08:59: Train Epoch 47: 0/167 Loss: 1.393112
+2024-07-06 08:59: Train Epoch 47: 20/167 Loss: 1.468896
+2024-07-06 08:59: Train Epoch 47: 40/167 Loss: 1.572017
+2024-07-06 08:59: Train Epoch 47: 60/167 Loss: 1.416415
+2024-07-06 08:59: Train Epoch 47: 80/167 Loss: 1.432071
+2024-07-06 08:59: Train Epoch 47: 100/167 Loss: 1.423270
+2024-07-06 08:59: Train Epoch 47: 120/167 Loss: 1.306622
+2024-07-06 08:59: Train Epoch 47: 140/167 Loss: 1.414175
+2024-07-06 08:59: Train Epoch 47: 160/167 Loss: 1.464101
+2024-07-06 08:59: **********Train Epoch 47: averaged Loss: 1.403383, tf_ratio: 1.000000
+2024-07-06 08:59: **********Val Epoch 47: average Loss: 1.511886
+2024-07-06 08:59: Train Epoch 48: 0/167 Loss: 1.407253
+2024-07-06 08:59: Train Epoch 48: 20/167 Loss: 1.461350
+2024-07-06 08:59: Train Epoch 48: 40/167 Loss: 1.353792
+2024-07-06 08:59: Train Epoch 48: 60/167 Loss: 1.452806
+2024-07-06 08:59: Train Epoch 48: 80/167 Loss: 1.335109
+2024-07-06 08:59: Train Epoch 48: 100/167 Loss: 1.480544
+2024-07-06 08:59: Train Epoch 48: 120/167 Loss: 1.362102
+2024-07-06 08:59: Train Epoch 48: 140/167 Loss: 1.367266
+2024-07-06 08:59: Train Epoch 48: 160/167 Loss: 1.341478
+2024-07-06 08:59: **********Train Epoch 48: averaged Loss: 1.403096, tf_ratio: 1.000000
+2024-07-06 08:59: **********Val Epoch 48: average Loss: 1.500508
+2024-07-06 08:59: *********************************Current best model saved!
+2024-07-06 08:59: Train Epoch 49: 0/167 Loss: 1.369731
+2024-07-06 08:59: Train Epoch 49: 20/167 Loss: 1.469369
+2024-07-06 08:59: Train Epoch 49: 40/167 Loss: 1.322273
+2024-07-06 08:59: Train Epoch 49: 60/167 Loss: 1.334189
+2024-07-06 08:59: Train Epoch 49: 80/167 Loss: 1.365170
+2024-07-06 08:59: Train Epoch 49: 100/167 Loss: 1.498610
+2024-07-06 08:59: Train Epoch 49: 120/167 Loss: 1.341283
+2024-07-06 08:59: Train Epoch 49: 140/167 Loss: 1.392137
+2024-07-06 08:59: Train Epoch 49: 160/167 Loss: 1.210537
+2024-07-06 08:59: **********Train Epoch 49: averaged Loss: 1.401893, tf_ratio: 1.000000
+2024-07-06 08:59: **********Val Epoch 49: average Loss: 1.504339
+2024-07-06 08:59: Train Epoch 50: 0/167 Loss: 1.424817
+2024-07-06 08:59: Train Epoch 50: 20/167 Loss: 1.410545
+2024-07-06 08:59: Train Epoch 50: 40/167 Loss: 1.370852
+2024-07-06 08:59: Train Epoch 50: 60/167 Loss: 1.306996
+2024-07-06 08:59: Train Epoch 50: 80/167 Loss: 1.420272
+2024-07-06 08:59: Train Epoch 50: 100/167 Loss: 1.417220
+2024-07-06 08:59: Train Epoch 50: 120/167 Loss: 1.324325
+2024-07-06 08:59: Train Epoch 50: 140/167 Loss: 1.426893
+2024-07-06 08:59: Train Epoch 50: 160/167 Loss: 1.450869
+2024-07-06 08:59: **********Train Epoch 50: averaged Loss: 1.398869, tf_ratio: 1.000000
+2024-07-06 08:59: **********Val Epoch 50: average Loss: 1.507380
+2024-07-06 08:59: Train Epoch 51: 0/167 Loss: 1.358089
+2024-07-06 08:59: Train Epoch 51: 20/167 Loss: 1.355858
+2024-07-06 08:59: Train Epoch 51: 40/167 Loss: 1.284365
+2024-07-06 08:59: Train Epoch 51: 60/167 Loss: 1.420006
+2024-07-06 08:59: Train Epoch 51: 80/167 Loss: 1.407958
+2024-07-06 08:59: Train Epoch 51: 100/167 Loss: 1.488342
+2024-07-06 08:59: Train Epoch 51: 120/167 Loss: 1.357801
+2024-07-06 08:59: Train Epoch 51: 140/167 Loss: 1.405824
+2024-07-06 08:59: Train Epoch 51: 160/167 Loss: 1.378867
+2024-07-06 08:59: **********Train Epoch 51: averaged Loss: 1.396655, tf_ratio: 1.000000
+2024-07-06 08:59: **********Val Epoch 51: average Loss: 1.498581
+2024-07-06 08:59: *********************************Current best model saved!
+2024-07-06 08:59: Train Epoch 52: 0/167 Loss: 1.455331
+2024-07-06 08:59: Train Epoch 52: 20/167 Loss: 1.359500
+2024-07-06 08:59: Train Epoch 52: 40/167 Loss: 1.317986
+2024-07-06 08:59: Train Epoch 52: 60/167 Loss: 1.420775
+2024-07-06 08:59: Train Epoch 52: 80/167 Loss: 1.406934
+2024-07-06 08:59: Train Epoch 52: 100/167 Loss: 1.353189
+2024-07-06 09:00: Train Epoch 52: 120/167 Loss: 1.329450
+2024-07-06 09:00: Train Epoch 52: 140/167 Loss: 1.428210
+2024-07-06 09:00: Train Epoch 52: 160/167 Loss: 1.498194
+2024-07-06 09:00: **********Train Epoch 52: averaged Loss: 1.396233, tf_ratio: 1.000000
+2024-07-06 09:00: **********Val Epoch 52: average Loss: 1.496973
+2024-07-06 09:00: *********************************Current best model saved!
+2024-07-06 09:00: Train Epoch 53: 0/167 Loss: 1.308851
+2024-07-06 09:00: Train Epoch 53: 20/167 Loss: 1.251500
+2024-07-06 09:00: Train Epoch 53: 40/167 Loss: 1.459261
+2024-07-06 09:00: Train Epoch 53: 60/167 Loss: 1.456279
+2024-07-06 09:00: Train Epoch 53: 80/167 Loss: 1.502241
+2024-07-06 09:00: Train Epoch 53: 100/167 Loss: 1.344387
+2024-07-06 09:00: Train Epoch 53: 120/167 Loss: 1.420946
+2024-07-06 09:00: Train Epoch 53: 140/167 Loss: 1.313605
+2024-07-06 09:00: Train Epoch 53: 160/167 Loss: 1.431466
+2024-07-06 09:00: **********Train Epoch 53: averaged Loss: 1.393313, tf_ratio: 1.000000
+2024-07-06 09:00: **********Val Epoch 53: average Loss: 1.499244
+2024-07-06 09:00: Train Epoch 54: 0/167 Loss: 1.402682
+2024-07-06 09:00: Train Epoch 54: 20/167 Loss: 1.565103
+2024-07-06 09:00: Train Epoch 54: 40/167 Loss: 1.353034
+2024-07-06 09:00: Train Epoch 54: 60/167 Loss: 1.331101
+2024-07-06 09:00: Train Epoch 54: 80/167 Loss: 1.352261
+2024-07-06 09:00: Train Epoch 54: 100/167 Loss: 1.406227
+2024-07-06 09:00: Train Epoch 54: 120/167 Loss: 1.435152
+2024-07-06 09:00: Train Epoch 54: 140/167 Loss: 1.467715
+2024-07-06 09:00: Train Epoch 54: 160/167 Loss: 1.403207
+2024-07-06 09:00: **********Train Epoch 54: averaged Loss: 1.390847, tf_ratio: 1.000000
+2024-07-06 09:00: **********Val Epoch 54: average Loss: 1.494638
+2024-07-06 09:00: *********************************Current best model saved!
+2024-07-06 09:00: Train Epoch 55: 0/167 Loss: 1.496351
+2024-07-06 09:00: Train Epoch 55: 20/167 Loss: 1.439515
+2024-07-06 09:00: Train Epoch 55: 40/167 Loss: 1.296997
+2024-07-06 09:00: Train Epoch 55: 60/167 Loss: 1.475611
+2024-07-06 09:00: Train Epoch 55: 80/167 Loss: 1.501570
+2024-07-06 09:00: Train Epoch 55: 100/167 Loss: 1.413718
+2024-07-06 09:00: Train Epoch 55: 120/167 Loss: 1.377425
+2024-07-06 09:00: Train Epoch 55: 140/167 Loss: 1.453831
+2024-07-06 09:00: Train Epoch 55: 160/167 Loss: 1.510816
+2024-07-06 09:00: **********Train Epoch 55: averaged Loss: 1.390709, tf_ratio: 1.000000
+2024-07-06 09:00: **********Val Epoch 55: average Loss: 1.501599
+2024-07-06 09:00: Train Epoch 56: 0/167 Loss: 1.433050
+2024-07-06 09:00: Train Epoch 56: 20/167 Loss: 1.455707
+2024-07-06 09:00: Train Epoch 56: 40/167 Loss: 1.356459
+2024-07-06 09:00: Train Epoch 56: 60/167 Loss: 1.368357
+2024-07-06 09:00: Train Epoch 56: 80/167 Loss: 1.410127
+2024-07-06 09:00: Train Epoch 56: 100/167 Loss: 1.395479
+2024-07-06 09:00: Train Epoch 56: 120/167 Loss: 1.368623
+2024-07-06 09:00: Train Epoch 56: 140/167 Loss: 1.470144
+2024-07-06 09:00: Train Epoch 56: 160/167 Loss: 1.321411
+2024-07-06 09:00: **********Train Epoch 56: averaged Loss: 1.388680, tf_ratio: 1.000000
+2024-07-06 09:00: **********Val Epoch 56: average Loss: 1.495697
+2024-07-06 09:00: Train Epoch 57: 0/167 Loss: 1.438324
+2024-07-06 09:00: Train Epoch 57: 20/167 Loss: 1.335753
+2024-07-06 09:00: Train Epoch 57: 40/167 Loss: 1.312203
+2024-07-06 09:00: Train Epoch 57: 60/167 Loss: 1.484452
+2024-07-06 09:00: Train Epoch 57: 80/167 Loss: 1.419049
+2024-07-06 09:00: Train Epoch 57: 100/167 Loss: 1.269345
+2024-07-06 09:00: Train Epoch 57: 120/167 Loss: 1.411967
+2024-07-06 09:00: Train Epoch 57: 140/167 Loss: 1.419699
+2024-07-06 09:00: Train Epoch 57: 160/167 Loss: 1.355674
+2024-07-06 09:00: **********Train Epoch 57: averaged Loss: 1.387821, tf_ratio: 1.000000
+2024-07-06 09:00: **********Val Epoch 57: average Loss: 1.497701
+2024-07-06 09:00: Train Epoch 58: 0/167 Loss: 1.316261
+2024-07-06 09:00: Train Epoch 58: 20/167 Loss: 1.392702
+2024-07-06 09:00: Train Epoch 58: 40/167 Loss: 1.420513
+2024-07-06 09:00: Train Epoch 58: 60/167 Loss: 1.320756
+2024-07-06 09:00: Train Epoch 58: 80/167 Loss: 1.355290
+2024-07-06 09:00: Train Epoch 58: 100/167 Loss: 1.373454
+2024-07-06 09:00: Train Epoch 58: 120/167 Loss: 1.409366
+2024-07-06 09:00: Train Epoch 58: 140/167 Loss: 1.290050
+2024-07-06 09:00: Train Epoch 58: 160/167 Loss: 1.431290
+2024-07-06 09:00: **********Train Epoch 58: averaged Loss: 1.385288, tf_ratio: 1.000000
+2024-07-06 09:00: **********Val Epoch 58: average Loss: 1.492115
+2024-07-06 09:00: *********************************Current best model saved!
+2024-07-06 09:00: Train Epoch 59: 0/167 Loss: 1.372817
+2024-07-06 09:00: Train Epoch 59: 20/167 Loss: 1.389465
+2024-07-06 09:00: Train Epoch 59: 40/167 Loss: 1.279841
+2024-07-06 09:00: Train Epoch 59: 60/167 Loss: 1.336901
+2024-07-06 09:00: Train Epoch 59: 80/167 Loss: 1.403380
+2024-07-06 09:00: Train Epoch 59: 100/167 Loss: 1.355115
+2024-07-06 09:00: Train Epoch 59: 120/167 Loss: 1.453784
+2024-07-06 09:00: Train Epoch 59: 140/167 Loss: 1.344827
+2024-07-06 09:00: Train Epoch 59: 160/167 Loss: 1.363336
+2024-07-06 09:00: **********Train Epoch 59: averaged Loss: 1.383725, tf_ratio: 1.000000
+2024-07-06 09:00: **********Val Epoch 59: average Loss: 1.497267
+2024-07-06 09:00: Train Epoch 60: 0/167 Loss: 1.430570
+2024-07-06 09:00: Train Epoch 60: 20/167 Loss: 1.387420
+2024-07-06 09:00: Train Epoch 60: 40/167 Loss: 1.440675
+2024-07-06 09:00: Train Epoch 60: 60/167 Loss: 1.405555
+2024-07-06 09:00: Train Epoch 60: 80/167 Loss: 1.391771
+2024-07-06 09:00: Train Epoch 60: 100/167 Loss: 1.429957
+2024-07-06 09:00: Train Epoch 60: 120/167 Loss: 1.449131
+2024-07-06 09:00: Train Epoch 60: 140/167 Loss: 1.451421
+2024-07-06 09:00: Train Epoch 60: 160/167 Loss: 1.302670
+2024-07-06 09:00: **********Train Epoch 60: averaged Loss: 1.382096, tf_ratio: 1.000000
+2024-07-06 09:00: **********Val Epoch 60: average Loss: 1.492744
+2024-07-06 09:00: Train Epoch 61: 0/167 Loss: 1.471798
+2024-07-06 09:00: Train Epoch 61: 20/167 Loss: 1.449019
+2024-07-06 09:00: Train Epoch 61: 40/167 Loss: 1.326082
+2024-07-06 09:00: Train Epoch 61: 60/167 Loss: 1.458944
+2024-07-06 09:00: Train Epoch 61: 80/167 Loss: 1.246468
+2024-07-06 09:00: Train Epoch 61: 100/167 Loss: 1.253013
+2024-07-06 09:00: Train Epoch 61: 120/167 Loss: 1.430310
+2024-07-06 09:00: Train Epoch 61: 140/167 Loss: 1.366299
+2024-07-06 09:00: Train Epoch 61: 160/167 Loss: 1.447903
+2024-07-06 09:00: **********Train Epoch 61: averaged Loss: 1.380336, tf_ratio: 1.000000
+2024-07-06 09:00: **********Val Epoch 61: average Loss: 1.496377
+2024-07-06 09:00: Train Epoch 62: 0/167 Loss: 1.401566
+2024-07-06 09:00: Train Epoch 62: 20/167 Loss: 1.418272
+2024-07-06 09:00: Train Epoch 62: 40/167 Loss: 1.277068
+2024-07-06 09:00: Train Epoch 62: 60/167 Loss: 1.359775
+2024-07-06 09:00: Train Epoch 62: 80/167 Loss: 1.499651
+2024-07-06 09:00: Train Epoch 62: 100/167 Loss: 1.350558
+2024-07-06 09:01: Train Epoch 62: 120/167 Loss: 1.476889
+2024-07-06 09:01: Train Epoch 62: 140/167 Loss: 1.497399
+2024-07-06 09:01: Train Epoch 62: 160/167 Loss: 1.326461
+2024-07-06 09:01: **********Train Epoch 62: averaged Loss: 1.379471, tf_ratio: 1.000000
+2024-07-06 09:01: **********Val Epoch 62: average Loss: 1.494331
+2024-07-06 09:01: Train Epoch 63: 0/167 Loss: 1.400509
+2024-07-06 09:01: Train Epoch 63: 20/167 Loss: 1.273055
+2024-07-06 09:01: Train Epoch 63: 40/167 Loss: 1.236046
+2024-07-06 09:01: Train Epoch 63: 60/167 Loss: 1.330544
+2024-07-06 09:01: Train Epoch 63: 80/167 Loss: 1.270797
+2024-07-06 09:01: Train Epoch 63: 100/167 Loss: 1.459211
+2024-07-06 09:01: Train Epoch 63: 120/167 Loss: 1.451110
+2024-07-06 09:01: Train Epoch 63: 140/167 Loss: 1.270814
+2024-07-06 09:01: Train Epoch 63: 160/167 Loss: 1.430521
+2024-07-06 09:01: **********Train Epoch 63: averaged Loss: 1.379380, tf_ratio: 1.000000
+2024-07-06 09:01: **********Val Epoch 63: average Loss: 1.493618
+2024-07-06 09:01: Train Epoch 64: 0/167 Loss: 1.463371
+2024-07-06 09:01: Train Epoch 64: 20/167 Loss: 1.336517
+2024-07-06 09:01: Train Epoch 64: 40/167 Loss: 1.423676
+2024-07-06 09:01: Train Epoch 64: 60/167 Loss: 1.293458
+2024-07-06 09:01: Train Epoch 64: 80/167 Loss: 1.365918
+2024-07-06 09:01: Train Epoch 64: 100/167 Loss: 1.446460
+2024-07-06 09:01: Train Epoch 64: 120/167 Loss: 1.414049
+2024-07-06 09:01: Train Epoch 64: 140/167 Loss: 1.423421
+2024-07-06 09:01: Train Epoch 64: 160/167 Loss: 1.418682
+2024-07-06 09:01: **********Train Epoch 64: averaged Loss: 1.376038, tf_ratio: 1.000000
+2024-07-06 09:01: **********Val Epoch 64: average Loss: 1.493031
+2024-07-06 09:01: Train Epoch 65: 0/167 Loss: 1.340192
+2024-07-06 09:01: Train Epoch 65: 20/167 Loss: 1.386041
+2024-07-06 09:01: Train Epoch 65: 40/167 Loss: 1.344544
+2024-07-06 09:01: Train Epoch 65: 60/167 Loss: 1.345851
+2024-07-06 09:01: Train Epoch 65: 80/167 Loss: 1.260510
+2024-07-06 09:01: Train Epoch 65: 100/167 Loss: 1.342534
+2024-07-06 09:01: Train Epoch 65: 120/167 Loss: 1.352573
+2024-07-06 09:01: Train Epoch 65: 140/167 Loss: 1.320508
+2024-07-06 09:01: Train Epoch 65: 160/167 Loss: 1.428964
+2024-07-06 09:01: **********Train Epoch 65: averaged Loss: 1.375527, tf_ratio: 1.000000
+2024-07-06 09:01: **********Val Epoch 65: average Loss: 1.498721
+2024-07-06 09:01: Train Epoch 66: 0/167 Loss: 1.375074
+2024-07-06 09:01: Train Epoch 66: 20/167 Loss: 1.376120
+2024-07-06 09:01: Train Epoch 66: 40/167 Loss: 1.294440
+2024-07-06 09:01: Train Epoch 66: 60/167 Loss: 1.362983
+2024-07-06 09:01: Train Epoch 66: 80/167 Loss: 1.358249
+2024-07-06 09:01: Train Epoch 66: 100/167 Loss: 1.389891
+2024-07-06 09:01: Train Epoch 66: 120/167 Loss: 1.429365
+2024-07-06 09:01: Train Epoch 66: 140/167 Loss: 1.453331
+2024-07-06 09:01: Train Epoch 66: 160/167 Loss: 1.561188
+2024-07-06 09:01: **********Train Epoch 66: averaged Loss: 1.374426, tf_ratio: 1.000000
+2024-07-06 09:01: **********Val Epoch 66: average Loss: 1.487435
+2024-07-06 09:01: *********************************Current best model saved!
+2024-07-06 09:01: Train Epoch 67: 0/167 Loss: 1.287524
+2024-07-06 09:01: Train Epoch 67: 20/167 Loss: 1.379672
+2024-07-06 09:01: Train Epoch 67: 40/167 Loss: 1.409638
+2024-07-06 09:01: Train Epoch 67: 60/167 Loss: 1.286412
+2024-07-06 09:01: Train Epoch 67: 80/167 Loss: 1.403598
+2024-07-06 09:01: Train Epoch 67: 100/167 Loss: 1.369089
+2024-07-06 09:01: Train Epoch 67: 120/167 Loss: 1.332640
+2024-07-06 09:01: Train Epoch 67: 140/167 Loss: 1.335162
+2024-07-06 09:01: Train Epoch 67: 160/167 Loss: 1.338424
+2024-07-06 09:01: **********Train Epoch 67: averaged Loss: 1.372247, tf_ratio: 1.000000
+2024-07-06 09:01: **********Val Epoch 67: average Loss: 1.489727
+2024-07-06 09:01: Train Epoch 68: 0/167 Loss: 1.403824
+2024-07-06 09:01: Train Epoch 68: 20/167 Loss: 1.268064
+2024-07-06 09:01: Train Epoch 68: 40/167 Loss: 1.360615
+2024-07-06 09:01: Train Epoch 68: 60/167 Loss: 1.303912
+2024-07-06 09:01: Train Epoch 68: 80/167 Loss: 1.375631
+2024-07-06 09:01: Train Epoch 68: 100/167 Loss: 1.445883
+2024-07-06 09:01: Train Epoch 68: 120/167 Loss: 1.438023
+2024-07-06 09:01: Train Epoch 68: 140/167 Loss: 1.506085
+2024-07-06 09:01: Train Epoch 68: 160/167 Loss: 1.396829
+2024-07-06 09:01: **********Train Epoch 68: averaged Loss: 1.372713, tf_ratio: 1.000000
+2024-07-06 09:01: **********Val Epoch 68: average Loss: 1.485970
+2024-07-06 09:01: *********************************Current best model saved!
+2024-07-06 09:01: Train Epoch 69: 0/167 Loss: 1.353191
+2024-07-06 09:01: Train Epoch 69: 20/167 Loss: 1.383057
+2024-07-06 09:01: Train Epoch 69: 40/167 Loss: 1.502401
+2024-07-06 09:01: Train Epoch 69: 60/167 Loss: 1.372914
+2024-07-06 09:01: Train Epoch 69: 80/167 Loss: 1.394721
+2024-07-06 09:01: Train Epoch 69: 100/167 Loss: 1.302780
+2024-07-06 09:01: Train Epoch 69: 120/167 Loss: 1.532300
+2024-07-06 09:01: Train Epoch 69: 140/167 Loss: 1.375970
+2024-07-06 09:01: Train Epoch 69: 160/167 Loss: 1.380748
+2024-07-06 09:01: **********Train Epoch 69: averaged Loss: 1.369331, tf_ratio: 1.000000
+2024-07-06 09:01: **********Val Epoch 69: average Loss: 1.493522
+2024-07-06 09:01: Train Epoch 70: 0/167 Loss: 1.466311
+2024-07-06 09:01: Train Epoch 70: 20/167 Loss: 1.494422
+2024-07-06 09:01: Train Epoch 70: 40/167 Loss: 1.422543
+2024-07-06 09:01: Train Epoch 70: 60/167 Loss: 1.416175
+2024-07-06 09:01: Train Epoch 70: 80/167 Loss: 1.539397
+2024-07-06 09:01: Train Epoch 70: 100/167 Loss: 1.311975
+2024-07-06 09:01: Train Epoch 70: 120/167 Loss: 1.324798
+2024-07-06 09:01: Train Epoch 70: 140/167 Loss: 1.405688
+2024-07-06 09:01: Train Epoch 70: 160/167 Loss: 1.472467
+2024-07-06 09:01: **********Train Epoch 70: averaged Loss: 1.368544, tf_ratio: 1.000000
+2024-07-06 09:01: **********Val Epoch 70: average Loss: 1.492522
+2024-07-06 09:01: Train Epoch 71: 0/167 Loss: 1.402256
+2024-07-06 09:01: Train Epoch 71: 20/167 Loss: 1.350201
+2024-07-06 09:01: Train Epoch 71: 40/167 Loss: 1.332977
+2024-07-06 09:01: Train Epoch 71: 60/167 Loss: 1.297402
+2024-07-06 09:01: Train Epoch 71: 80/167 Loss: 1.443481
+2024-07-06 09:01: Train Epoch 71: 100/167 Loss: 1.348270
+2024-07-06 09:01: Train Epoch 71: 120/167 Loss: 1.573906
+2024-07-06 09:01: Train Epoch 71: 140/167 Loss: 1.463899
+2024-07-06 09:01: Train Epoch 71: 160/167 Loss: 1.416906
+2024-07-06 09:01: **********Train Epoch 71: averaged Loss: 1.371924, tf_ratio: 1.000000
+2024-07-06 09:01: **********Val Epoch 71: average Loss: 1.489205
+2024-07-06 09:01: Train Epoch 72: 0/167 Loss: 1.396794
+2024-07-06 09:01: Train Epoch 72: 20/167 Loss: 1.409405
+2024-07-06 09:01: Train Epoch 72: 40/167 Loss: 1.432735
+2024-07-06 09:01: Train Epoch 72: 60/167 Loss: 1.381932
+2024-07-06 09:01: Train Epoch 72: 80/167 Loss: 1.297904
+2024-07-06 09:01: Train Epoch 72: 100/167 Loss: 1.317895
+2024-07-06 09:02: Train Epoch 72: 120/167 Loss: 1.357737
+2024-07-06 09:02: Train Epoch 72: 140/167 Loss: 1.350973
+2024-07-06 09:02: Train Epoch 72: 160/167 Loss: 1.336167
+2024-07-06 09:02: **********Train Epoch 72: averaged Loss: 1.365419, tf_ratio: 1.000000
+2024-07-06 09:02: **********Val Epoch 72: average Loss: 1.487213
+2024-07-06 09:02: Train Epoch 73: 0/167 Loss: 1.353810
+2024-07-06 09:02: Train Epoch 73: 20/167 Loss: 1.370191
+2024-07-06 09:02: Train Epoch 73: 40/167 Loss: 1.448026
+2024-07-06 09:02: Train Epoch 73: 60/167 Loss: 1.408747
+2024-07-06 09:02: Train Epoch 73: 80/167 Loss: 1.364580
+2024-07-06 09:02: Train Epoch 73: 100/167 Loss: 1.435019
+2024-07-06 09:02: Train Epoch 73: 120/167 Loss: 1.289297
+2024-07-06 09:02: Train Epoch 73: 140/167 Loss: 1.316335
+2024-07-06 09:02: Train Epoch 73: 160/167 Loss: 1.282881
+2024-07-06 09:02: **********Train Epoch 73: averaged Loss: 1.363983, tf_ratio: 1.000000
+2024-07-06 09:02: **********Val Epoch 73: average Loss: 1.482954
+2024-07-06 09:02: *********************************Current best model saved!
+2024-07-06 09:02: Train Epoch 74: 0/167 Loss: 1.300880
+2024-07-06 09:02: Train Epoch 74: 20/167 Loss: 1.337402
+2024-07-06 09:02: Train Epoch 74: 40/167 Loss: 1.128092
+2024-07-06 09:02: Train Epoch 74: 60/167 Loss: 1.278374
+2024-07-06 09:02: Train Epoch 74: 80/167 Loss: 1.459447
+2024-07-06 09:02: Train Epoch 74: 100/167 Loss: 1.403252
+2024-07-06 09:02: Train Epoch 74: 120/167 Loss: 1.353408
+2024-07-06 09:02: Train Epoch 74: 140/167 Loss: 1.378409
+2024-07-06 09:02: Train Epoch 74: 160/167 Loss: 1.302466
+2024-07-06 09:02: **********Train Epoch 74: averaged Loss: 1.364194, tf_ratio: 1.000000
+2024-07-06 09:02: **********Val Epoch 74: average Loss: 1.485399
+2024-07-06 09:02: Train Epoch 75: 0/167 Loss: 1.307141
+2024-07-06 09:02: Train Epoch 75: 20/167 Loss: 1.339859
+2024-07-06 09:02: Train Epoch 75: 40/167 Loss: 1.341111
+2024-07-06 09:02: Train Epoch 75: 60/167 Loss: 1.380502
+2024-07-06 09:02: Train Epoch 75: 80/167 Loss: 1.464832
+2024-07-06 09:02: Train Epoch 75: 100/167 Loss: 1.369612
+2024-07-06 09:02: Train Epoch 75: 120/167 Loss: 1.455831
+2024-07-06 09:02: Train Epoch 75: 140/167 Loss: 1.287453
+2024-07-06 09:02: Train Epoch 75: 160/167 Loss: 1.322555
+2024-07-06 09:02: **********Train Epoch 75: averaged Loss: 1.364483, tf_ratio: 1.000000
+2024-07-06 09:02: **********Val Epoch 75: average Loss: 1.487005
+2024-07-06 09:02: Train Epoch 76: 0/167 Loss: 1.336072
+2024-07-06 09:02: Train Epoch 76: 20/167 Loss: 1.399724
+2024-07-06 09:02: Train Epoch 76: 40/167 Loss: 1.380119
+2024-07-06 09:02: Train Epoch 76: 60/167 Loss: 1.275445
+2024-07-06 09:02: Train Epoch 76: 80/167 Loss: 1.267734
+2024-07-06 09:02: Train Epoch 76: 100/167 Loss: 1.316868
+2024-07-06 09:02: Train Epoch 76: 120/167 Loss: 1.448226
+2024-07-06 09:02: Train Epoch 76: 140/167 Loss: 1.366282
+2024-07-06 09:02: Train Epoch 76: 160/167 Loss: 1.355649
+2024-07-06 09:02: **********Train Epoch 76: averaged Loss: 1.362617, tf_ratio: 1.000000
+2024-07-06 09:02: **********Val Epoch 76: average Loss: 1.483191
+2024-07-06 09:02: Train Epoch 77: 0/167 Loss: 1.387283
+2024-07-06 09:02: Train Epoch 77: 20/167 Loss: 1.292075
+2024-07-06 09:02: Train Epoch 77: 40/167 Loss: 1.399490
+2024-07-06 09:02: Train Epoch 77: 60/167 Loss: 1.453413
+2024-07-06 09:02: Train Epoch 77: 80/167 Loss: 1.330314
+2024-07-06 09:02: Train Epoch 77: 100/167 Loss: 1.287126
+2024-07-06 09:02: Train Epoch 77: 120/167 Loss: 1.368678
+2024-07-06 09:02: Train Epoch 77: 140/167 Loss: 1.263913
+2024-07-06 09:02: Train Epoch 77: 160/167 Loss: 1.348352
+2024-07-06 09:02: **********Train Epoch 77: averaged Loss: 1.359509, tf_ratio: 1.000000
+2024-07-06 09:02: **********Val Epoch 77: average Loss: 1.486103
+2024-07-06 09:02: Train Epoch 78: 0/167 Loss: 1.390804
+2024-07-06 09:02: Train Epoch 78: 20/167 Loss: 1.263512
+2024-07-06 09:02: Train Epoch 78: 40/167 Loss: 1.292773
+2024-07-06 09:02: Train Epoch 78: 60/167 Loss: 1.276644
+2024-07-06 09:02: Train Epoch 78: 80/167 Loss: 1.354143
+2024-07-06 09:02: Train Epoch 78: 100/167 Loss: 1.310493
+2024-07-06 09:02: Train Epoch 78: 120/167 Loss: 1.458517
+2024-07-06 09:02: Train Epoch 78: 140/167 Loss: 1.436977
+2024-07-06 09:02: Train Epoch 78: 160/167 Loss: 1.366672
+2024-07-06 09:02: **********Train Epoch 78: averaged Loss: 1.358835, tf_ratio: 1.000000
+2024-07-06 09:02: **********Val Epoch 78: average Loss: 1.492488
+2024-07-06 09:02: Train Epoch 79: 0/167 Loss: 1.322964
+2024-07-06 09:02: Train Epoch 79: 20/167 Loss: 1.292945
+2024-07-06 09:02: Train Epoch 79: 40/167 Loss: 1.282324
+2024-07-06 09:02: Train Epoch 79: 60/167 Loss: 1.277884
+2024-07-06 09:02: Train Epoch 79: 80/167 Loss: 1.333451
+2024-07-06 09:02: Train Epoch 79: 100/167 Loss: 1.481590
+2024-07-06 09:02: Train Epoch 79: 120/167 Loss: 1.360098
+2024-07-06 09:02: Train Epoch 79: 140/167 Loss: 1.393927
+2024-07-06 09:02: Train Epoch 79: 160/167 Loss: 1.395055
+2024-07-06 09:02: **********Train Epoch 79: averaged Loss: 1.359006, tf_ratio: 1.000000
+2024-07-06 09:02: **********Val Epoch 79: average Loss: 1.492420
+2024-07-06 09:02: Train Epoch 80: 0/167 Loss: 1.301959
+2024-07-06 09:02: Train Epoch 80: 20/167 Loss: 1.274502
+2024-07-06 09:02: Train Epoch 80: 40/167 Loss: 1.330968
+2024-07-06 09:02: Train Epoch 80: 60/167 Loss: 1.441027
+2024-07-06 09:02: Train Epoch 80: 80/167 Loss: 1.298261
+2024-07-06 09:02: Train Epoch 80: 100/167 Loss: 1.346270
+2024-07-06 09:02: Train Epoch 80: 120/167 Loss: 1.347412
+2024-07-06 09:02: Train Epoch 80: 140/167 Loss: 1.315709
+2024-07-06 09:02: Train Epoch 80: 160/167 Loss: 1.447731
+2024-07-06 09:02: **********Train Epoch 80: averaged Loss: 1.356101, tf_ratio: 1.000000
+2024-07-06 09:02: **********Val Epoch 80: average Loss: 1.489170
+2024-07-06 09:02: Train Epoch 81: 0/167 Loss: 1.380832
+2024-07-06 09:02: Train Epoch 81: 20/167 Loss: 1.285343
+2024-07-06 09:02: Train Epoch 81: 40/167 Loss: 1.298073
+2024-07-06 09:02: Train Epoch 81: 60/167 Loss: 1.404420
+2024-07-06 09:02: Train Epoch 81: 80/167 Loss: 1.441549
+2024-07-06 09:02: Train Epoch 81: 100/167 Loss: 1.414296
+2024-07-06 09:02: Train Epoch 81: 120/167 Loss: 1.423768
+2024-07-06 09:02: Train Epoch 81: 140/167 Loss: 1.412284
+2024-07-06 09:02: Train Epoch 81: 160/167 Loss: 1.272258
+2024-07-06 09:02: **********Train Epoch 81: averaged Loss: 1.355939, tf_ratio: 1.000000
+2024-07-06 09:02: **********Val Epoch 81: average Loss: 1.484828
+2024-07-06 09:02: Train Epoch 82: 0/167 Loss: 1.364011
+2024-07-06 09:02: Train Epoch 82: 20/167 Loss: 1.287617
+2024-07-06 09:02: Train Epoch 82: 40/167 Loss: 1.394602
+2024-07-06 09:02: Train Epoch 82: 60/167 Loss: 1.469460
+2024-07-06 09:02: Train Epoch 82: 80/167 Loss: 1.243435
+2024-07-06 09:02: Train Epoch 82: 100/167 Loss: 1.364205
+2024-07-06 09:03: Train Epoch 82: 120/167 Loss: 1.351249
+2024-07-06 09:03: Train Epoch 82: 140/167 Loss: 1.365866
+2024-07-06 09:03: Train Epoch 82: 160/167 Loss: 1.343768
+2024-07-06 09:03: **********Train Epoch 82: averaged Loss: 1.355768, tf_ratio: 1.000000
+2024-07-06 09:03: **********Val Epoch 82: average Loss: 1.491222
+2024-07-06 09:03: Train Epoch 83: 0/167 Loss: 1.299629
+2024-07-06 09:03: Train Epoch 83: 20/167 Loss: 1.356565
+2024-07-06 09:03: Train Epoch 83: 40/167 Loss: 1.331190
+2024-07-06 09:03: Train Epoch 83: 60/167 Loss: 1.331741
+2024-07-06 09:03: Train Epoch 83: 80/167 Loss: 1.292558
+2024-07-06 09:03: Train Epoch 83: 100/167 Loss: 1.489015
+2024-07-06 09:03: Train Epoch 83: 120/167 Loss: 1.265052
+2024-07-06 09:03: Train Epoch 83: 140/167 Loss: 1.318256
+2024-07-06 09:03: Train Epoch 83: 160/167 Loss: 1.464342
+2024-07-06 09:03: **********Train Epoch 83: averaged Loss: 1.352608, tf_ratio: 1.000000
+2024-07-06 09:03: **********Val Epoch 83: average Loss: 1.489030
+2024-07-06 09:03: Train Epoch 84: 0/167 Loss: 1.371206
+2024-07-06 09:03: Train Epoch 84: 20/167 Loss: 1.425427
+2024-07-06 09:03: Train Epoch 84: 40/167 Loss: 1.387333
+2024-07-06 09:03: Train Epoch 84: 60/167 Loss: 1.312470
+2024-07-06 09:03: Train Epoch 84: 80/167 Loss: 1.384892
+2024-07-06 09:03: Train Epoch 84: 100/167 Loss: 1.397357
+2024-07-06 09:03: Train Epoch 84: 120/167 Loss: 1.226007
+2024-07-06 09:03: Train Epoch 84: 140/167 Loss: 1.346760
+2024-07-06 09:03: Train Epoch 84: 160/167 Loss: 1.386877
+2024-07-06 09:03: **********Train Epoch 84: averaged Loss: 1.352806, tf_ratio: 1.000000
+2024-07-06 09:03: **********Val Epoch 84: average Loss: 1.483522
+2024-07-06 09:03: Train Epoch 85: 0/167 Loss: 1.344777
+2024-07-06 09:03: Train Epoch 85: 20/167 Loss: 1.368466
+2024-07-06 09:03: Train Epoch 85: 40/167 Loss: 1.400151
+2024-07-06 09:03: Train Epoch 85: 60/167 Loss: 1.362360
+2024-07-06 09:03: Train Epoch 85: 80/167 Loss: 1.348930
+2024-07-06 09:03: Train Epoch 85: 100/167 Loss: 1.382576
+2024-07-06 09:03: Train Epoch 85: 120/167 Loss: 1.254088
+2024-07-06 09:03: Train Epoch 85: 140/167 Loss: 1.369107
+2024-07-06 09:03: Train Epoch 85: 160/167 Loss: 1.433580
+2024-07-06 09:03: **********Train Epoch 85: averaged Loss: 1.350364, tf_ratio: 1.000000
+2024-07-06 09:03: **********Val Epoch 85: average Loss: 1.486389
+2024-07-06 09:03: Train Epoch 86: 0/167 Loss: 1.239103
+2024-07-06 09:03: Train Epoch 86: 20/167 Loss: 1.426923
+2024-07-06 09:03: Train Epoch 86: 40/167 Loss: 1.312104
+2024-07-06 09:03: Train Epoch 86: 60/167 Loss: 1.246369
+2024-07-06 09:03: Train Epoch 86: 80/167 Loss: 1.351659
+2024-07-06 09:03: Train Epoch 86: 100/167 Loss: 1.289985
+2024-07-06 09:03: Train Epoch 86: 120/167 Loss: 1.264423
+2024-07-06 09:03: Train Epoch 86: 140/167 Loss: 1.426062
+2024-07-06 09:03: Train Epoch 86: 160/167 Loss: 1.341591
+2024-07-06 09:03: **********Train Epoch 86: averaged Loss: 1.348941, tf_ratio: 1.000000
+2024-07-06 09:03: **********Val Epoch 86: average Loss: 1.497790
+2024-07-06 09:03: Train Epoch 87: 0/167 Loss: 1.344113
+2024-07-06 09:03: Train Epoch 87: 20/167 Loss: 1.291430
+2024-07-06 09:03: Train Epoch 87: 40/167 Loss: 1.351145
+2024-07-06 09:03: Train Epoch 87: 60/167 Loss: 1.290859
+2024-07-06 09:03: Train Epoch 87: 80/167 Loss: 1.275499
+2024-07-06 09:03: Train Epoch 87: 100/167 Loss: 1.290597
+2024-07-06 09:03: Train Epoch 87: 120/167 Loss: 1.355186
+2024-07-06 09:03: Train Epoch 87: 140/167 Loss: 1.405412
+2024-07-06 09:03: Train Epoch 87: 160/167 Loss: 1.393706
+2024-07-06 09:03: **********Train Epoch 87: averaged Loss: 1.348613, tf_ratio: 1.000000
+2024-07-06 09:03: **********Val Epoch 87: average Loss: 1.487783
+2024-07-06 09:03: Train Epoch 88: 0/167 Loss: 1.368216
+2024-07-06 09:03: Train Epoch 88: 20/167 Loss: 1.252424
+2024-07-06 09:03: Train Epoch 88: 40/167 Loss: 1.250205
+2024-07-06 09:03: Train Epoch 88: 60/167 Loss: 1.331930
+2024-07-06 09:03: Train Epoch 88: 80/167 Loss: 1.324408
+2024-07-06 09:03: Train Epoch 88: 100/167 Loss: 1.364484
+2024-07-06 09:03: Train Epoch 88: 120/167 Loss: 1.495141
+2024-07-06 09:03: Train Epoch 88: 140/167 Loss: 1.393286
+2024-07-06 09:03: Train Epoch 88: 160/167 Loss: 1.281317
+2024-07-06 09:03: **********Train Epoch 88: averaged Loss: 1.346599, tf_ratio: 1.000000
+2024-07-06 09:03: **********Val Epoch 88: average Loss: 1.485345
+2024-07-06 09:03: Validation performance didn't improve for 15 epochs. Training stops.
+2024-07-06 09:03: Total training time: 8.7838min, best loss: 1.482954
+2024-07-06 09:03: Horizon 01, MAE: 0.75, RMSE: 1.47, MAPE: 1.3521%
+2024-07-06 09:03: Horizon 02, MAE: 0.99, RMSE: 2.12, MAPE: 1.8440%
+2024-07-06 09:03: Horizon 03, MAE: 1.16, RMSE: 2.61, MAPE: 2.2163%
+2024-07-06 09:03: Horizon 04, MAE: 1.29, RMSE: 3.00, MAPE: 2.5283%
+2024-07-06 09:03: Horizon 05, MAE: 1.39, RMSE: 3.34, MAPE: 2.8050%
+2024-07-06 09:03: Horizon 06, MAE: 1.49, RMSE: 3.61, MAPE: 3.0512%
+2024-07-06 09:03: Horizon 07, MAE: 1.58, RMSE: 3.85, MAPE: 3.2758%
+2024-07-06 09:03: Horizon 08, MAE: 1.65, RMSE: 4.06, MAPE: 3.4842%
+2024-07-06 09:03: Horizon 09, MAE: 1.73, RMSE: 4.24, MAPE: 3.6764%
+2024-07-06 09:03: Horizon 10, MAE: 1.79, RMSE: 4.41, MAPE: 3.8600%
+2024-07-06 09:03: Horizon 11, MAE: 1.86, RMSE: 4.56, MAPE: 4.0369%
+2024-07-06 09:03: Horizon 12, MAE: 1.93, RMSE: 4.71, MAPE: 4.2009%
+2024-07-06 09:03: Average Horizon, MAE: 1.47, RMSE: 3.63, MAPE: 3.0276%
+
+Process finished with exit code -1

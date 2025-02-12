@@ -1,0 +1,243 @@
+ssh://root@region-41.seetacloud.com:56455/root/miniconda3/bin/python -u /project/MTL-main/model/train.py
+MANCHESTER
+Train:  (8691, 4, 277, 4) (8691, 4, 277, 2)
+Val:  (2892, 4, 277, 4) (2892, 4, 277, 2)
+Test:  (2892, 4, 277, 4) (2892, 4, 277, 2)
+
+--------- MTLSTformer ---------
+{
+    "num_nodes": 277,
+    "in_steps": 4,
+    "out_steps": 4,
+    "train_size": 0.6,
+    "val_size": 0.2,
+    "time_of_day": true,
+    "day_of_week": true,
+    "lr": 0.001,
+    "weight_decay": 0.0015,
+    "milestones": [
+        25,
+        45,
+        65
+    ],
+    "lr_decay_rate": 0.1,
+    "batch_size": 16,
+    "max_epochs": 100,
+    "early_stop": 15,
+    "use_cl": false,
+    "cl_step_size": 2500,
+    "model_args": {
+        "num_nodes": 277,
+        "in_steps": 4,
+        "out_steps": 4,
+        "steps_per_day": 96,
+        "input_dim": 3,
+        "output_dim": 1,
+        "input_emb_dim": 24,
+        "tod_emb_dim": 24,
+        "dow_emb_dim": 24,
+        "adaptive_emb_dim": 80,
+        "feed_forward_dim": 256,
+        "cross_feed_forward_dim": 64,
+        "cross_heads": 4,
+        "num_heads": 4,
+        "num_layers": 2,
+        "dropout": 0.1
+    }
+}
+=========================================================================================================
+Layer (type:depth-idx)                                  Output Shape              Param #
+=========================================================================================================
+MTLSTformer                                             [16, 4, 277, 2]           88,640
+├─Linear: 1-1                                           [16, 4, 277, 24]          96
+├─Linear: 1-2                                           [16, 4, 277, 24]          96
+├─Embedding: 1-3                                        [16, 4, 277, 24]          2,304
+├─Embedding: 1-4                                        [16, 4, 277, 24]          168
+├─CrossTaskAttentionLayer: 1-5                          [16, 4, 277, 152]         --
+│    └─AttentionLayer: 2-1                              [16, 277, 4, 152]         --
+│    │    └─Linear: 3-1                                 [16, 277, 4, 152]         23,256
+│    │    └─Linear: 3-2                                 [16, 277, 4, 152]         23,256
+│    │    └─Linear: 3-3                                 [16, 277, 4, 152]         23,256
+│    │    └─Linear: 3-4                                 [16, 277, 4, 152]         23,256
+│    └─Dropout: 2-2                                     [16, 277, 4, 152]         --
+│    └─LayerNorm: 2-3                                   [16, 277, 4, 152]         304
+│    └─Sequential: 2-4                                  [16, 277, 4, 152]         --
+│    │    └─Linear: 3-5                                 [16, 277, 4, 64]          9,792
+│    │    └─ReLU: 3-6                                   [16, 277, 4, 64]          --
+│    │    └─Linear: 3-7                                 [16, 277, 4, 152]         9,880
+│    └─Dropout: 2-5                                     [16, 277, 4, 152]         --
+│    └─LayerNorm: 2-6                                   [16, 277, 4, 152]         304
+├─CrossTaskAttentionLayer: 1-6                          [16, 4, 277, 152]         --
+│    └─AttentionLayer: 2-7                              [16, 277, 4, 152]         --
+│    │    └─Linear: 3-8                                 [16, 277, 4, 152]         23,256
+│    │    └─Linear: 3-9                                 [16, 277, 4, 152]         23,256
+│    │    └─Linear: 3-10                                [16, 277, 4, 152]         23,256
+│    │    └─Linear: 3-11                                [16, 277, 4, 152]         23,256
+│    └─Dropout: 2-8                                     [16, 277, 4, 152]         --
+│    └─LayerNorm: 2-9                                   [16, 277, 4, 152]         304
+│    └─Sequential: 2-10                                 [16, 277, 4, 152]         --
+│    │    └─Linear: 3-12                                [16, 277, 4, 64]          9,792
+│    │    └─ReLU: 3-13                                  [16, 277, 4, 64]          --
+│    │    └─Linear: 3-14                                [16, 277, 4, 152]         9,880
+│    └─Dropout: 2-11                                    [16, 277, 4, 152]         --
+│    └─LayerNorm: 2-12                                  [16, 277, 4, 152]         304
+├─ModuleList: 1-7                                       --                        --
+│    └─SelfAttentionLayer: 2-13                         [16, 4, 277, 152]         --
+│    │    └─AttentionLayer: 3-15                        [16, 277, 4, 152]         93,024
+│    │    └─Dropout: 3-16                               [16, 277, 4, 152]         --
+│    │    └─LayerNorm: 3-17                             [16, 277, 4, 152]         304
+│    │    └─Sequential: 3-18                            [16, 277, 4, 152]         78,232
+│    │    └─Dropout: 3-19                               [16, 277, 4, 152]         --
+│    │    └─LayerNorm: 3-20                             [16, 277, 4, 152]         304
+│    └─SelfAttentionLayer: 2-14                         [16, 4, 277, 152]         --
+│    │    └─AttentionLayer: 3-21                        [16, 277, 4, 152]         93,024
+│    │    └─Dropout: 3-22                               [16, 277, 4, 152]         --
+│    │    └─LayerNorm: 3-23                             [16, 277, 4, 152]         304
+│    │    └─Sequential: 3-24                            [16, 277, 4, 152]         78,232
+│    │    └─Dropout: 3-25                               [16, 277, 4, 152]         --
+│    │    └─LayerNorm: 3-26                             [16, 277, 4, 152]         304
+├─ModuleList: 1-8                                       --                        --
+│    └─SelfAttentionLayer: 2-15                         [16, 4, 277, 152]         --
+│    │    └─SpatialAttentionConvlutionLayer: 3-27       [16, 4, 277, 152]         92,872
+│    │    └─Dropout: 3-28                               [16, 4, 277, 152]         --
+│    │    └─LayerNorm: 3-29                             [16, 4, 277, 152]         304
+│    │    └─Sequential: 3-30                            [16, 4, 277, 152]         78,232
+│    │    └─Dropout: 3-31                               [16, 4, 277, 152]         --
+│    │    └─LayerNorm: 3-32                             [16, 4, 277, 152]         304
+│    └─SelfAttentionLayer: 2-16                         [16, 4, 277, 152]         --
+│    │    └─SpatialAttentionConvlutionLayer: 3-33       [16, 4, 277, 152]         92,872
+│    │    └─Dropout: 3-34                               [16, 4, 277, 152]         --
+│    │    └─LayerNorm: 3-35                             [16, 4, 277, 152]         304
+│    │    └─Sequential: 3-36                            [16, 4, 277, 152]         78,232
+│    │    └─Dropout: 3-37                               [16, 4, 277, 152]         --
+│    │    └─LayerNorm: 3-38                             [16, 4, 277, 152]         304
+├─ModuleList: 1-9                                       --                        --
+│    └─SelfAttentionLayer: 2-17                         [16, 4, 277, 152]         --
+│    │    └─AttentionLayer: 3-39                        [16, 277, 4, 152]         93,024
+│    │    └─Dropout: 3-40                               [16, 277, 4, 152]         --
+│    │    └─LayerNorm: 3-41                             [16, 277, 4, 152]         304
+│    │    └─Sequential: 3-42                            [16, 277, 4, 152]         78,232
+│    │    └─Dropout: 3-43                               [16, 277, 4, 152]         --
+│    │    └─LayerNorm: 3-44                             [16, 277, 4, 152]         304
+│    └─SelfAttentionLayer: 2-18                         [16, 4, 277, 152]         --
+│    │    └─AttentionLayer: 3-45                        [16, 277, 4, 152]         93,024
+│    │    └─Dropout: 3-46                               [16, 277, 4, 152]         --
+│    │    └─LayerNorm: 3-47                             [16, 277, 4, 152]         304
+│    │    └─Sequential: 3-48                            [16, 277, 4, 152]         78,232
+│    │    └─Dropout: 3-49                               [16, 277, 4, 152]         --
+│    │    └─LayerNorm: 3-50                             [16, 277, 4, 152]         304
+├─ModuleList: 1-10                                      --                        --
+│    └─SelfAttentionLayer: 2-19                         [16, 4, 277, 152]         --
+│    │    └─SpatialAttentionConvlutionLayer: 3-51       [16, 4, 277, 152]         92,872
+│    │    └─Dropout: 3-52                               [16, 4, 277, 152]         --
+│    │    └─LayerNorm: 3-53                             [16, 4, 277, 152]         304
+│    │    └─Sequential: 3-54                            [16, 4, 277, 152]         78,232
+│    │    └─Dropout: 3-55                               [16, 4, 277, 152]         --
+│    │    └─LayerNorm: 3-56                             [16, 4, 277, 152]         304
+│    └─SelfAttentionLayer: 2-20                         [16, 4, 277, 152]         --
+│    │    └─SpatialAttentionConvlutionLayer: 3-57       [16, 4, 277, 152]         92,872
+│    │    └─Dropout: 3-58                               [16, 4, 277, 152]         --
+│    │    └─LayerNorm: 3-59                             [16, 4, 277, 152]         304
+│    │    └─Sequential: 3-60                            [16, 4, 277, 152]         78,232
+│    │    └─Dropout: 3-61                               [16, 4, 277, 152]         --
+│    │    └─LayerNorm: 3-62                             [16, 4, 277, 152]         304
+├─Linear: 1-11                                          [16, 277, 4]              2,436
+├─Linear: 1-12                                          [16, 277, 4]              2,436
+=========================================================================================================
+Total params: 1,697,088
+Trainable params: 1,697,088
+Non-trainable params: 0
+Total mult-adds (M): 25.74
+=========================================================================================================
+Input size (MB): 0.28
+Forward/backward pass size (MB): 1831.52
+Params size (MB): 6.43
+Estimated Total Size (MB): 1838.23
+=========================================================================================================
+
+Loss: HuberLoss
+
+2024-08-20 13:57:59.880209 Epoch 1  	Train Loss = 76.36584 Val Loss = 52.66005
+2024-08-20 13:58:51.671351 Epoch 2  	Train Loss = 49.00306 Val Loss = 44.50300
+2024-08-20 13:59:42.448122 Epoch 3  	Train Loss = 43.61700 Val Loss = 43.45848
+2024-08-20 14:00:37.063159 Epoch 4  	Train Loss = 42.36589 Val Loss = 47.51581
+2024-08-20 14:01:28.145550 Epoch 5  	Train Loss = 39.82000 Val Loss = 40.25126
+2024-08-20 14:02:18.758726 Epoch 6  	Train Loss = 38.88091 Val Loss = 39.09540
+2024-08-20 14:03:09.013921 Epoch 7  	Train Loss = 37.81943 Val Loss = 39.47184
+2024-08-20 14:03:59.241418 Epoch 8  	Train Loss = 37.21025 Val Loss = 38.01328
+2024-08-20 14:04:49.501996 Epoch 9  	Train Loss = 36.80331 Val Loss = 37.19993
+2024-08-20 14:05:39.781883 Epoch 10  	Train Loss = 36.29217 Val Loss = 39.71861
+2024-08-20 14:06:29.991826 Epoch 11  	Train Loss = 35.84040 Val Loss = 37.26496
+2024-08-20 14:07:20.222004 Epoch 12  	Train Loss = 35.29166 Val Loss = 36.82177
+2024-08-20 14:08:10.430830 Epoch 13  	Train Loss = 35.03396 Val Loss = 36.11030
+2024-08-20 14:09:00.632286 Epoch 14  	Train Loss = 34.84319 Val Loss = 39.25323
+2024-08-20 14:09:50.829528 Epoch 15  	Train Loss = 34.30205 Val Loss = 36.83156
+2024-08-20 14:10:41.052357 Epoch 16  	Train Loss = 33.74539 Val Loss = 37.34579
+2024-08-20 14:11:31.360060 Epoch 17  	Train Loss = 33.96427 Val Loss = 35.23793
+2024-08-20 14:12:21.674996 Epoch 18  	Train Loss = 33.67365 Val Loss = 36.72895
+2024-08-20 14:13:11.862555 Epoch 19  	Train Loss = 33.58432 Val Loss = 36.31968
+2024-08-20 14:14:02.038494 Epoch 20  	Train Loss = 33.56393 Val Loss = 36.28440
+2024-08-20 14:14:52.208554 Epoch 21  	Train Loss = 33.35203 Val Loss = 35.52122
+2024-08-20 14:15:42.410973 Epoch 22  	Train Loss = 32.99494 Val Loss = 37.79295
+2024-08-20 14:16:32.701824 Epoch 23  	Train Loss = 32.73768 Val Loss = 34.92449
+2024-08-20 14:17:22.980265 Epoch 24  	Train Loss = 32.47254 Val Loss = 34.64248
+2024-08-20 14:18:13.212928 Epoch 25  	Train Loss = 32.46879 Val Loss = 36.35057
+2024-08-20 14:19:03.385437 Epoch 26  	Train Loss = 30.18426 Val Loss = 33.38269
+2024-08-20 14:19:53.687784 Epoch 27  	Train Loss = 29.85570 Val Loss = 33.43892
+2024-08-20 14:20:43.858624 Epoch 28  	Train Loss = 29.77199 Val Loss = 33.50928
+2024-08-20 14:21:34.094541 Epoch 29  	Train Loss = 29.70319 Val Loss = 33.37981
+2024-08-20 14:22:24.320387 Epoch 30  	Train Loss = 29.64459 Val Loss = 33.83428
+2024-08-20 14:23:14.524936 Epoch 31  	Train Loss = 29.57833 Val Loss = 33.67122
+2024-08-20 14:24:04.724379 Epoch 32  	Train Loss = 29.53177 Val Loss = 33.58565
+2024-08-20 14:24:54.905130 Epoch 33  	Train Loss = 29.46728 Val Loss = 33.55054
+2024-08-20 14:25:45.117944 Epoch 34  	Train Loss = 29.43215 Val Loss = 33.18121
+2024-08-20 14:26:35.414584 Epoch 35  	Train Loss = 29.35547 Val Loss = 33.54924
+2024-08-20 14:27:25.627044 Epoch 36  	Train Loss = 29.33002 Val Loss = 33.54224
+2024-08-20 14:28:15.871928 Epoch 37  	Train Loss = 29.26888 Val Loss = 33.37122
+2024-08-20 14:29:06.098369 Epoch 38  	Train Loss = 29.25246 Val Loss = 33.45539
+2024-08-20 14:29:56.420611 Epoch 39  	Train Loss = 29.17845 Val Loss = 33.29509
+2024-08-20 14:30:46.601381 Epoch 40  	Train Loss = 29.15990 Val Loss = 33.34295
+2024-08-20 14:31:36.803512 Epoch 41  	Train Loss = 29.14300 Val Loss = 33.32386
+2024-08-20 14:32:27.044415 Epoch 42  	Train Loss = 29.09570 Val Loss = 33.20252
+2024-08-20 14:33:17.209134 Epoch 43  	Train Loss = 29.03928 Val Loss = 33.22149
+2024-08-20 14:34:07.458616 Epoch 44  	Train Loss = 28.99574 Val Loss = 33.20123
+2024-08-20 14:34:57.706003 Epoch 45  	Train Loss = 28.96841 Val Loss = 33.15968
+2024-08-20 14:35:47.926567 Epoch 46  	Train Loss = 28.66199 Val Loss = 33.11099
+2024-08-20 14:36:38.168425 Epoch 47  	Train Loss = 28.61215 Val Loss = 33.09545
+2024-08-20 14:37:28.446666 Epoch 48  	Train Loss = 28.59679 Val Loss = 33.07216
+2024-08-20 14:38:18.688894 Epoch 49  	Train Loss = 28.58995 Val Loss = 33.16070
+2024-08-20 14:39:08.992089 Epoch 50  	Train Loss = 28.58270 Val Loss = 33.14758
+2024-08-20 14:39:59.250573 Epoch 51  	Train Loss = 28.57886 Val Loss = 33.17298
+2024-08-20 14:40:49.447556 Epoch 52  	Train Loss = 28.57973 Val Loss = 33.20973
+2024-08-20 14:41:39.746426 Epoch 53  	Train Loss = 28.56915 Val Loss = 33.08558
+2024-08-20 14:42:30.122071 Epoch 54  	Train Loss = 28.56433 Val Loss = 33.12916
+2024-08-20 14:43:20.336057 Epoch 55  	Train Loss = 28.55729 Val Loss = 33.11040
+2024-08-20 14:44:10.632245 Epoch 56  	Train Loss = 28.54589 Val Loss = 33.12679
+2024-08-20 14:45:00.826424 Epoch 57  	Train Loss = 28.54541 Val Loss = 33.12887
+2024-08-20 14:45:51.164434 Epoch 58  	Train Loss = 28.54967 Val Loss = 33.10344
+2024-08-20 14:46:41.370782 Epoch 59  	Train Loss = 28.52435 Val Loss = 33.11090
+2024-08-20 14:47:31.579557 Epoch 60  	Train Loss = 28.52803 Val Loss = 33.09053
+2024-08-20 14:48:21.848823 Epoch 61  	Train Loss = 28.52172 Val Loss = 33.10691
+2024-08-20 14:49:12.114625 Epoch 62  	Train Loss = 28.51961 Val Loss = 33.11479
+2024-08-20 14:50:02.351345 Epoch 63  	Train Loss = 28.51026 Val Loss = 33.14938
+Early stopping at epoch: 63
+Best at epoch 48:
+Train Loss = 28.59679
+Train RMSE = 30.89621, MAE = 13.24287, MAPE = 9.94884
+Val Loss = 33.07216
+Val RMSE = 34.43093, MAE = 15.70801, MAPE = 11.06612
+Saved Model: ../saved_models/MTLSTformer-MANCHESTER-2024-08-20-13-57-01.pt
+--------- Test ---------
+Flow All Steps RMSE = 47.72783, MAE = 28.59507, MAPE = 17.14339
+Flow Step 1 RMSE = 40.09489, MAE = 24.63501, MAPE = 13.53049
+Flow Step 2 RMSE = 46.05024, MAE = 27.69801, MAPE = 16.18677
+Flow Step 3 RMSE = 50.15171, MAE = 29.99561, MAPE = 18.42365
+Flow Step 4 RMSE = 53.55723, MAE = 32.05177, MAPE = 20.43274
+Speed All Steps RMSE = 6.97590, MAE = 2.93062, MAPE = 4.91133
+Speed Step 1 RMSE = 5.34227, MAE = 2.34983, MAPE = 3.64700
+Speed Step 2 RMSE = 6.75423, MAE = 2.84892, MAPE = 4.74364
+Speed Step 3 RMSE = 7.50412, MAE = 3.14858, MAPE = 5.39938
+Speed Step 4 RMSE = 8.01136, MAE = 3.37514, MAPE = 5.85531
+Inference time: 4.58 s
+
+Process finished with exit code -1
