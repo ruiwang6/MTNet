@@ -260,7 +260,7 @@ if __name__ == "__main__":
     dataset = args.dataset
     dataset = dataset.upper()
     data_path = f"../data/{dataset}"
-    model_name = MTLSTformer.__name__
+    model_name = "MTNet"
 
     with open(f"{model_name}.yaml", "r") as f:
         cfg = yaml.safe_load(f)
