@@ -24,11 +24,11 @@ We use the following datasets in our experiments:
 
 - **Manchester**   
   - **Source**: [Baidu NetDisk](https://pan.baidu.com/s/1YpZa1mYI3uOHl7lKKHjM_Q) (code: `jtmc`)   
-  - **Preprocessing**: `prepareManchester.py`
+  - **Preprocessing**: `data_prepare.py`
 
 - **PEMS04 and PEMS08**   
-  - **Source**: [STSGCN](https://github.com/Davidham3/STSGCN)   
-  - **Preprocessing**: Please follow their instructions for data preparation.  
+  - **Source**: PeMSD4 and PeMSD8 datasets used in our experiments were released by and are available from the [ASTGCN repository](https://github.com/Davidham3/ASTGCN-2019-mxnet/tree/master/data).
+  - **Preprocessing**: `data_prepare.py`
 
 ## Hyperparameter Experiments
 
