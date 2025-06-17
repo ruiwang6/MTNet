@@ -6,6 +6,27 @@ This is the pytorch implementation of MTNet. MTNet is a multi-task learning fram
 ## Model Comparison
 The folder 'Model Comparison' contains the training logs of MTNet and Benchmarks.
 
+## Hyperparameter Experiments
+
+Due to space limitations in the paper, we do not include a detailed discussion of hyperparameter effects there. Instead, we provide a more comprehensive view here to aid understanding and reproducibility.
+
+We conducted extensive hyperparameter experiments to investigate their impact on model performance, including the number of decoder layers, the number of attention heads, the learning rate, and the batch size.
+
+We performed these experiments on both Manchester and PeMSD8; similar conclusions apply to PeMSD4.
+
+- **Number of Decoder Layers**: Results show that **2 decoder layers** achieve the best performance.  
+- **Number of Attention Heads**: Optimal results are achieved with **4 attention heads** on Manchester, and **8 attention heads** on PeMSD8 and PeMSD4. 
+- **Learning Rate**: The performance curve is **concave**, with the best performance at **0.001**.  
+- **Batch Size**: The model shows **low sensitivity** to batch size.
+
+![Hyperparameter Experiment - Number of Layers and Attention Heads](experiments/parameters.jpg)
+
+![Hyperparameter Experiment - Learning Rate and Batch Size](experiments/LR_BS.jpg)
+
+
+## D³STN Failed Experiment
+![D³STN Training Failure](experiments/D3STN_failure.png)
+
 ## Required Packages
 
 ```
@@ -29,27 +50,7 @@ We use the following datasets in our experiments:
 - **PEMS04 and PEMS08**   
   - **Source**: PeMSD4 and PeMSD8 datasets used in our experiments were released by and are available from the [ASTGCN repository](https://github.com/Davidham3/ASTGCN-2019-mxnet/tree/master/data).
   - **Preprocessing**: `data_prepare.py`
-
-## Hyperparameter Experiments
-
-Due to space limitations in the paper, we do not include a detailed discussion of hyperparameter effects there. Instead, we provide a more comprehensive view here to aid understanding and reproducibility.
-
-We conducted extensive hyperparameter experiments to investigate their impact on model performance, including the number of decoder layers, the number of attention heads, the learning rate, and the batch size.
-
-We performed these experiments on both Manchester and PeMSD8; similar conclusions apply to PeMSD4.
-
-- **Number of Decoder Layers**: Results show that **2 decoder layers** achieve the best performance.  
-- **Number of Attention Heads**: Optimal results are achieved with **4 attention heads** on Manchester, and **8 attention heads** on PeMSD8 and PeMSD4. 
-- **Learning Rate**: The performance curve is **concave**, with the best performance at **0.001**.  
-- **Batch Size**: The model shows **low sensitivity** to batch size.
-
-![Hyperparameter Experiment - Number of Layers and Attention Heads](experiments/parameters.jpg)
-
-![Hyperparameter Experiment - Learning Rate and Batch Size](experiments/LR_BS.jpg)
-
-
-
-
+ 
 ## Training Commands
 
 ```bash
@@ -61,4 +62,3 @@ python train.py -d <dataset> -g <gpu_id>
 - PEMS04
 - PEMS08
 - Manchester
-
