@@ -19,11 +19,13 @@ torchinfo
 ```
 
 ## Datasets
-- Manchester
-- PEMS04
-- PEMS08
+We use the following datasets in our experiments:
 
-Download PEMS04 and PEMS08 datasets provided by [STSGCN](https://github.com/Davidham3/STSGCN).
+-Manchester
+Download from Baidu NetDisk (code: jtmc) and preprocess with prepareManchester.py.
+
+-PEMS04 and PEMS08
+Provided by STSGCN. Please follow their instructions for data preparation.
 
 ## Training Commands
 
