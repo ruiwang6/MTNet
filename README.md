@@ -19,13 +19,17 @@ torchinfo
 ```
 
 ## Datasets
+
 We use the following datasets in our experiments:
 
--Manchester
-Download from Baidu NetDisk (code: jtmc) and preprocess with prepareManchester.py.
+- **Manchester**  
+  Download: [Baidu NetDisk](https://pan.baidu.com/s/1YpZa1mYI3uOHl7lKKHjM_Q) (extraction code: `jtmc`)  
+  Preprocess with: `prepareManchester.py`
 
--PEMS04 and PEMS08
-Provided by STSGCN. Please follow their instructions for data preparation.
+- **PEMS04 and PEMS08**  
+  Download from: [STSGCN](https://github.com/Davidham3/STSGCN)  
+  Follow STSGCN instructions for preprocessing.
+
 
 ## Training Commands
 
