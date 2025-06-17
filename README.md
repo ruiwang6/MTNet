@@ -44,7 +44,7 @@ torchinfo
 We use the following datasets in our experiments:
 
 - **Manchester**   
-  - **Source**: [Baidu NetDisk](https://pan.baidu.com/s/1YpZa1mYI3uOHl7lKKHjM_Q) (code: `jtmc`)   
+  - **Source**: [Baidu NetDisk](https://pan.baidu.com/s/1YpZa1mYI3uOHl7lKKHjM_Q) (code: `jtmc`) The shared folder contains detailed preprocessing scripts and documentation.
   - **Preprocessing**: `data_prepare.py`
 
 - **PEMS04 and PEMS08**   
