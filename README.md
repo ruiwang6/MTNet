@@ -25,9 +25,7 @@ We performed these experiments on both Manchester and PeMSD8; similar conclusion
 
 
 ## D³STN Failed Experiment
-The file specified by --sc_path is missing, and the project does not include any instructions or code to generate this file. As a result, it is unclear how this input is expected to be prepared, which hinders reproducibility.
 
-![D³STN Training Failure](experiments/D3STN_failure.png)
 
 ## Required Packages
 
