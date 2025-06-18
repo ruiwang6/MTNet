@@ -25,7 +25,9 @@ We performed these experiments on both Manchester and PeMSD8; similar conclusion
 
 
 ## D³STN Failed Experiment
+![D³STN Failed Experiment](experiments/D3STN_1.png)
 
+![D³STN Failed Experiment](experiments/D3STN_2.png)
 
 ## Required Packages
 
