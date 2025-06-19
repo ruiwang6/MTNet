@@ -24,11 +24,6 @@ We performed these experiments on both Manchester and PeMSD8; similar conclusion
 ![Hyperparameter Experiment - Learning Rate and Batch Size](experiments/LR_BS.jpg)
 
 
-## D³STN Failed Experiment
-![D³STN Failed Experiment](experiments/D3STN_1.png)
-
-![D³STN Failed Experiment](experiments/D3STN_2.png)
-
 ## Required Packages
 
 ```
